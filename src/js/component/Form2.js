@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import Modal from 'react-modal';
 
 import './form.css';
-
+Modal.setAppElement('#root')
 class MasterForm extends React.Component {
   constructor(props) {
     super(props)
@@ -15,9 +16,30 @@ class MasterForm extends React.Component {
       hairTexture: '',
       scalpCondition: '',
       stylingPreference: '',
+      showModal: false,
+      showModaltc: false,
     }
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+
+    this.handleOpenModaltc = this.handleOpenModaltc.bind(this);
+    this.handleCloseModaltc = this.handleCloseModaltc.bind(this);
+  }
+
+  handleOpenModal () {
+    this.setState({ showModal: true });
+  }
+  handleOpenModaltc () {
+    this.setState({ showModaltc: true });
   }
   
+  handleCloseModal () {
+    this.setState({ showModal: false });
+  }
+  handleCloseModaltc () {
+    this.setState({ showModaltc: false });
+  }  
+
   handleChange = event => {
     const {name, value} = event.target
     this.setState({
@@ -115,6 +137,14 @@ class MasterForm extends React.Component {
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
           curlPattern={this.state.curlPattern}
+          handleOpenModal={this.handleOpenModal}
+          handleCloseModal={this.handleCloseModal}
+          showModal={this.state.showModal}
+
+          
+          handleOpenModaltc={this.handleOpenModaltc}
+          handleCloseModaltc={this.handleCloseModaltc}
+          showModaltc={this.state.showModaltc}
         />
         <Step2 
           currentStep={this.state.currentStep} 
@@ -201,6 +231,14 @@ function Step1(props) {
         onClick={props.handleChange}
       />
       <label for="s2w">Straight To Wavy</label>
+        <a onClick={props.handleOpenModal}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModal}
+           contentLabel="Minimal Modal Example"
+        >
+          Modal 1 content
+          <a onClick={props.handleCloseModal}>Close Modal</a>
+        </Modal>
 
       <input
         className="form-control" 
@@ -221,7 +259,14 @@ function Step1(props) {
         onClick={props.handleChange}
       />
       <label for="s2w">Tight Curls</label>
-
+      <a onClick={props.handleOpenModaltc}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModaltc}
+           contentLabel="Minimal Modal Example"
+        >
+          Modal 3 content
+          <a onClick={props.handleCloseModaltc}>Close Modal</a>
+        </Modal>
     </div>
   );
 }
@@ -482,11 +527,9 @@ function Step6(props) {
 }
 
 function Step7(props) {
-  console.log(props);
   if (props.currentStep !== 7) {
     return null
   } 
-  console.log(props.stylingPreference);
   var image = '';
   if(props.stylingPreference == "volumized")
     image = './images/icon-hair-warrior-queen.png';
