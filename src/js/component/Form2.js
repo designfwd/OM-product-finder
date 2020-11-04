@@ -32,6 +32,10 @@ class MasterForm extends React.Component {
       showModalFlaking: false,
       showModalTightDry: false,
       showModalSupple: false,
+      showModalNatWithNoRefreshing: false,
+      showModalNatWithSomeRefreshing: false,
+      showModalOccasionalHeat: false,
+      showModalVolumized: false,
     }
     //step 1
     this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -85,6 +89,19 @@ class MasterForm extends React.Component {
     
     this.handleOpenModalSupple = this.handleOpenModalSupple.bind(this);
     this.handleCloseModalSupple = this.handleCloseModalSupple.bind(this);
+  
+    //step 6
+    this.handleOpenModalNatWithNoRefreshing = this.handleOpenModalNatWithNoRefreshing.bind(this);
+    this.handleCloseModalNatWithNoRefreshing = this.handleCloseModalNatWithNoRefreshing.bind(this);
+    
+    this.handleOpenModalNatWithSomeRefreshing = this.handleOpenModalNatWithSomeRefreshing.bind(this);
+    this.handleCloseModalNatWithSomeRefreshing = this.handleCloseModalNatWithSomeRefreshing.bind(this);
+    
+    this.handleOpenModalOccasionalHeat = this.handleOpenModalOccasionalHeat.bind(this);
+    this.handleCloseModalOccasionalHeat = this.handleCloseModalOccasionalHeat.bind(this);
+    
+    this.handleOpenModalVolumized = this.handleOpenModalVolumized.bind(this);
+    this.handleCloseModalVolumized = this.handleCloseModalVolumized.bind(this);
   }
   //open modals
   handleOpenModal () {
@@ -135,6 +152,18 @@ class MasterForm extends React.Component {
   handleOpenModalSupple () {
     this.setState({ showModalSupple: true });
   }
+  handleOpenModalNatWithNoRefreshing () {
+    this.setState({ showModalNatWithNoRefreshing: true });
+  }
+  handleOpenModalNatWithSomeRefreshing () {
+    this.setState({ showModalNatWithSomeRefreshing: true });
+  }
+  handleOpenModalOccasionalHeat () {
+    this.setState({ showModalOccasionalHeat: true });
+  }
+  handleOpenModalVolumized () {
+    this.setState({ showModalVolumized: true });
+  }
   
   //close modals
   handleCloseModal () {
@@ -184,6 +213,19 @@ class MasterForm extends React.Component {
   }
   handleCloseModalSupple () {
     this.setState({ showModalSupple: false });
+  }
+  
+  handleCloseModalNatWithNoRefreshing () {
+    this.setState({ showModalNatWithNoRefreshing: false });
+  }
+  handleCloseModalNatWithSomeRefreshing () {
+    this.setState({ showModalNatWithSomeRefreshing: false });
+  }
+  handleCloseModalOccasionalHeat () {
+    this.setState({ showModalOccasionalHeat: false });
+  }
+  handleCloseModalVolumized () {
+    this.setState({ showModalVolumized: false });
   }
 
   handleChange = event => {
@@ -372,6 +414,22 @@ class MasterForm extends React.Component {
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
           stylingPreference={this.state.stylingPreference}
+
+          handleOpenModalNatWithSomeRefreshing={this.handleOpenModalNatWithSomeRefreshing}
+          handleCloseModalNatWithSomeRefreshing={this.handleCloseModalNatWithSomeRefreshing}
+          showModalNatWithSomeRefreshing={this.state.showModalNatWithSomeRefreshing}
+
+          handleOpenModalNatWithNoRefreshing={this.handleOpenModalNatWithNoRefreshing}
+          handleCloseModalNatWithNoRefreshing={this.handleCloseModalNatWithNoRefreshing}
+          showModalNatWithNoRefreshing={this.state.showModalNatWithNoRefreshing}
+
+          handleOpenModalOccasionalHeat={this.handleOpenModalOccasionalHeat}
+          handleCloseModalOccasionalHeat={this.handleCloseModalOccasionalHeat}
+          showModalOccasionalHeat={this.state.showModalOccasionalHeat}
+
+          handleOpenModalVolumized={this.handleOpenModalVolumized}
+          handleCloseModalVolumized={this.handleCloseModalVolumized}
+          showModalVolumized={this.state.showModalVolumized}
         />        
         <Step7
           currentStep={this.state.currentStep} 
@@ -798,7 +856,14 @@ function Step6(props) {
         onClick={props.handleChange}
       />
       <label for="nwnr">Natural with No Refreshing</label>
-
+      <a onClick={props.handleOpenModalNatWithNoRefreshing}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalNatWithNoRefreshing}
+           contentLabel="Minimal Modal Example"
+        >
+          No heat styling and minimal post-wash day styling. 
+          <a onClick={props.handleCloseModalNatWithNoRefreshing}>Close Modal</a>
+        </Modal>
       <input
         className="form-control" 
         type="radio" 
@@ -808,7 +873,14 @@ function Step6(props) {
         onClick={props.handleChange}
       />
       <label for="nwsr">Natural with Some Refreshing</label>
-
+      <a onClick={props.handleOpenModalNatWithSomeRefreshing}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalNatWithSomeRefreshing}
+           contentLabel="Minimal Modal Example"
+        >
+          No heat styling with some post-wash day styling to reshape waves and curls
+          <a onClick={props.handleCloseModalNatWithSomeRefreshing}>Close Modal</a>
+        </Modal>
       <input
         className="form-control" 
         type="radio" 
@@ -817,8 +889,15 @@ function Step6(props) {
         value="occasionalHeatStyling"
         onClick={props.handleChange}
       />
-      <label for="ohs">Flaking</label>
-
+      <label for="ohs">Occational Heat Styling</label>
+      <a onClick={props.handleOpenModalOccasionalHeat}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalOccasionalHeat}
+           contentLabel="Minimal Modal Example"
+        >
+          Hair is blow dried and/or flat ironed once in a while.
+          <a onClick={props.handleCloseModalOccasionalHeat}>Close Modal</a>
+        </Modal>
       <input
         className="form-control" 
         type="radio" 
@@ -828,7 +907,14 @@ function Step6(props) {
         onClick={props.handleChange}
       />
       <label for="volumized">Volumized</label>
-
+      <a onClick={props.handleOpenModalVolumized}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalVolumized}
+           contentLabel="Minimal Modal Example"
+        >
+          Hair is encouraged to fluff up for a soft, full look.
+          <a onClick={props.handleCloseModalVolumized}>Close Modal</a>
+        </Modal>
     </div>
   );
 }
