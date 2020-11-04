@@ -36,6 +36,7 @@ class MasterForm extends React.Component {
       showModalNatWithSomeRefreshing: false,
       showModalOccasionalHeat: false,
       showModalVolumized: false,
+      hairType: '',  
     }
     //step 1
     this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -237,7 +238,12 @@ class MasterForm extends React.Component {
    
   handleSubmit = event => {
     event.preventDefault()
-    const { email,curlPattern, porosity,curlShape, hairTexture, scalpCondition, stylingPreference } = this.state
+    const { email,curlPattern, porosity,curlShape, hairTexture, scalpCondition, stylingPreference } = this.state;
+    //if curlpattern = straight to wavy and hair perosity = medium to low goes to mermaid
+    //if curlpattern = loose curls and perosity = medium to low goes to mermaid
+    if((curlPattern == 'StraightToWavy' && porosity == 'MediumToLowPorosity') ||(curlPattern=='LooseCurls' && porosity == 'MediumToLowPorosity')){
+      alert('mermaid');
+    }
     alert(`Your registration detail: \n 
             curlPattern: ${curlPattern} \n 
             porosity: ${porosity} \n
@@ -250,7 +256,17 @@ class MasterForm extends React.Component {
   
   _next = () => {
     let currentStep = this.state.currentStep
-    currentStep = currentStep >= 6? 7: currentStep + 1
+    let curlPattern = this.state.curlPattern;
+    let porosity = this.state.porosity;
+
+    if(currentStep == 2) {
+      if((curlPattern == 'TightCurls') && (porosity == 'MediumToLowPorosity'))
+        currentStep++;
+      else
+        currentStep +=2;
+    }else{
+      currentStep = currentStep >= 6? 7: currentStep+1;
+    }
     this.setState({
       currentStep: currentStep
     })
@@ -258,7 +274,17 @@ class MasterForm extends React.Component {
     
   _prev = () => {
     let currentStep = this.state.currentStep
-    currentStep = currentStep <= 1? 1: currentStep - 1
+    let curlPattern = this.state.curlPattern;
+    let porosity = this.state.porosity;
+
+    if(currentStep == 4) {
+      if((curlPattern == 'TightCurls') && (porosity == 'MediumToLowPorosity'))
+        currentStep--;
+      else
+        currentStep -=2;
+    }else{
+      currentStep = currentStep <= 1? 1: currentStep - 1
+    }    
     this.setState({
       currentStep: currentStep
     })
