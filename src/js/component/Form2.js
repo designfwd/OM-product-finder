@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import Modal from 'react-modal';
 
 import './form.css';
-
+Modal.setAppElement('#root')
 class MasterForm extends React.Component {
   constructor(props) {
     super(props)
@@ -15,9 +16,218 @@ class MasterForm extends React.Component {
       hairTexture: '',
       scalpCondition: '',
       stylingPreference: '',
+      showModal: false,
+      showModaltc: false,
+      showModallc: false,
+      showModalm2lp: false,
+      showModalm2hp: false,
+      showModalSshaped: false,
+      showModalSpiral: false,
+      showModalSingleStrand: false,
+      showModalFine: false,
+      showModalMedium: false,
+      showModalCoarse: false,
+      showModalSensitive: false,
+      showModalIrritated: false,
+      showModalFlaking: false,
+      showModalTightDry: false,
+      showModalSupple: false,
+      showModalNatWithNoRefreshing: false,
+      showModalNatWithSomeRefreshing: false,
+      showModalOccasionalHeat: false,
+      showModalVolumized: false,
     }
+    //step 1
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+
+    this.handleOpenModaltc = this.handleOpenModaltc.bind(this);
+    this.handleCloseModaltc = this.handleCloseModaltc.bind(this);
+
+    this.handleOpenModallc = this.handleOpenModallc.bind(this);
+    this.handleCloseModallc = this.handleCloseModallc.bind(this);
+
+    //step 2
+    this.handleOpenModalm2lp = this.handleOpenModalm2lp.bind(this);
+    this.handleCloseModalm2lp = this.handleCloseModalm2lp.bind(this);
+
+    this.handleOpenModalm2hp = this.handleOpenModalm2hp.bind(this);
+    this.handleCloseModalm2hp = this.handleCloseModalm2hp.bind(this);
+
+    //step 3
+    this.handleOpenModalSshaped = this.handleOpenModalSshaped.bind(this);
+    this.handleCloseModalSshaped = this.handleCloseModalSshaped.bind(this);
+
+    this.handleOpenModalSpiral = this.handleOpenModalSpiral.bind(this);
+    this.handleCloseModalSpiral = this.handleCloseModalSpiral.bind(this);
+
+    this.handleOpenModalSingleStrand = this.handleOpenModalSingleStrand.bind(this);
+    this.handleCloseModalSinglStrand = this.handleCloseModalSinglStrand.bind(this);
+
+    //step 4
+    this.handleOpenModalFine = this.handleOpenModalFine.bind(this);
+    this.handleCloseModalFine = this.handleCloseModalFine.bind(this);
+    
+    this.handleOpenModalMedium = this.handleOpenModalMedium.bind(this);
+    this.handleCloseModalMedium = this.handleCloseModalMedium.bind(this);
+    
+    this.handleOpenModalCoarse = this.handleOpenModalCoarse.bind(this);
+    this.handleCloseModalCoarse = this.handleCloseModalCoarse.bind(this);
+    
+    //step 5
+    this.handleOpenModalSensitive = this.handleOpenModalSensitive.bind(this);
+    this.handleCloseModalSensitive = this.handleCloseModalSensitive.bind(this);
+    
+    this.handleOpenModalIrritated = this.handleOpenModalIrritated.bind(this);
+    this.handleCloseModalIrritated = this.handleCloseModalIrritated.bind(this);
+    
+    this.handleOpenModalFlaking = this.handleOpenModalFlaking.bind(this);
+    this.handleCloseModalFlaking = this.handleCloseModalFlaking.bind(this);
+    
+    this.handleOpenModalTightDry = this.handleOpenModalTightDry.bind(this);
+    this.handleCloseModalTightDry = this.handleCloseModalTightDry.bind(this);
+    
+    this.handleOpenModalSupple = this.handleOpenModalSupple.bind(this);
+    this.handleCloseModalSupple = this.handleCloseModalSupple.bind(this);
+  
+    //step 6
+    this.handleOpenModalNatWithNoRefreshing = this.handleOpenModalNatWithNoRefreshing.bind(this);
+    this.handleCloseModalNatWithNoRefreshing = this.handleCloseModalNatWithNoRefreshing.bind(this);
+    
+    this.handleOpenModalNatWithSomeRefreshing = this.handleOpenModalNatWithSomeRefreshing.bind(this);
+    this.handleCloseModalNatWithSomeRefreshing = this.handleCloseModalNatWithSomeRefreshing.bind(this);
+    
+    this.handleOpenModalOccasionalHeat = this.handleOpenModalOccasionalHeat.bind(this);
+    this.handleCloseModalOccasionalHeat = this.handleCloseModalOccasionalHeat.bind(this);
+    
+    this.handleOpenModalVolumized = this.handleOpenModalVolumized.bind(this);
+    this.handleCloseModalVolumized = this.handleCloseModalVolumized.bind(this);
+  }
+  //open modals
+  handleOpenModal () {
+    this.setState({ showModal: true });
+  }
+  handleOpenModaltc () {
+    this.setState({ showModaltc: true });
+  }
+  handleOpenModallc () {
+    this.setState({ showModallc: true });
+  }
+  handleOpenModalm2lp () {
+    this.setState({ showModalm2lp: true });
+  }
+  handleOpenModalm2hp () {
+    this.setState({ showModalm2hp: true });
+  }
+  handleOpenModalSshaped() {
+    this.setState({ showModalSshaped: true });
+  }
+  handleOpenModalSpiral () {
+    this.setState({ showModalSpiral: true });
+  }
+  handleOpenModalSingleStrand () {
+    this.setState({ showModalSingleStrand: true });
+  }
+  handleOpenModalFine () {
+    this.setState({ showModalFine: true });
+  }
+  handleOpenModalMedium () {
+    this.setState({ showModalMedium: true });
+  }
+  handleOpenModalCoarse () {
+    this.setState({ showModalCoarse: true });
+  }
+  handleOpenModalSensitive () {
+    this.setState({ showModalSensitive: true });
+  }
+  handleOpenModalIrritated () {
+    this.setState({ showModalIrritated: true });
+  }
+  handleOpenModalFlaking () {
+    this.setState({ showModalFlaking: true });
+  }
+  handleOpenModalTightDry () {
+    this.setState({ showModalTightDry: true });
+  }
+  handleOpenModalSupple () {
+    this.setState({ showModalSupple: true });
+  }
+  handleOpenModalNatWithNoRefreshing () {
+    this.setState({ showModalNatWithNoRefreshing: true });
+  }
+  handleOpenModalNatWithSomeRefreshing () {
+    this.setState({ showModalNatWithSomeRefreshing: true });
+  }
+  handleOpenModalOccasionalHeat () {
+    this.setState({ showModalOccasionalHeat: true });
+  }
+  handleOpenModalVolumized () {
+    this.setState({ showModalVolumized: true });
   }
   
+  //close modals
+  handleCloseModal () {
+    this.setState({ showModal: false });
+  }
+  handleCloseModaltc () {
+    this.setState({ showModaltc: false });
+  }
+  handleCloseModallc () {
+    this.setState({ showModallc: false });
+  } 
+  handleCloseModalm2lp () {
+    this.setState({ showModalm2lp: false });
+  } 
+  handleCloseModalm2hp () {
+    this.setState({ showModalm2hp: false });
+  }
+  handleCloseModalSshaped () {
+    this.setState({ showModalSshaped: false });
+  } 
+  handleCloseModalSpiral () {
+    this.setState({ showModalSpiral: false });
+  } 
+  handleCloseModalSinglStrand () {
+    this.setState({ showModalSingleStrand: false });
+  }
+  handleCloseModalFine () {
+    this.setState({ showModalFine: false });
+  }
+  handleCloseModalMedium () {
+    this.setState({ showModalMedium: false });
+  }
+  handleCloseModalCoarse () {
+    this.setState({ showModalCoarse: false });
+  }
+  handleCloseModalSensitive () {
+    this.setState({ showModalSensitive: false });
+  }
+  handleCloseModalIrritated () {
+    this.setState({ showModalIrritated: false });
+  }
+  handleCloseModalFlaking () {
+    this.setState({ showModalFlaking: false });
+  }
+  handleCloseModalTightDry () {
+    this.setState({ showModalTightDry: false });
+  }
+  handleCloseModalSupple () {
+    this.setState({ showModalSupple: false });
+  }
+  
+  handleCloseModalNatWithNoRefreshing () {
+    this.setState({ showModalNatWithNoRefreshing: false });
+  }
+  handleCloseModalNatWithSomeRefreshing () {
+    this.setState({ showModalNatWithSomeRefreshing: false });
+  }
+  handleCloseModalOccasionalHeat () {
+    this.setState({ showModalOccasionalHeat: false });
+  }
+  handleCloseModalVolumized () {
+    this.setState({ showModalVolumized: false });
+  }
+
   handleChange = event => {
     const {name, value} = event.target
     this.setState({
@@ -115,31 +325,111 @@ class MasterForm extends React.Component {
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
           curlPattern={this.state.curlPattern}
+
+          handleOpenModal={this.handleOpenModal}
+          handleCloseModal={this.handleCloseModal}
+          showModal={this.state.showModal}
+          
+          handleOpenModaltc={this.handleOpenModaltc}
+          handleCloseModaltc={this.handleCloseModaltc}
+          showModaltc={this.state.showModaltc}
+
+          handleOpenModallc={this.handleOpenModallc}
+          handleCloseModallc={this.handleCloseModallc}
+          showModallc={this.state.showModallc}
         />
         <Step2 
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
           porosity={this.state.porosity}
+
+          handleOpenModalm2lp={this.handleOpenModalm2lp}
+          handleCloseModalm2lp={this.handleCloseModalm2lp}
+          showModalm2lp={this.state.showModalm2lp}
+          
+          handleOpenModalm2hp={this.handleOpenModalm2hp}
+          handleCloseModalm2hp={this.handleCloseModalm2hp}
+          showModalm2hp={this.state.showModalm2hp}          
         />
         <Step3 
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
           curlShape={this.state.curlShape}
+
+          handleOpenModalSshaped={this.handleOpenModalSshaped}
+          handleCloseModalSshaped={this.handleCloseModalSshaped}
+          showModalSshaped={this.state.showModalSshaped}
+          
+          handleOpenModalSpiral={this.handleOpenModalSpiral}
+          handleCloseModalSpiral={this.handleCloseModalSpiral}
+          showModalSpiral={this.state.showModalSpiral}
+
+          handleOpenModalSingleStrand={this.handleOpenModalSingleStrand}
+          handleCloseModalSinglStrand={this.handleCloseModalSinglStrand}
+          showModalSingleStrand={this.state.showModalSingleStrand}
         />
         <Step4
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
           hairTexture={this.state.hairTexture}
+          
+          handleOpenModalFine={this.handleOpenModalFine}
+          handleCloseModalFine={this.handleCloseModalFine}
+          showModalFine={this.state.showModalFine}
+
+          handleOpenModalMedium={this.handleOpenModalMedium}
+          handleCloseModalMedium={this.handleCloseModalMedium}
+          showModalMedium={this.state.showModalMedium}
+
+          handleOpenModalCoarse={this.handleOpenModalCoarse}
+          handleCloseModalCoarse={this.handleCloseModalCoarse}
+          showModalCoarse={this.state.showModalCoarse}
         />
         <Step5
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
           scalpCondition={this.state.scalpCondition}
+
+          handleOpenModalSensitive={this.handleOpenModalSensitive}
+          handleCloseModalSensitive={this.handleCloseModalSensitive}
+          showModalSensitive={this.state.showModalSensitive}
+
+          handleOpenModalIrritated={this.handleOpenModalIrritated}
+          handleCloseModalIrritated={this.handleCloseModalIrritated}
+          showModalIrritated={this.state.showModalIrritated}
+
+          handleOpenModalFlaking={this.handleOpenModalFlaking}
+          handleCloseModalFlaking={this.handleCloseModalFlaking}
+          showModalFlaking={this.state.showModalFlaking}
+
+          handleOpenModalTightDry={this.handleOpenModalTightDry}
+          handleCloseModalTightDry={this.handleCloseModalTightDry}
+          showModalTightDry={this.state.showModalTightDry}
+
+          handleOpenModalSupple={this.handleOpenModalSupple}
+          handleCloseModalSupple={this.handleCloseModalSupple}
+          showModalSupple={this.state.showModalSupple}
         />
         <Step6
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
           stylingPreference={this.state.stylingPreference}
+
+          handleOpenModalNatWithSomeRefreshing={this.handleOpenModalNatWithSomeRefreshing}
+          handleCloseModalNatWithSomeRefreshing={this.handleCloseModalNatWithSomeRefreshing}
+          showModalNatWithSomeRefreshing={this.state.showModalNatWithSomeRefreshing}
+
+          handleOpenModalNatWithNoRefreshing={this.handleOpenModalNatWithNoRefreshing}
+          handleCloseModalNatWithNoRefreshing={this.handleCloseModalNatWithNoRefreshing}
+          showModalNatWithNoRefreshing={this.state.showModalNatWithNoRefreshing}
+
+          handleOpenModalOccasionalHeat={this.handleOpenModalOccasionalHeat}
+          handleCloseModalOccasionalHeat={this.handleCloseModalOccasionalHeat}
+          showModalOccasionalHeat={this.state.showModalOccasionalHeat}
+
+          handleOpenModalVolumized={this.handleOpenModalVolumized}
+          handleCloseModalVolumized={this.handleCloseModalVolumized}
+          showModalVolumized={this.state.showModalVolumized}
         />        
         <Step7
           currentStep={this.state.currentStep} 
@@ -201,6 +491,14 @@ function Step1(props) {
         onClick={props.handleChange}
       />
       <label for="s2w">Straight To Wavy</label>
+        <a onClick={props.handleOpenModal}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModal}
+           contentLabel="Minimal Modal Example"
+        >
+          Less than one curl per inch.  Hair ranges from perfectly straight to slight texture and is flat to the head when wet. Not much change in length when hair is pulled taught from its natural resting position.
+          <a onClick={props.handleCloseModal}>Close Modal</a>
+        </Modal>
 
       <input
         className="form-control" 
@@ -211,7 +509,14 @@ function Step1(props) {
         onClick={props.handleChange}
       />
       <label for="lc">Loose Curls</label>
-
+      <a onClick={props.handleOpenModallc}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModallc}
+           contentLabel="Minimal Modal Example"
+        >
+          One to two curls per inch.  Some length change when hair is pulled taught from its natural resting position. You can easily pull your fingers through your curls when they are dry.
+          <a onClick={props.handleCloseModallc}>Close Modal</a>
+        </Modal>
       <input
         className="form-control" 
         type="radio" 
@@ -221,7 +526,14 @@ function Step1(props) {
         onClick={props.handleChange}
       />
       <label for="s2w">Tight Curls</label>
-
+      <a onClick={props.handleOpenModaltc}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModaltc}
+           contentLabel="Minimal Modal Example"
+        >
+          More than two curls per inch.  Significant length change when hair is pulled taught from its natural resting position.  Challenging or impossible to pull your fingers through hair once it is and dry.
+          <a onClick={props.handleCloseModaltc}>Close Modal</a>
+        </Modal>
     </div>
   );
 }
@@ -249,6 +561,15 @@ function Step2(props) {
         onClick={props.handleChange}
       />
       <label for="s2w">Medium to Low Porosity</label>
+      <a onClick={props.handleOpenModalm2lp}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalm2lp}
+           contentLabel="Minimal Modal Example"
+        >
+          Hair is slow to absorb water and product,  prone to build-up or greasiness, and does not experience a dramatic change in humidity.
+          <a onClick={props.handleCloseModalm2lp}>Close Modal</a>
+        </Modal>
+
 
       <input
         className="form-control" 
@@ -259,6 +580,14 @@ function Step2(props) {
         onClick={props.handleChange}
       />
       <label for="lc">Medium to High Porosity</label>
+      <a onClick={props.handleOpenModalm2hp}>Trigger Modal</a>
+      <Modal 
+           isOpen={props.showModalm2hp}
+           contentLabel="Minimal Modal Example"
+        >
+          Hair readily absorbs moisture and product, may look dull after a few days, and gets poofy and frizzy in humidity.
+          <a onClick={props.handleCloseModalm2hp}>Close Modal</a>
+        </Modal>      
     </div>
   );
 }
@@ -285,7 +614,14 @@ function Step3(props) {
         onClick={props.handleChange}
       />
       <label for="sshape">'S' Shape</label>
-
+      <a onClick={props.handleOpenModalSshaped}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalSshaped}
+           contentLabel="Minimal Modal Example"
+        >
+          Clear curl ‘families’ that group in a repeating wave pattern.  May be loose or very tight.
+          <a onClick={props.handleCloseModalSshaped}>Close Modal</a>
+        </Modal>
       <input
         className="form-control" 
         type="radio" 
@@ -295,6 +631,14 @@ function Step3(props) {
         onClick={props.handleChange}
       />
       <label for="lc">Spiral</label>
+      <a onClick={props.handleOpenModalSpiral}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalSpiral}
+           contentLabel="Minimal Modal Example"
+        >
+          Clear curl ‘families’ that that coil in a helix around a central axis. May be loose or very tight.
+          <a onClick={props.handleCloseModalSpiral}>Close Modal</a>
+        </Modal>
 
       <input
         className="form-control" 
@@ -305,6 +649,14 @@ function Step3(props) {
         onClick={props.handleChange}
       />
       <label for="singleStrand">Single Strand</label>
+      <a onClick={props.handleOpenModalSingleStrand}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalSingleStrand}
+           contentLabel="Minimal Modal Example"
+        >
+          Independent strands that stand out from one another, do not easily group, and may be ‘s’ or spiral shaped. 
+          <a onClick={props.handleCloseModalSinglStrand}>Close Modal</a>
+        </Modal>
     </div>
   );
 }
@@ -332,7 +684,14 @@ function Step4(props) {
         onClick={props.handleChange}
       />
       <label for="fine">Fine</label>
-
+      <a onClick={props.handleOpenModalFine}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalFine}
+           contentLabel="Minimal Modal Example"
+        >
+          Individual hairs are easy to feel between the fingers and are somewhat soft
+          <a onClick={props.handleCloseModalFine}>Close Modal</a>
+        </Modal>
       <input
         className="form-control" 
         type="radio" 
@@ -342,7 +701,14 @@ function Step4(props) {
         onClick={props.handleChange}
       />
       <label for="medium">Medium</label>
-
+      <a onClick={props.handleOpenModalMedium}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalMedium}
+           contentLabel="Minimal Modal Example"
+        >
+          Individual hairs are easy to feel between the fingers and are somewhat soft
+          <a onClick={props.handleCloseModalMedium}>Close Modal</a>
+        </Modal>
       <input
         className="form-control" 
         type="radio" 
@@ -352,6 +718,14 @@ function Step4(props) {
         onClick={props.handleChange}
       />
       <label for="coarse">Coarse</label>
+      <a onClick={props.handleOpenModalCoarse}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalCoarse}
+           contentLabel="Minimal Modal Example"
+        >
+          Individual hairs feel hard and substantial between the fingers.
+          <a onClick={props.handleCloseModalCoarse}>Close Modal</a>
+        </Modal>
     </div>
   );
 }
@@ -379,7 +753,14 @@ function Step5(props) {
         onClick={props.handleChange}
       />
       <label for="sensitive">Sensitive</label>
-
+      <a onClick={props.handleOpenModalSensitive}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalSensitive}
+           contentLabel="Minimal Modal Example"
+        >
+          Sore feeling, even when not restricted in a tight style.
+          <a onClick={props.handleCloseModalSensitive}>Close Modal</a>
+        </Modal>
       <input
         className="form-control" 
         type="radio" 
@@ -389,7 +770,14 @@ function Step5(props) {
         onClick={props.handleChange}
       />
       <label for="irritated">Irritated</label>
-
+      <a onClick={props.handleOpenModalIrritated}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalIrritated}
+           contentLabel="Minimal Modal Example"
+        >
+          Visible redness and itching.
+          <a onClick={props.handleCloseModalIrritated}>Close Modal</a>
+        </Modal>
       <input
         className="form-control" 
         type="radio" 
@@ -399,7 +787,14 @@ function Step5(props) {
         onClick={props.handleChange}
       />
       <label for="flaking">Flaking</label>
-
+      <a onClick={props.handleOpenModalFlaking}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalFlaking}
+           contentLabel="Minimal Modal Example"
+        >
+          Light colored flakes originating from the scalp (not product build up).
+          <a onClick={props.handleCloseModalFlaking}>Close Modal</a>
+        </Modal>
       <input
         className="form-control" 
         type="radio" 
@@ -409,7 +804,14 @@ function Step5(props) {
         onClick={props.handleChange}
       />
       <label for="tight">Tight</label>
-
+      <a onClick={props.handleOpenModalTightDry}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalTightDry}
+           contentLabel="Minimal Modal Example"
+        >
+          Scalp does not move easily over the skull and feels almost glued down.
+          <a onClick={props.handleCloseModalTightDry}>Close Modal</a>
+        </Modal>
       <input
         className="form-control" 
         type="radio" 
@@ -419,6 +821,14 @@ function Step5(props) {
         onClick={props.handleChange}
       />
       <label for="supple">Supple</label>
+      <a onClick={props.handleOpenModalSupple}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalSupple}
+           contentLabel="Minimal Modal Example"
+        >
+          Scalp moves easily over the skull and has some give when pressed with fingertips.
+          <a onClick={props.handleCloseModalSupple}>Close Modal</a>
+        </Modal>      
     </div>
   );
 }
@@ -446,7 +856,14 @@ function Step6(props) {
         onClick={props.handleChange}
       />
       <label for="nwnr">Natural with No Refreshing</label>
-
+      <a onClick={props.handleOpenModalNatWithNoRefreshing}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalNatWithNoRefreshing}
+           contentLabel="Minimal Modal Example"
+        >
+          No heat styling and minimal post-wash day styling. 
+          <a onClick={props.handleCloseModalNatWithNoRefreshing}>Close Modal</a>
+        </Modal>
       <input
         className="form-control" 
         type="radio" 
@@ -456,7 +873,14 @@ function Step6(props) {
         onClick={props.handleChange}
       />
       <label for="nwsr">Natural with Some Refreshing</label>
-
+      <a onClick={props.handleOpenModalNatWithSomeRefreshing}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalNatWithSomeRefreshing}
+           contentLabel="Minimal Modal Example"
+        >
+          No heat styling with some post-wash day styling to reshape waves and curls
+          <a onClick={props.handleCloseModalNatWithSomeRefreshing}>Close Modal</a>
+        </Modal>
       <input
         className="form-control" 
         type="radio" 
@@ -465,8 +889,15 @@ function Step6(props) {
         value="occasionalHeatStyling"
         onClick={props.handleChange}
       />
-      <label for="ohs">Flaking</label>
-
+      <label for="ohs">Occational Heat Styling</label>
+      <a onClick={props.handleOpenModalOccasionalHeat}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalOccasionalHeat}
+           contentLabel="Minimal Modal Example"
+        >
+          Hair is blow dried and/or flat ironed once in a while.
+          <a onClick={props.handleCloseModalOccasionalHeat}>Close Modal</a>
+        </Modal>
       <input
         className="form-control" 
         type="radio" 
@@ -476,17 +907,22 @@ function Step6(props) {
         onClick={props.handleChange}
       />
       <label for="volumized">Volumized</label>
-
+      <a onClick={props.handleOpenModalVolumized}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalVolumized}
+           contentLabel="Minimal Modal Example"
+        >
+          Hair is encouraged to fluff up for a soft, full look.
+          <a onClick={props.handleCloseModalVolumized}>Close Modal</a>
+        </Modal>
     </div>
   );
 }
 
 function Step7(props) {
-  console.log(props);
   if (props.currentStep !== 7) {
     return null
   } 
-  console.log(props.stylingPreference);
   var image = '';
   if(props.stylingPreference == "volumized")
     image = './images/icon-hair-warrior-queen.png';
