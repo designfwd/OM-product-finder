@@ -27,6 +27,11 @@ class MasterForm extends React.Component {
       showModalFine: false,
       showModalMedium: false,
       showModalCoarse: false,
+      showModalSensitive: false,
+      showModalIrritated: false,
+      showModalFlaking: false,
+      showModalTightDry: false,
+      showModalSupple: false,
     }
     //step 1
     this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -64,6 +69,22 @@ class MasterForm extends React.Component {
     
     this.handleOpenModalCoarse = this.handleOpenModalCoarse.bind(this);
     this.handleCloseModalCoarse = this.handleCloseModalCoarse.bind(this);
+    
+    //step 5
+    this.handleOpenModalSensitive = this.handleOpenModalSensitive.bind(this);
+    this.handleCloseModalSensitive = this.handleCloseModalSensitive.bind(this);
+    
+    this.handleOpenModalIrritated = this.handleOpenModalIrritated.bind(this);
+    this.handleCloseModalIrritated = this.handleCloseModalIrritated.bind(this);
+    
+    this.handleOpenModalFlaking = this.handleOpenModalFlaking.bind(this);
+    this.handleCloseModalFlaking = this.handleCloseModalFlaking.bind(this);
+    
+    this.handleOpenModalTightDry = this.handleOpenModalTightDry.bind(this);
+    this.handleCloseModalTightDry = this.handleCloseModalTightDry.bind(this);
+    
+    this.handleOpenModalSupple = this.handleOpenModalSupple.bind(this);
+    this.handleCloseModalSupple = this.handleCloseModalSupple.bind(this);
   }
   //open modals
   handleOpenModal () {
@@ -99,6 +120,21 @@ class MasterForm extends React.Component {
   handleOpenModalCoarse () {
     this.setState({ showModalCoarse: true });
   }
+  handleOpenModalSensitive () {
+    this.setState({ showModalSensitive: true });
+  }
+  handleOpenModalIrritated () {
+    this.setState({ showModalIrritated: true });
+  }
+  handleOpenModalFlaking () {
+    this.setState({ showModalFlaking: true });
+  }
+  handleOpenModalTightDry () {
+    this.setState({ showModalTightDry: true });
+  }
+  handleOpenModalSupple () {
+    this.setState({ showModalSupple: true });
+  }
   
   //close modals
   handleCloseModal () {
@@ -133,6 +169,21 @@ class MasterForm extends React.Component {
   }
   handleCloseModalCoarse () {
     this.setState({ showModalCoarse: false });
+  }
+  handleCloseModalSensitive () {
+    this.setState({ showModalSensitive: false });
+  }
+  handleCloseModalIrritated () {
+    this.setState({ showModalIrritated: false });
+  }
+  handleCloseModalFlaking () {
+    this.setState({ showModalFlaking: false });
+  }
+  handleCloseModalTightDry () {
+    this.setState({ showModalTightDry: false });
+  }
+  handleCloseModalSupple () {
+    this.setState({ showModalSupple: false });
   }
 
   handleChange = event => {
@@ -296,6 +347,26 @@ class MasterForm extends React.Component {
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
           scalpCondition={this.state.scalpCondition}
+
+          handleOpenModalSensitive={this.handleOpenModalSensitive}
+          handleCloseModalSensitive={this.handleCloseModalSensitive}
+          showModalSensitive={this.state.showModalSensitive}
+
+          handleOpenModalIrritated={this.handleOpenModalIrritated}
+          handleCloseModalIrritated={this.handleCloseModalIrritated}
+          showModalIrritated={this.state.showModalIrritated}
+
+          handleOpenModalFlaking={this.handleOpenModalFlaking}
+          handleCloseModalFlaking={this.handleCloseModalFlaking}
+          showModalFlaking={this.state.showModalFlaking}
+
+          handleOpenModalTightDry={this.handleOpenModalTightDry}
+          handleCloseModalTightDry={this.handleCloseModalTightDry}
+          showModalTightDry={this.state.showModalTightDry}
+
+          handleOpenModalSupple={this.handleOpenModalSupple}
+          handleCloseModalSupple={this.handleCloseModalSupple}
+          showModalSupple={this.state.showModalSupple}
         />
         <Step6
           currentStep={this.state.currentStep} 
@@ -624,7 +695,14 @@ function Step5(props) {
         onClick={props.handleChange}
       />
       <label for="sensitive">Sensitive</label>
-
+      <a onClick={props.handleOpenModalSensitive}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalSensitive}
+           contentLabel="Minimal Modal Example"
+        >
+          Sore feeling, even when not restricted in a tight style.
+          <a onClick={props.handleCloseModalSensitive}>Close Modal</a>
+        </Modal>
       <input
         className="form-control" 
         type="radio" 
@@ -634,7 +712,14 @@ function Step5(props) {
         onClick={props.handleChange}
       />
       <label for="irritated">Irritated</label>
-
+      <a onClick={props.handleOpenModalIrritated}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalIrritated}
+           contentLabel="Minimal Modal Example"
+        >
+          Visible redness and itching.
+          <a onClick={props.handleCloseModalIrritated}>Close Modal</a>
+        </Modal>
       <input
         className="form-control" 
         type="radio" 
@@ -644,7 +729,14 @@ function Step5(props) {
         onClick={props.handleChange}
       />
       <label for="flaking">Flaking</label>
-
+      <a onClick={props.handleOpenModalFlaking}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalFlaking}
+           contentLabel="Minimal Modal Example"
+        >
+          Light colored flakes originating from the scalp (not product build up).
+          <a onClick={props.handleCloseModalFlaking}>Close Modal</a>
+        </Modal>
       <input
         className="form-control" 
         type="radio" 
@@ -654,7 +746,14 @@ function Step5(props) {
         onClick={props.handleChange}
       />
       <label for="tight">Tight</label>
-
+      <a onClick={props.handleOpenModalTightDry}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalTightDry}
+           contentLabel="Minimal Modal Example"
+        >
+          Scalp does not move easily over the skull and feels almost glued down.
+          <a onClick={props.handleCloseModalTightDry}>Close Modal</a>
+        </Modal>
       <input
         className="form-control" 
         type="radio" 
@@ -664,6 +763,14 @@ function Step5(props) {
         onClick={props.handleChange}
       />
       <label for="supple">Supple</label>
+      <a onClick={props.handleOpenModalSupple}>Trigger Modal</a>
+        <Modal 
+           isOpen={props.showModalSupple}
+           contentLabel="Minimal Modal Example"
+        >
+          Scalp moves easily over the skull and has some give when pressed with fingertips.
+          <a onClick={props.handleCloseModalSupple}>Close Modal</a>
+        </Modal>      
     </div>
   );
 }
