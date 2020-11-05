@@ -296,7 +296,7 @@ class MasterForm extends React.Component {
         <button 
           className="btn btn-secondary form-slide__button form-slide__button--prev" 
           type="button" onClick={this._prev}>
-        Back
+        &larr;  Back
         </button>
       )
     }
@@ -310,7 +310,7 @@ class MasterForm extends React.Component {
         <button 
           className="btn btn-primary form-slide__button form-slide__button--next" 
           type="button" onClick={this._next}>
-        Continue
+        Continue  &rarr;
         </button>        
       )
     }
@@ -506,7 +506,7 @@ function Step1(props) {
         What's Your Curl Pattern?
       </h2>
       <div class="copy form-slide__body">
-        The number of curls that occur along a 1” section of hair. Have your hair in <a class="form-slide__link" href="#" target="_blank">locs</a> or a <a href="#" target="_blank">protective style</a>? Click these links for product recommendations. 
+        The number of curls that occur along a 1” section of hair. Have your hair in <a class="form-slide__link" href="#" target="_blank">locs</a> or a <a class="form-slide__link" href="#" target="_blank">protective style</a>? Click these links for product recommendations. 
       </div> 
 
       <div class="form-slide__inputs">
