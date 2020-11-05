@@ -300,7 +300,7 @@ class MasterForm extends React.Component {
         <button 
           className="btn btn-secondary form-slide__button form-slide__button--prev" 
           type="button" onClick={this._prev}>
-        Back
+        &larr; Back
         </button>
       )
     }
@@ -314,7 +314,7 @@ class MasterForm extends React.Component {
         <button 
           className="btn btn-primary form-slide__button form-slide__button--next" 
           type="button" onClick={this._next}>
-        Continue
+        Continue &rarr;
         </button>        
       )
     }
