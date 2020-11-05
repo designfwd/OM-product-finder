@@ -618,43 +618,57 @@ function Step2(props) {
       </div> 
 
       <div class="form-slide__inputs">
-        <input
-          className="form-control form-slide__control" 
-          type="radio" 
-          id="m2lp" 
-          name="porosity" 
-          value="MediumToLowPorosity"
-          onClick={props.handleChange}
-        />
-        <label class="form-slide__label" for="s2w">Medium to Low Porosity</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModalm2lp}>Trigger Modal</a>
-        <Modal 
-          className="form-slide__modal"
-          isOpen={props.showModalm2lp}
-          contentLabel="Minimal Modal Example"
-        >
-          Hair is slow to absorb water and product,  prone to build-up or greasiness, and does not experience a dramatic change in humidity.
-          <a class="form-slide__close" onClick={props.handleCloseModalm2lp}>Close Modal</a>
-        </Modal>
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="m2lp" 
+            name="porosity" 
+            value="MediumToLowPorosity"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="s2w">Medium to Low Porosity</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModalm2lp}>i</a>
+          <Modal 
+            isOpen={props.showModalm2lp}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Medium to Low Porosity
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              Hair is slow to absorb water and product,  prone to build-up or greasiness, and does not experience a dramatic change in humidity.
+            </p>
+              <a class="form-slide__close" onClick={props.handleCloseModalm2lp}>X</a>
+          </Modal>
+        </div>
     
-        <input
-          className="form-control form-slide__control" 
-          type="radio" 
-          id="m2hp" 
-          name="porosity" 
-          value="MediumToHighPorosity"
-          onClick={props.handleChange}
-        />
-        <label class="form-slide__label" for="lc">Medium to High Porosity</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModalm2hp}>Trigger Modal</a>
-        <Modal 
-          className="form-slide__modal"
-          isOpen={props.showModalm2hp}
-          contentLabel="Minimal Modal Example"
-        >
-          Hair readily absorbs moisture and product, may look dull after a few days, and gets poofy and frizzy in humidity.
-          <a class="form-slide__close" onClick={props.handleCloseModalm2hp}>Close Modal</a>
-        </Modal>
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="m2hp" 
+            name="porosity" 
+            value="MediumToHighPorosity"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="lc">Medium to High Porosity</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModalm2hp}>i</a>
+          <Modal 
+            isOpen={props.showModalm2hp}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Medium to High Porosity
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              Hair readily absorbs moisture and product, may look dull after a few days, and gets poofy and frizzy in humidity.
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModalm2hp}>X</a>
+          </Modal>
+        </div>
       </div>
     </div>
   );
