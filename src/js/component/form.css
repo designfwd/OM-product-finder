@@ -1,3 +1,19 @@
-Button {
-  padding: 20px;
-}
+.form-slide {}
+
+.form-slide__body {}
+
+.form-slide__button {}
+
+.form-slide__control {}
+
+.form-slide__form {}
+
+.form-slide__headline {}
+
+.form-slide__icon {}
+
+.form-slide__label {}
+
+.form-slide__link {}
+
+.form-slide__modal {}
