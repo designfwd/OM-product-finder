@@ -974,14 +974,14 @@ function Step7(props) {
     <React.Fragment>
     <div className="form-group form-slide form-slide--seven">
       {}
-        <img src={`${image}`} />
-      <h2>What's Your Styling Preference?</h2>
-      <div class="copy">
+        <img class="form-slide__icon" src={`${image}`} />
+      <h2 class="form-slide__headline">What's Your Styling Preference?</h2>
+      <div class="copy form-slide__body">
         Which of these profiles best describes your styling routine?
       </div> 
-      <label htmlFor="email">Email</label>
+      <label class="form-slide__label" htmlFor="email">Email</label>
       <input
-        className="form-control"
+        className="form-control form-slide__control"
         id="email"
         name="email"
         type="email"
@@ -990,7 +990,7 @@ function Step7(props) {
         onChange={props.handleChange}
         />      
     </div>
-    <button className="btn btn-success btn-block">Get My Detailed Results!</button>
+    <button className="btn btn-success btn-block form-slide__button form-slide__button--results">Get My Detailed Results!</button>
     </React.Fragment>
   );
 }
