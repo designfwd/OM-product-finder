@@ -499,7 +499,7 @@ function Step1(props) {
   } 
   return(
     <div className="form-group form-slide form-slide--one">
-      <p>Step {props.currentStep} of 6</p> 
+      <p class="form-slide__step">Step {props.currentStep} of 6</p> 
       
       <img class="form-slide__icon" src="./images/icon-hair-curl-pattern.png" />
       <h2 class="form-slide__headline">What's Your Curl Pattern?</h2>
@@ -516,7 +516,7 @@ function Step1(props) {
         onClick={props.handleChange}
       />
       <label for="s2w">Straight To Wavy</label>
-        <a onClick={props.handleOpenModal}>Trigger Modal</a>
+        <a class="form-slide__trigger" onClick={props.handleOpenModal}>Trigger Modal</a>
         <Modal 
            isOpen={props.showModal}
            contentLabel="Minimal Modal Example"
@@ -534,7 +534,7 @@ function Step1(props) {
         onClick={props.handleChange}
       />
       <label class="form-slide__label" for="lc">Loose Curls</label>
-      <a onClick={props.handleOpenModallc}>Trigger Modal</a>
+      <a class="form-slide__trigger" onClick={props.handleOpenModallc}>Trigger Modal</a>
         <Modal
            className="form-slide__modal"
            isOpen={props.showModallc}
@@ -552,7 +552,7 @@ function Step1(props) {
         onClick={props.handleChange}
       />
       <label class="form-slide__label" for="s2w">Tight Curls</label>
-      <a onClick={props.handleOpenModaltc}>Trigger Modal</a>
+      <a class="form-slide__trigger" onClick={props.handleOpenModaltc}>Trigger Modal</a>
         <Modal
            className="form-slide__modal"
            isOpen={props.showModaltc}
@@ -571,49 +571,51 @@ function Step2(props) {
   } 
   return(
     <div className="form-group form-slide form-slide--two">
-      <p>Step {props.currentStep} of 6</p> 
+      <p class="form-slide__step">Step {props.currentStep} of 6</p> 
       
-      <img src="./images/icon-hair-porosity.png" />
-      <h2>What's Your Porosity</h2>
-      <div class="copy">
+      <img class="form-slide__icon" src="./images/icon-hair-porosity.png" />
+      <h2 class="form-slide__headline">What's Your Porosity</h2>
+      <div class="copy form-slide__body">
         Porosity refers to the degree to which your hair is able to absorb moisture and product 
       </div> 
 
       <input
-        className="form-control" 
+        className="form-control form-slide__control" 
         type="radio" 
         id="m2lp" 
         name="porosity" 
         value="MediumToLowPorosity"
         onClick={props.handleChange}
       />
-      <label for="s2w">Medium to Low Porosity</label>
-      <a onClick={props.handleOpenModalm2lp}>Trigger Modal</a>
+      <label class="form-slide__label" for="s2w">Medium to Low Porosity</label>
+      <a class="form-slide__trigger" onClick={props.handleOpenModalm2lp}>Trigger Modal</a>
         <Modal 
+           className="form-slide__modal"
            isOpen={props.showModalm2lp}
            contentLabel="Minimal Modal Example"
         >
           Hair is slow to absorb water and product,  prone to build-up or greasiness, and does not experience a dramatic change in humidity.
-          <a onClick={props.handleCloseModalm2lp}>Close Modal</a>
+          <a class="form-slide__link" onClick={props.handleCloseModalm2lp}>Close Modal</a>
         </Modal>
 
 
       <input
-        className="form-control" 
+        className="form-control form-slide__control" 
         type="radio" 
         id="m2hp" 
         name="porosity" 
         value="MediumToHighPorosity"
         onClick={props.handleChange}
       />
-      <label for="lc">Medium to High Porosity</label>
-      <a onClick={props.handleOpenModalm2hp}>Trigger Modal</a>
+      <label class="form-slide__label" for="lc">Medium to High Porosity</label>
+      <a class="form-slide__trigger" onClick={props.handleOpenModalm2hp}>Trigger Modal</a>
       <Modal 
+           className="form-slide__modal"
            isOpen={props.showModalm2hp}
            contentLabel="Minimal Modal Example"
         >
           Hair readily absorbs moisture and product, may look dull after a few days, and gets poofy and frizzy in humidity.
-          <a onClick={props.handleCloseModalm2hp}>Close Modal</a>
+          <a class="form-slide__link" onClick={props.handleCloseModalm2hp}>Close Modal</a>
         </Modal>      
     </div>
   );
