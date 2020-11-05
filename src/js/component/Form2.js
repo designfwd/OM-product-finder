@@ -950,30 +950,99 @@ function Step7(props) {
   var title = '';
   var link = '';
   var hairType = '';
+  var cottonCandyURLS = [
+    'https://www.originalmoxie.com/cotton-candy-loose-curls-fine/',
+    'https://www.originalmoxie.com/cotton-candy-loose-curls-medium/',
+    'https://www.originalmoxie.com/cotton-candy-loose-curls-coarse/',
+    'https://www.originalmoxie.com/cotton-candy-straight-wavy-coarse/',
+    'https://www.originalmoxie.com/cotton-candy-straight-wavy-medium/',
+    'https://www.originalmoxie.com/cotton-candy-straight-wavy-fine/',
+  ];
+  var mermaidURLS = [
+    'https://www.originalmoxie.com/mermaid-loose-curls-coarse/',
+    'https://www.originalmoxie.com/mermaid-loose-curls-medium/',
+    'https://www.originalmoxie.com/mermaid-loose-curls-fine/',
+    'https://www.originalmoxie.com/mermaid-straight-wavy-coarse/',
+    'https://www.originalmoxie.com/mermaid-straight-wavy-medium/',
+    'https://www.originalmoxie.com/mermaid-straight-wavy-fine/',
+  ];
+  var shapeShifterURLS = [
+    'https://www.originalmoxie.com/shape-shifter-s-curls/',
+    'https://www.originalmoxie.com/shape-shifter-spiral-curls/',
+    'https://www.originalmoxie.com/shape-shifter-single-strand/',
+  ];  
+  var warriorURLS = [
+    'https://www.originalmoxie.com/warrior-queen-s-curls/',
+    'https://www.originalmoxie.com/warrior-queen-spiral-curls/',
+    'https://www.originalmoxie.com/warrior-queen-single-strand/',
+  ]; 
+
   //if curlpattern = straight to wavy and hair perosity = medium to low goes to mermaid
   //if curlpattern = loose curls and perosity = medium to low goes to mermaid
   if((props.curlPattern == 'StraightToWavy' && props.porosity == 'MediumToLowPorosity') ||(props.curlPattern=='LooseCurls' && props.porosity == 'MediumToLowPorosity')){
     image = './images/icon-hair-mermaid.png';
     content = 'Water is your element!  With your natural strength and resilience, length comes easily to you.  It takes just the right mix of moisture and control to awaken and tame your inner waves.  Too much of either will weigh your hair down and hide its natural sheen.';
-    link = 'link-to-mermaid';
+    if(props.curlPattern=='LooseCurls'){
+      if(props.hairTexture == 'Fine')
+        link = mermaidURLS[2];
+      else if(props.hairTexture == 'medium')
+        link = mermaidURLS[1];
+      else 
+        link = mermaidURLS[0];
+    }else if(props.curlPattern == "StraightToWavy"){
+      if(props.hairTexture == 'Fine')
+        link = mermaidURLS[5];
+      else if(props.hairTexture == 'medium')
+        link = mermaidURLS[4];
+      else 
+        link = mermaidURLS[3];
+    }
     hairType = 'The Mermaid™/Merman™';
   }else if(props.curlPattern == 'TightCurls' && props.porosity == 'MediumToHighPorosity'){
     // if curlPattern = Tight Curls && Porosity == MediumToHighPorosity : shape shifter
     image = './images/icon-hair-shapeshifter.png';
     content = 'Change is the only constant with this hair type!  Your tight curls are natural barometers that change with the weather and morph in appearance from wet to dry and in between washes.  Protect your hair from damage and help it look its best with rich moisturizers, strong definers and shine-enhancing sealants.  ';
-    link = 'link-to-shape-shifter';
+
+    if(props.curlShape == 'singleStrand'){
+      link = shapeShifterURLS[2];
+    }else if(props.curlShape == 'spiral')
+      link = shapeShifterURLS[1];
+    else
+      link = shapeShifterURLS[0];
+
     hairType = 'The Shape Shifter™';
-  }else if((props.curlPattern == 'StraightToWavy' && props.porosity == 'MediumToLowPorosity') ||(props.curlPattern=='LooseCurls' && props.porosity == 'MediumToLowPorosity')){
+  }else if((props.curlPattern == 'StraightToWavy' && props.porosity == 'MediumToHighPorosity') ||(props.curlPattern=='LooseCurls' && props.porosity == 'MediumToLowPorosity')){
     // if curlPattern = StraightToWavy && Porosity == MediumToHighPorosity : cotton candy
     // if curlPattern = LooseCurls && Porosity == MediumToLowPorosity : cotton candy
     image = './images/icon-hair-cotton-candy.png';
     content = 'Your hair is like spun sugar that can rise to great heights or melt away in the blink of an eye. Your delicate, changeable waves and loose curls are easily damaged and thrive with a light touch.  Keep your hair healthy, strong, and buoyant with rich moisturizers and lightweight definers and sealers.';
-    link = 'link-to-cotton-candy';
+    if(props.curlPattern=='LooseCurls'){
+      if(props.hairTexture == 'Fine')
+        link = cottonCandyURLS[0];
+      else if(props.hairTexture == 'medium')
+        link = cottonCandyURLS[1];
+      else 
+        link = cottonCandyURLS[2];
+    }else if(props.curlPattern == "StraightToWavy"){
+      if(props.hairTexture == 'Fine')
+        link = cottonCandyURLS[5];
+      else if(props.hairTexture == 'medium')
+        link = cottonCandyURLS[4];
+      else 
+        link = mermacottonCandyURLSidURLS[3];
+    }
     hairType = 'The Cotton Candy Dream™';
   }else{
     image = './images/icon-hair-warrior-queen.png';
     content = 'Your tight curls have a mind of their own and the strength to withstand whatever comes their way.    Selective in its tastes, your hair won’t absorb what doesn’t suit it.  It takes just the right mix of products to reveal the velvety sheen and softness that lie within.';
-    link = 'link-to-warrior-queen';
+
+    if(props.curlShape == 'singleStrand'){
+      link = warriorURLS[2];
+    }else if(props.curlShape == 'spiral')
+      link = warriorURLS[1];
+    else
+      link = warriorURLS[0];
+
     hairType = 'The Warrior Queen™/Warrior King™';
   }
   console.log(`Your registration detail: \n 
