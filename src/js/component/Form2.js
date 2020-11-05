@@ -522,7 +522,7 @@ function Step1(props) {
            contentLabel="Minimal Modal Example"
         >
           Less than one curl per inch.  Hair ranges from perfectly straight to slight texture and is flat to the head when wet. Not much change in length when hair is pulled taught from its natural resting position.
-          <a onClick={props.handleCloseModal}>Close Modal</a>
+          <a class="form-slide__close" onClick={props.handleCloseModal}>Close Modal</a>
         </Modal>
 
       <input
@@ -541,7 +541,7 @@ function Step1(props) {
            contentLabel="Minimal Modal Example"
         >
           One to two curls per inch.  Some length change when hair is pulled taught from its natural resting position. You can easily pull your fingers through your curls when they are dry.
-          <a class="form-slide__link" onClick={props.handleCloseModallc}>Close Modal</a>
+          <a class="form-slide__close" onClick={props.handleCloseModallc}>Close Modal</a>
         </Modal>
       <input
         className="form-control form-slide__control form-slide__control--radio" 
@@ -559,7 +559,7 @@ function Step1(props) {
            contentLabel="Minimal Modal Example"
         >
           More than two curls per inch.  Significant length change when hair is pulled taught from its natural resting position.  Challenging or impossible to pull your fingers through hair once it is and dry.
-          <a class="form-slide__link" onClick={props.handleCloseModaltc}>Close Modal</a>
+          <a class="form-slide__close" onClick={props.handleCloseModaltc}>Close Modal</a>
         </Modal>
     </div>
   );
@@ -595,7 +595,7 @@ function Step2(props) {
            contentLabel="Minimal Modal Example"
         >
           Hair is slow to absorb water and product,  prone to build-up or greasiness, and does not experience a dramatic change in humidity.
-          <a class="form-slide__link" onClick={props.handleCloseModalm2lp}>Close Modal</a>
+          <a class="form-slide__close" onClick={props.handleCloseModalm2lp}>Close Modal</a>
         </Modal>
 
 
@@ -615,7 +615,7 @@ function Step2(props) {
            contentLabel="Minimal Modal Example"
         >
           Hair readily absorbs moisture and product, may look dull after a few days, and gets poofy and frizzy in humidity.
-          <a class="form-slide__link" onClick={props.handleCloseModalm2hp}>Close Modal</a>
+          <a class="form-slide__close" onClick={props.handleCloseModalm2hp}>Close Modal</a>
         </Modal>      
     </div>
   );
@@ -626,65 +626,68 @@ function Step3(props) {
   } 
   return(
     <div className="form-group form-slide form-slide--three">
-      <p>Step {props.currentStep} of 6</p> 
+      <p class="form-slide__step">Step {props.currentStep} of 6</p> 
       
-      <img src="./images/icon-hair-curl-shape.png" />
-      <h2>What's Your Curl Shape?</h2>
-      <div class="copy">
+      <img class="form-slide__icon" src="./images/icon-hair-curl-shape.png" />
+      <h2 class="form-slide__headline">What's Your Curl Shape?</h2>
+      <div class="copy form-slide__body">
         The Three-dimensional appearance of a curl or wave.
       </div> 
 
       <input
-        className="form-control" 
+        className="form-control form-slide__control" 
         type="radio" 
         id="sshape" 
         name="curlShape" 
         value="s-shape"
         onClick={props.handleChange}
       />
-      <label for="sshape">'S' Shape</label>
-      <a onClick={props.handleOpenModalSshaped}>Trigger Modal</a>
+      <label class="form-slide__label" for="sshape">'S' Shape</label>
+      <a class="form-slide__trigger" onClick={props.handleOpenModalSshaped}>Trigger Modal</a>
         <Modal 
+           className="form-slide__modal"
            isOpen={props.showModalSshaped}
            contentLabel="Minimal Modal Example"
         >
           Clear curl ‘families’ that group in a repeating wave pattern.  May be loose or very tight.
-          <a onClick={props.handleCloseModalSshaped}>Close Modal</a>
+          <a class="form-slide__close" onClick={props.handleCloseModalSshaped}>Close Modal</a>
         </Modal>
       <input
-        className="form-control" 
+        className="form-control form-slide__control" 
         type="radio" 
         id="spiral" 
         name="curlShape" 
         value="spiral"
         onClick={props.handleChange}
       />
-      <label for="lc">Spiral</label>
-      <a onClick={props.handleOpenModalSpiral}>Trigger Modal</a>
+      <label class="form-slide__label" for="lc">Spiral</label>
+      <a class="form-slide__trigger" onClick={props.handleOpenModalSpiral}>Trigger Modal</a>
         <Modal 
+           className="form-slide__modal"
            isOpen={props.showModalSpiral}
            contentLabel="Minimal Modal Example"
         >
           Clear curl ‘families’ that that coil in a helix around a central axis. May be loose or very tight.
-          <a onClick={props.handleCloseModalSpiral}>Close Modal</a>
+          <a class="form-slide__close" onClick={props.handleCloseModalSpiral}>Close Modal</a>
         </Modal>
 
       <input
-        className="form-control" 
+        className="form-control form-slide__control" 
         type="radio" 
         id="singleStrand" 
         name="curlShape" 
         value="singleStrand"
         onClick={props.handleChange}
       />
-      <label for="singleStrand">Single Strand</label>
-      <a onClick={props.handleOpenModalSingleStrand}>Trigger Modal</a>
+      <label class="form-slide__label" for="singleStrand">Single Strand</label>
+      <a class="form-slide__trigger" onClick={props.handleOpenModalSingleStrand}>Trigger Modal</a>
         <Modal 
+           className="form-slide__modal"
            isOpen={props.showModalSingleStrand}
            contentLabel="Minimal Modal Example"
         >
           Independent strands that stand out from one another, do not easily group, and may be ‘s’ or spiral shaped. 
-          <a onClick={props.handleCloseModalSinglStrand}>Close Modal</a>
+          <a class="form-slide__close" onClick={props.handleCloseModalSinglStrand}>Close Modal</a>
         </Modal>
     </div>
   );
