@@ -501,14 +501,14 @@ function Step1(props) {
     <div className="form-group form-slide form-slide--one">
       <p>Step {props.currentStep} of 6</p> 
       
-      <img src="./images/icon-hair-curl-pattern.png" />
-      <h2>What's Your Curl Patter?</h2>
-      <div class="copy">
-        The number of curls that occur along a 1” section of hair. Have your hair in <a href="#" target="_blank">locs</a> or a <a href="#" target="_blank">protective style</a>? Click these links for product recommendations. 
+      <img class="form-slide__icon" src="./images/icon-hair-curl-pattern.png" />
+      <h2 class="form-slide__headline">What's Your Curl Pattern?</h2>
+      <div class="copy form-slide__body">
+        The number of curls that occur along a 1” section of hair. Have your hair in <a class="form-slide__link" href="#" target="_blank">locs</a> or a <a href="#" target="_blank">protective style</a>? Click these links for product recommendations. 
       </div> 
 
       <input
-        className="form-control" 
+        className="form-control form-slide__control form-slide__control--radio" 
         type="radio" 
         id="s2w" 
         name="curlPattern" 
@@ -526,38 +526,40 @@ function Step1(props) {
         </Modal>
 
       <input
-        className="form-control" 
+        className="form-control form-slide__control form-slide__control--radio" 
         type="radio" 
         id="lc" 
         name="curlPattern" 
         value="LooseCurls"
         onClick={props.handleChange}
       />
-      <label for="lc">Loose Curls</label>
+      <label class="form-slide__label" for="lc">Loose Curls</label>
       <a onClick={props.handleOpenModallc}>Trigger Modal</a>
-        <Modal 
+        <Modal
+           className="form-slide__modal"
            isOpen={props.showModallc}
            contentLabel="Minimal Modal Example"
         >
           One to two curls per inch.  Some length change when hair is pulled taught from its natural resting position. You can easily pull your fingers through your curls when they are dry.
-          <a onClick={props.handleCloseModallc}>Close Modal</a>
+          <a class="form-slide__link" onClick={props.handleCloseModallc}>Close Modal</a>
         </Modal>
       <input
-        className="form-control" 
+        className="form-control form-slide__control form-slide__control--radio" 
         type="radio" 
         id="tc" 
         name="curlPattern" 
         value="TightCurls"
         onClick={props.handleChange}
       />
-      <label for="s2w">Tight Curls</label>
+      <label class="form-slide__label" for="s2w">Tight Curls</label>
       <a onClick={props.handleOpenModaltc}>Trigger Modal</a>
-        <Modal 
+        <Modal
+           className="form-slide__modal"
            isOpen={props.showModaltc}
            contentLabel="Minimal Modal Example"
         >
           More than two curls per inch.  Significant length change when hair is pulled taught from its natural resting position.  Challenging or impossible to pull your fingers through hair once it is and dry.
-          <a onClick={props.handleCloseModaltc}>Close Modal</a>
+          <a class="form-slide__link" onClick={props.handleCloseModaltc}>Close Modal</a>
         </Modal>
     </div>
   );
