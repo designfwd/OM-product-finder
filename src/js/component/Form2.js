@@ -298,7 +298,7 @@ class MasterForm extends React.Component {
     if(currentStep !==0 && currentStep <= 7){
       return (
         <button 
-          className="btn btn-secondary" 
+          className="btn btn-secondary form-slide__button form-slide__button--prev" 
           type="button" onClick={this._prev}>
         Back
         </button>
@@ -312,7 +312,7 @@ class MasterForm extends React.Component {
     if(currentStep > 0 && currentStep < 7){
       return (
         <button 
-          className="btn btn-primary float-right" 
+          className="btn btn-primary form-slide__button form-slide__button--next" 
           type="button" onClick={this._next}>
         Continue
         </button>        
@@ -326,7 +326,7 @@ class MasterForm extends React.Component {
     if(currentStep == 0){
       return (
         <button 
-          className="btn btn-primary float-right" 
+          className="btn btn-primary form-slide__button form-slide__button--start" 
           type="button" onClick={this._next}>
         Get Started
         </button>        
@@ -339,7 +339,7 @@ class MasterForm extends React.Component {
     return (
       <React.Fragment>
 
-      <form onSubmit={this.handleSubmit}>
+      <form class="form-slide__form" onSubmit={this.handleSubmit}>
       {/* 
           render the form steps and pass required props in
         */}
@@ -485,11 +485,10 @@ function Step0(props) {
     return null
   } 
   return(
-    <div class="content-container">
-      <img src="./images/om-logo-blue-sm.png" />
-      <h2>We speak hair!</h2>
-      <h2>Your hair is talking and we’re listening.</h2>
-      <div class="copy">Healthy hair is happy hair.  Find your Hair Type Personality™ and help your hair live its best life.</div> 
+    <div class="content-container form-slide form-slide--zero">
+      <img class="form-slide__icon" src="./images/om-logo-blue-sm.png" />
+      <h2 class="form-slide__headline">We speak hair!<br/>Your hair is talking and we’re listening.</h2>
+      <div class="copy form-slide__body">Healthy hair is happy hair.  Find your Hair Type Personality™ and help your hair live its best life.</div> 
     </div>
   );
 }
@@ -499,7 +498,7 @@ function Step1(props) {
     return null
   } 
   return(
-    <div className="form-group">
+    <div className="form-group form-slide form-slide--one">
       <p>Step {props.currentStep} of 6</p> 
       
       <img src="./images/icon-hair-curl-pattern.png" />
@@ -569,7 +568,7 @@ function Step2(props) {
     return null
   } 
   return(
-    <div className="form-group">
+    <div className="form-group form-slide form-slide--two">
       <p>Step {props.currentStep} of 6</p> 
       
       <img src="./images/icon-hair-porosity.png" />
@@ -622,7 +621,7 @@ function Step3(props) {
     return null
   } 
   return(
-    <div className="form-group">
+    <div className="form-group form-slide form-slide--three">
       <p>Step {props.currentStep} of 6</p> 
       
       <img src="./images/icon-hair-curl-shape.png" />
@@ -692,7 +691,7 @@ function Step4(props) {
     return null
   } 
   return(
-    <div className="form-group">
+    <div className="form-group form-slide form-slide--four">
       <p>Step {props.currentStep} of 6</p> 
       
       <img src="./images/icon-hair-texture.png" />
@@ -761,7 +760,7 @@ function Step5(props) {
     return null
   } 
   return(
-    <div className="form-group">
+    <div className="form-group form-slide form-slide--five">
       <p>Step {props.currentStep} of 6</p> 
       
       <img src="./images/icon-hair-scalp-condition.png" />
@@ -864,7 +863,7 @@ function Step6(props) {
     return null
   } 
   return(
-    <div className="form-group">
+    <div className="form-group form-slide form-slide--six">
       <p>Step {props.currentStep} of 6</p> 
       
       <img src="./images/icon-hair-styling-preference.png" />
@@ -954,7 +953,7 @@ function Step7(props) {
     image = './images/icon-hair-warrior-queen.png';
   return(
     <React.Fragment>
-    <div className="form-group">
+    <div className="form-group form-slide form-slide--seven">
       {}
         <img src={`${image}`} />
       <h2>What's Your Styling Preference?</h2>
