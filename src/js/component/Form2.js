@@ -879,81 +879,85 @@ function Step6(props) {
   } 
   return(
     <div className="form-group form-slide form-slide--six">
-      <p>Step {props.currentStep} of 6</p> 
+      <p class="form-slide__step">Step {props.currentStep} of 6</p> 
       
-      <img src="./images/icon-hair-styling-preference.png" />
-      <h2>What's Your Styling Preference?</h2>
-      <div class="copy">
+      <img class="form-slide__icon" src="./images/icon-hair-styling-preference.png" />
+      <h2 class="form-slide__headline">What's Your Styling Preference?</h2>
+      <div class="copy form-slide__body">
         Which of these profiles best describes your styling routine?
       </div> 
 
       <input
-        className="form-control" 
+        className="form-control form-slide__control" 
         type="radio" 
         id="nwnr" 
         name="stylingPreference" 
         value="naturalWithNoRefreshing"
         onClick={props.handleChange}
       />
-      <label for="nwnr">Natural with No Refreshing</label>
-      <a onClick={props.handleOpenModalNatWithNoRefreshing}>Trigger Modal</a>
+      <label class="form-slide__label" for="nwnr">Natural with No Refreshing</label>
+      <a class="form-slide__trigger" onClick={props.handleOpenModalNatWithNoRefreshing}>Trigger Modal</a>
         <Modal 
+           className="form-slide__modal"
            isOpen={props.showModalNatWithNoRefreshing}
            contentLabel="Minimal Modal Example"
         >
           No heat styling and minimal post-wash day styling. 
-          <a onClick={props.handleCloseModalNatWithNoRefreshing}>Close Modal</a>
+          <a class="form-slide__close" onClick={props.handleCloseModalNatWithNoRefreshing}>Close Modal</a>
         </Modal>
       <input
-        className="form-control" 
+        className="form-control form-slide__control" 
         type="radio" 
         id="nwsr" 
         name="stylingPreference" 
         value="naturalWithSomeRefreshing"
         onClick={props.handleChange}
       />
-      <label for="nwsr">Natural with Some Refreshing</label>
-      <a onClick={props.handleOpenModalNatWithSomeRefreshing}>Trigger Modal</a>
+      <label class="form-slide__label" for="nwsr">Natural with Some Refreshing</label>
+      <a class="form-slide__trigger" onClick={props.handleOpenModalNatWithSomeRefreshing}>Trigger Modal</a>
         <Modal 
+           className="form-slide__modal"
            isOpen={props.showModalNatWithSomeRefreshing}
            contentLabel="Minimal Modal Example"
         >
           No heat styling with some post-wash day styling to reshape waves and curls
-          <a onClick={props.handleCloseModalNatWithSomeRefreshing}>Close Modal</a>
+          <a class="form-slide__close" onClick={props.handleCloseModalNatWithSomeRefreshing}>Close Modal</a>
         </Modal>
       <input
-        className="form-control" 
+        className="form-control form-slide__control" 
         type="radio" 
         id="ohs" 
         name="stylingPreference" 
         value="occasionalHeatStyling"
         onClick={props.handleChange}
       />
-      <label for="ohs">Occational Heat Styling</label>
-      <a onClick={props.handleOpenModalOccasionalHeat}>Trigger Modal</a>
+      <label class="form-slide__label" for="ohs">Occational Heat Styling</label>
+      <a class="form-slide__trigger" onClick={props.handleOpenModalOccasionalHeat}>Trigger Modal</a>
         <Modal 
+           class="form-slide__modal"
            isOpen={props.showModalOccasionalHeat}
            contentLabel="Minimal Modal Example"
         >
           Hair is blow dried and/or flat ironed once in a while.
-          <a onClick={props.handleCloseModalOccasionalHeat}>Close Modal</a>
+          <a class="form-slide__close" onClick={props.handleCloseModalOccasionalHeat}>Close Modal</a>
         </Modal>
       <input
-        className="form-control" 
+        className="form-control form-slide__control" 
         type="radio" 
         id="volumized" 
         name="stylingPreference" 
         value="volumized"
         onClick={props.handleChange}
       />
-      <label for="volumized">Volumized</label>
-      <a onClick={props.handleOpenModalVolumized}>Trigger Modal</a>
+      <label class="form-slide__label" for="volumized">Volumized</label>
+      <a class="form-slide__trigger" onClick={props.handleOpenModalVolumized}>Trigger Modal</a>
         <Modal 
+           class="form-slide__modal"
            isOpen={props.showModalVolumized}
            contentLabel="Minimal Modal Example"
         >
           Hair is encouraged to fluff up for a soft, full look.
-          <a onClick={props.handleCloseModalVolumized}>Close Modal</a>
+          <a class="form-slide__close" onClick={props.handleCloseModalVolumized}>Close Modal</a>
         </Modal>
     </div>
   );
