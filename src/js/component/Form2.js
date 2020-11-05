@@ -3,7 +3,16 @@ import ReactDOM from "react-dom";
 import Modal from 'react-modal';
 
 import './form.css';
-Modal.setAppElement('#root')
+Modal.setAppElement('#root');
+Modal.defaultStyles = {
+  content: {
+    left: '50%',
+    position: 'absolute',
+    top: '50%',
+    transform: 'translate3D( -50%, -50%, 0 )'
+  }
+};
+
 class MasterForm extends React.Component {
   constructor(props) {
     super(props)
@@ -510,62 +519,85 @@ function Step1(props) {
       </div> 
 
       <div class="form-slide__inputs">
-        <input
-          className="form-control form-slide__control form-slide__control--radio" 
-          type="radio" 
-          id="s2w" 
-          name="curlPattern" 
-          value="StraightToWavy"
-          onClick={props.handleChange}
-        />
-        <label for="s2w">Straight To Wavy</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModal}>
-          Trigger Modal
-        </a>
-        <Modal 
-           isOpen={props.showModal}
-           contentLabel="Minimal Modal Example"
-        >
-          Less than one curl per inch.  Hair ranges from perfectly straight to slight texture and is flat to the head when wet. Not much change in length when hair is pulled taught from its natural resting position.
-          <a class="form-slide__close" onClick={props.handleCloseModal}>Close Modal</a>
-        </Modal>
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="s2w" 
+            name="curlPattern" 
+            value="StraightToWavy"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="s2w">Straight To Wavy</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModal}>
+            i
+          </a>
+          <Modal 
+            isOpen={props.showModal}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Straight to Wavy
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              Less than one curl per inch.  Hair ranges from perfectly straight to slight texture and is flat to the head when wet. Not much change in length when hair is pulled taught from its natural resting position.
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModal}>X</a>
+          </Modal>
+        </div>
 
-        <input
-          className="form-control form-slide__control form-slide__control--radio" 
-          type="radio" 
-          id="lc" 
-          name="curlPattern" 
-          value="LooseCurls"
-          onClick={props.handleChange}
-        />
-        <label class="form-slide__label" for="lc">Loose Curls</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModallc}>Trigger Modal</a>
-        <Modal
-          className="form-slide__modal"
-          isOpen={props.showModallc}
-          contentLabel="Minimal Modal Example"
-        >
-          One to two curls per inch.  Some length change when hair is pulled taught from its natural resting position. You can easily pull your fingers through your curls when they are dry.
-          <a class="form-slide__close" onClick={props.handleCloseModallc}>Close Modal</a>
-        </Modal>
-        <input
-          className="form-control form-slide__control form-slide__control--radio" 
-          type="radio" 
-          id="tc" 
-          name="curlPattern" 
-          value="TightCurls"
-          onClick={props.handleChange}
-        />
-        <label class="form-slide__label" for="s2w">Tight Curls</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModaltc}>Trigger Modal</a>
-        <Modal
-          className="form-slide__modal"
-          isOpen={props.showModaltc}
-          contentLabel="Minimal Modal Example"
-        >
-          More than two curls per inch.  Significant length change when hair is pulled taught from its natural resting position.  Challenging or impossible to pull your fingers through hair once it is and dry.
-          <a class="form-slide__close" onClick={props.handleCloseModaltc}>Close Modal</a>
-        </Modal>
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="lc" 
+            name="curlPattern" 
+            value="LooseCurls"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="lc">Loose Curls</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModallc}>i</a>
+          <Modal
+            isOpen={props.showModallc}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Loose Curls
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              One to two curls per inch.  Some length change when hair is pulled taught from its natural resting position. You can easily pull your fingers through your curls when they are dry.
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModallc}>X</a>
+          </Modal>
+        </div>
+
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="tc" 
+            name="curlPattern" 
+            value="TightCurls"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="s2w">Tight Curls</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModaltc}>i</a>
+          <Modal
+            isOpen={props.showModaltc}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Tight Curls
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              More than two curls per inch.  Significant length change when hair is pulled taught from its natural resting position.  Challenging or impossible to pull your fingers through hair once it is and dry.
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModaltc}>X</a>
+          </Modal>
+        </div>
       </div>
     </div>
   );
@@ -586,43 +618,57 @@ function Step2(props) {
       </div> 
 
       <div class="form-slide__inputs">
-        <input
-          className="form-control form-slide__control" 
-          type="radio" 
-          id="m2lp" 
-          name="porosity" 
-          value="MediumToLowPorosity"
-          onClick={props.handleChange}
-        />
-        <label class="form-slide__label" for="s2w">Medium to Low Porosity</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModalm2lp}>Trigger Modal</a>
-        <Modal 
-          className="form-slide__modal"
-          isOpen={props.showModalm2lp}
-          contentLabel="Minimal Modal Example"
-        >
-          Hair is slow to absorb water and product,  prone to build-up or greasiness, and does not experience a dramatic change in humidity.
-          <a class="form-slide__close" onClick={props.handleCloseModalm2lp}>Close Modal</a>
-        </Modal>
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="m2lp" 
+            name="porosity" 
+            value="MediumToLowPorosity"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="s2w">Medium to Low Porosity</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModalm2lp}>i</a>
+          <Modal 
+            isOpen={props.showModalm2lp}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Medium to Low Porosity
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              Hair is slow to absorb water and product,  prone to build-up or greasiness, and does not experience a dramatic change in humidity.
+            </p>
+              <a class="form-slide__close" onClick={props.handleCloseModalm2lp}>X</a>
+          </Modal>
+        </div>
     
-        <input
-          className="form-control form-slide__control" 
-          type="radio" 
-          id="m2hp" 
-          name="porosity" 
-          value="MediumToHighPorosity"
-          onClick={props.handleChange}
-        />
-        <label class="form-slide__label" for="lc">Medium to High Porosity</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModalm2hp}>Trigger Modal</a>
-        <Modal 
-          className="form-slide__modal"
-          isOpen={props.showModalm2hp}
-          contentLabel="Minimal Modal Example"
-        >
-          Hair readily absorbs moisture and product, may look dull after a few days, and gets poofy and frizzy in humidity.
-          <a class="form-slide__close" onClick={props.handleCloseModalm2hp}>Close Modal</a>
-        </Modal>
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="m2hp" 
+            name="porosity" 
+            value="MediumToHighPorosity"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="lc">Medium to High Porosity</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModalm2hp}>i</a>
+          <Modal 
+            isOpen={props.showModalm2hp}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Medium to High Porosity
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              Hair readily absorbs moisture and product, may look dull after a few days, and gets poofy and frizzy in humidity.
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModalm2hp}>X</a>
+          </Modal>
+        </div>
       </div>
     </div>
   );
@@ -641,61 +687,83 @@ function Step3(props) {
         The Three-dimensional appearance of a curl or wave.
       </div> 
 
-      <input
-        className="form-control form-slide__control" 
-        type="radio" 
-        id="sshape" 
-        name="curlShape" 
-        value="s-shape"
-        onClick={props.handleChange}
-      />
-      <label class="form-slide__label" for="sshape">'S' Shape</label>
-      <a class="form-slide__trigger" onClick={props.handleOpenModalSshaped}>Trigger Modal</a>
+      <div class="form-slide__option">
+        <input
+          className="form-control form-slide__radio" 
+          type="radio" 
+          id="sshape" 
+          name="curlShape" 
+          value="s-shape"
+          onClick={props.handleChange}
+        />
+        <span class="form-slide__control"></span>
+        <label class="form-slide__label" for="sshape">'S' Shape</label>
+        <a class="form-slide__trigger" onClick={props.handleOpenModalSshaped}>i</a>
         <Modal 
-           className="form-slide__modal"
-           isOpen={props.showModalSshaped}
-           contentLabel="Minimal Modal Example"
+          isOpen={props.showModalSshaped}
+          contentLabel="Minimal Modal Example"
         >
-          Clear curl ‘families’ that group in a repeating wave pattern.  May be loose or very tight.
-          <a class="form-slide__close" onClick={props.handleCloseModalSshaped}>Close Modal</a>
+          <h2 class="form-slide__headline form-slide__headline--modal">
+            'S' Shape
+          </h2>
+          <p class="form-slide__body form-slide__body--modal">
+            Clear curl ‘families’ that group in a repeating wave pattern.  May be loose or very tight.
+          </p>
+          <a class="form-slide__close" onClick={props.handleCloseModalSshaped}>X</a>
         </Modal>
-      <input
-        className="form-control form-slide__control" 
-        type="radio" 
-        id="spiral" 
-        name="curlShape" 
-        value="spiral"
-        onClick={props.handleChange}
-      />
-      <label class="form-slide__label" for="lc">Spiral</label>
-      <a class="form-slide__trigger" onClick={props.handleOpenModalSpiral}>Trigger Modal</a>
-        <Modal 
-           className="form-slide__modal"
-           isOpen={props.showModalSpiral}
-           contentLabel="Minimal Modal Example"
-        >
-          Clear curl ‘families’ that that coil in a helix around a central axis. May be loose or very tight.
-          <a class="form-slide__close" onClick={props.handleCloseModalSpiral}>Close Modal</a>
-        </Modal>
+      </div>
 
-      <input
-        className="form-control form-slide__control" 
-        type="radio" 
-        id="singleStrand" 
-        name="curlShape" 
-        value="singleStrand"
-        onClick={props.handleChange}
-      />
-      <label class="form-slide__label" for="singleStrand">Single Strand</label>
-      <a class="form-slide__trigger" onClick={props.handleOpenModalSingleStrand}>Trigger Modal</a>
+      <div class="form-slide__option">
+        <input
+          className="form-control form-slide__radio" 
+          type="radio" 
+          id="spiral" 
+          name="curlShape" 
+          value="spiral"
+          onClick={props.handleChange}
+        />
+        <span class="form-slide__control"></span>
+        <label class="form-slide__label" for="lc">Spiral</label>
+        <a class="form-slide__trigger" onClick={props.handleOpenModalSpiral}>i</a>
         <Modal 
-           className="form-slide__modal"
-           isOpen={props.showModalSingleStrand}
-           contentLabel="Minimal Modal Example"
+          isOpen={props.showModalSpiral}
+          contentLabel="Minimal Modal Example"
         >
-          Independent strands that stand out from one another, do not easily group, and may be ‘s’ or spiral shaped. 
-          <a class="form-slide__close" onClick={props.handleCloseModalSinglStrand}>Close Modal</a>
+          <h2 class="form-slide__headline form-slide__headline--modal">
+            Spiral
+          </h2>
+          <p class="form-slide__body form-slide__body--modal">
+            Clear curl ‘families’ that that coil in a helix around a central axis. May be loose or very tight.
+          </p>
+          <a class="form-slide__close" onClick={props.handleCloseModalSpiral}>X</a>
         </Modal>
+      </div>
+
+      <div class="form-slide__option">
+        <input
+          className="form-control form-slide__radio" 
+          type="radio" 
+          id="singleStrand" 
+          name="curlShape" 
+          value="singleStrand"
+          onClick={props.handleChange}
+        />
+        <span class="form-slide__control"></span>
+        <label class="form-slide__label" for="singleStrand">Single Strand</label>
+        <a class="form-slide__trigger" onClick={props.handleOpenModalSingleStrand}>i</a>
+        <Modal
+          isOpen={props.showModalSingleStrand}
+          contentLabel="Minimal Modal Example"
+        >
+          <h2 class="form-slide__headline form-slide__headline--modal">
+            Single Strand
+          </h2>
+          <p class="form-slide__body form-slide__body--modal">
+            Independent strands that stand out from one another, do not easily group, and may be ‘s’ or spiral shaped. 
+          </p>
+          <a class="form-slide__close" onClick={props.handleCloseModalSinglStrand}>X</a>
+        </Modal>
+      </div>
     </div>
   );
 }
