@@ -1,4 +1,11 @@
-.form-slide {}
+.form-slide {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 1100px;
+  width: calc( 100% - 4rem );
+}
 
 .form-slide__body {}
 
@@ -13,6 +20,8 @@
 .form-slide__headline {}
 
 .form-slide__icon {}
+
+.form-slide__inputs {}
 
 .form-slide__label {}
 
