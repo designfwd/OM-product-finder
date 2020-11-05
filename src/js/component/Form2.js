@@ -239,11 +239,7 @@ class MasterForm extends React.Component {
   handleSubmit = event => {
     event.preventDefault()
     const { email,curlPattern, porosity,curlShape, hairTexture, scalpCondition, stylingPreference } = this.state;
-    //if curlpattern = straight to wavy and hair perosity = medium to low goes to mermaid
-    //if curlpattern = loose curls and perosity = medium to low goes to mermaid
-    if((curlPattern == 'StraightToWavy' && porosity == 'MediumToLowPorosity') ||(curlPattern=='LooseCurls' && porosity == 'MediumToLowPorosity')){
-      alert('mermaid');
-    }
+
     alert(`Your registration detail: \n 
             curlPattern: ${curlPattern} \n 
             porosity: ${porosity} \n
@@ -295,7 +291,7 @@ class MasterForm extends React.Component {
   */
   previousButton() {
     let currentStep = this.state.currentStep;
-    if(currentStep !==0 && currentStep <= 7){
+    if(currentStep !==0 && currentStep < 7){
       return (
         <button 
           className="btn btn-secondary" 
@@ -950,16 +946,55 @@ function Step7(props) {
     return null
   } 
   var image = '';
-  if(props.stylingPreference == "volumized")
+  var content = '';
+  var title = '';
+  var link = '';
+  var hairType = '';
+  //if curlpattern = straight to wavy and hair perosity = medium to low goes to mermaid
+  //if curlpattern = loose curls and perosity = medium to low goes to mermaid
+  if((props.curlPattern == 'StraightToWavy' && props.porosity == 'MediumToLowPorosity') ||(props.curlPattern=='LooseCurls' && props.porosity == 'MediumToLowPorosity')){
+    image = './images/icon-hair-mermaid.png';
+    content = 'Water is your element!  With your natural strength and resilience, length comes easily to you.  It takes just the right mix of moisture and control to awaken and tame your inner waves.  Too much of either will weigh your hair down and hide its natural sheen.';
+    link = 'link-to-mermaid';
+    hairType = 'The Mermaid™/Merman™';
+  }else if(props.curlPattern == 'TightCurls' && props.porosity == 'MediumToHighPorosity'){
+    // if curlPattern = Tight Curls && Porosity == MediumToHighPorosity : shape shifter
+    image = './images/icon-hair-shapeshifter.png';
+    content = 'Change is the only constant with this hair type!  Your tight curls are natural barometers that change with the weather and morph in appearance from wet to dry and in between washes.  Protect your hair from damage and help it look its best with rich moisturizers, strong definers and shine-enhancing sealants.  ';
+    link = 'link-to-shape-shifter';
+    hairType = 'The Shape Shifter™';
+  }else if((props.curlPattern == 'StraightToWavy' && props.porosity == 'MediumToLowPorosity') ||(props.curlPattern=='LooseCurls' && props.porosity == 'MediumToLowPorosity')){
+    // if curlPattern = StraightToWavy && Porosity == MediumToHighPorosity : cotton candy
+    // if curlPattern = LooseCurls && Porosity == MediumToLowPorosity : cotton candy
+    image = './images/icon-hair-cotton-candy.png';
+    content = 'Your hair is like spun sugar that can rise to great heights or melt away in the blink of an eye. Your delicate, changeable waves and loose curls are easily damaged and thrive with a light touch.  Keep your hair healthy, strong, and buoyant with rich moisturizers and lightweight definers and sealers.';
+    link = 'link-to-cotton-candy';
+    hairType = 'The Cotton Candy Dream™';
+  }else{
     image = './images/icon-hair-warrior-queen.png';
+    content = 'Your tight curls have a mind of their own and the strength to withstand whatever comes their way.    Selective in its tastes, your hair won’t absorb what doesn’t suit it.  It takes just the right mix of products to reveal the velvety sheen and softness that lie within.';
+    link = 'link-to-warrior-queen';
+    hairType = 'The Warrior Queen™/Warrior King™';
+  }
+  console.log(`Your registration detail: \n 
+    curlPattern: ${props.curlPattern} \n 
+    porosity: ${props.porosity} \n
+    curlShape: ${props.curlShape} \n
+    hairTexture: ${props.hairTexture}\n
+    scalpCondition: ${props.scalpCondition} \n
+    stylingPreference: ${props.stylingPreference} \n`
+  )
+    
   return(
     <React.Fragment>
     <div className="form-group">
-      {}
+        <img src="./images/Shape-Shifter-Back-2.png" />
+      <div class="content-container">
         <img src={`${image}`} />
-      <h2>What's Your Styling Preference?</h2>
+        <h3>Your Hair Type Personality™ is</h3>
+      <h2>{`${hairType}`}</h2>
       <div class="copy">
-        Which of these profiles best describes your styling routine?
+        {`${content}`}
       </div> 
       <label htmlFor="email">Email</label>
       <input
@@ -970,9 +1005,11 @@ function Step7(props) {
         placeholder="Email Address"
         value={props.email}
         onChange={props.handleChange}
-        />      
+        />
+        </div>
+        <img src="./images/Get-Clean-Back-2.png" />
     </div>
-    <button className="btn btn-success btn-block">Get My Detailed Results!</button>
+    <a className="btn btn-success btn-block" href={`${link}`}>Get My Detailed Results!</a>
     </React.Fragment>
   );
 }
