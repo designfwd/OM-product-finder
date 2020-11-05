@@ -3,7 +3,16 @@ import ReactDOM from "react-dom";
 import Modal from 'react-modal';
 
 import './form.css';
-Modal.setAppElement('#root')
+Modal.setAppElement('#root');
+Modal.defaultStyles = {
+  content: {
+    left: '50%',
+    position: 'absolute',
+    top: '50%',
+    transform: 'translate3D( -50%, -50%, 0 )'
+  }
+};
+
 class MasterForm extends React.Component {
   constructor(props) {
     super(props)
@@ -510,62 +519,85 @@ function Step1(props) {
       </div> 
 
       <div class="form-slide__inputs">
-        <input
-          className="form-control form-slide__control form-slide__control--radio" 
-          type="radio" 
-          id="s2w" 
-          name="curlPattern" 
-          value="StraightToWavy"
-          onClick={props.handleChange}
-        />
-        <label for="s2w">Straight To Wavy</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModal}>
-          Trigger Modal
-        </a>
-        <Modal 
-           isOpen={props.showModal}
-           contentLabel="Minimal Modal Example"
-        >
-          Less than one curl per inch.  Hair ranges from perfectly straight to slight texture and is flat to the head when wet. Not much change in length when hair is pulled taught from its natural resting position.
-          <a class="form-slide__close" onClick={props.handleCloseModal}>Close Modal</a>
-        </Modal>
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="s2w" 
+            name="curlPattern" 
+            value="StraightToWavy"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="s2w">Straight To Wavy</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModal}>
+            i
+          </a>
+          <Modal 
+            isOpen={props.showModal}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Straight to Wavy
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              Less than one curl per inch.  Hair ranges from perfectly straight to slight texture and is flat to the head when wet. Not much change in length when hair is pulled taught from its natural resting position.
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModal}>X</a>
+          </Modal>
+        </div>
 
-        <input
-          className="form-control form-slide__control form-slide__control--radio" 
-          type="radio" 
-          id="lc" 
-          name="curlPattern" 
-          value="LooseCurls"
-          onClick={props.handleChange}
-        />
-        <label class="form-slide__label" for="lc">Loose Curls</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModallc}>Trigger Modal</a>
-        <Modal
-          className="form-slide__modal"
-          isOpen={props.showModallc}
-          contentLabel="Minimal Modal Example"
-        >
-          One to two curls per inch.  Some length change when hair is pulled taught from its natural resting position. You can easily pull your fingers through your curls when they are dry.
-          <a class="form-slide__close" onClick={props.handleCloseModallc}>Close Modal</a>
-        </Modal>
-        <input
-          className="form-control form-slide__control form-slide__control--radio" 
-          type="radio" 
-          id="tc" 
-          name="curlPattern" 
-          value="TightCurls"
-          onClick={props.handleChange}
-        />
-        <label class="form-slide__label" for="s2w">Tight Curls</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModaltc}>Trigger Modal</a>
-        <Modal
-          className="form-slide__modal"
-          isOpen={props.showModaltc}
-          contentLabel="Minimal Modal Example"
-        >
-          More than two curls per inch.  Significant length change when hair is pulled taught from its natural resting position.  Challenging or impossible to pull your fingers through hair once it is and dry.
-          <a class="form-slide__close" onClick={props.handleCloseModaltc}>Close Modal</a>
-        </Modal>
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="lc" 
+            name="curlPattern" 
+            value="LooseCurls"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="lc">Loose Curls</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModallc}>i</a>
+          <Modal
+            isOpen={props.showModallc}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Loose Curls
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              One to two curls per inch.  Some length change when hair is pulled taught from its natural resting position. You can easily pull your fingers through your curls when they are dry.
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModallc}>X</a>
+          </Modal>
+        </div>
+
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="tc" 
+            name="curlPattern" 
+            value="TightCurls"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="s2w">Tight Curls</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModaltc}>i</a>
+          <Modal
+            isOpen={props.showModaltc}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Tight Curls
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              More than two curls per inch.  Significant length change when hair is pulled taught from its natural resting position.  Challenging or impossible to pull your fingers through hair once it is and dry.
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModaltc}>X</a>
+          </Modal>
+        </div>
       </div>
     </div>
   );
