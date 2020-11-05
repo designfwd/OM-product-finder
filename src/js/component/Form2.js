@@ -699,64 +699,67 @@ function Step4(props) {
   } 
   return(
     <div className="form-group form-slide form-slide--four">
-      <p>Step {props.currentStep} of 6</p> 
+      <p class="form-slide__step">Step {props.currentStep} of 6</p> 
       
-      <img src="./images/icon-hair-texture.png" />
-      <h2>What's Your Hair Texture?</h2>
-      <div class="copy">
+      <img class="form-slide__icon" src="./images/icon-hair-texture.png" />
+      <h2 class="form-slide__headline">What's Your Hair Texture?</h2>
+      <div class="copy form-slide__body">
         The width of your individual strands of hair ranging from less than 60 microns to 80 microns in diameter.
       </div> 
 
       <input
-        className="form-control" 
+        className="form-control form-slide__control" 
         type="radio" 
         id="fine" 
         name="hairTexture" 
         value="Fine"
         onClick={props.handleChange}
       />
-      <label for="fine">Fine</label>
-      <a onClick={props.handleOpenModalFine}>Trigger Modal</a>
+      <label class="form-slide__label" for="fine">Fine</label>
+      <a class="form-slide__trigger" onClick={props.handleOpenModalFine}>Trigger Modal</a>
         <Modal 
+           className="form-slide__modal"
            isOpen={props.showModalFine}
            contentLabel="Minimal Modal Example"
         >
           Individual hairs are easy to feel between the fingers and are somewhat soft
-          <a onClick={props.handleCloseModalFine}>Close Modal</a>
+          <a class="form-slide__close" onClick={props.handleCloseModalFine}>Close Modal</a>
         </Modal>
       <input
-        className="form-control" 
+        className="form-control form-slide__control" 
         type="radio" 
         id="medium" 
         name="hairTexture" 
         value="medium"
         onClick={props.handleChange}
       />
-      <label for="medium">Medium</label>
-      <a onClick={props.handleOpenModalMedium}>Trigger Modal</a>
+      <label class="form-slide__label" for="medium">Medium</label>
+      <a class="form-slide__trigger" onClick={props.handleOpenModalMedium}>Trigger Modal</a>
         <Modal 
+           className="form-slide__modal"
            isOpen={props.showModalMedium}
            contentLabel="Minimal Modal Example"
         >
           Individual hairs are easy to feel between the fingers and are somewhat soft
-          <a onClick={props.handleCloseModalMedium}>Close Modal</a>
+          <a class="form-slide__close" onClick={props.handleCloseModalMedium}>Close Modal</a>
         </Modal>
       <input
-        className="form-control" 
+        className="form-control form-slide__control" 
         type="radio" 
         id="coarse" 
         name="hairTexture" 
         value="coarse"
         onClick={props.handleChange}
       />
-      <label for="coarse">Coarse</label>
-      <a onClick={props.handleOpenModalCoarse}>Trigger Modal</a>
+      <label class="form-slide__label" for="coarse">Coarse</label>
+      <a class="form-slide__trigger" onClick={props.handleOpenModalCoarse}>Trigger Modal</a>
         <Modal 
+           className="form-slide__modal"
            isOpen={props.showModalCoarse}
            contentLabel="Minimal Modal Example"
         >
           Individual hairs feel hard and substantial between the fingers.
-          <a onClick={props.handleCloseModalCoarse}>Close Modal</a>
+          <a class="form-slide__close" onClick={props.handleCloseModalCoarse}>Close Modal</a>
         </Modal>
     </div>
   );
