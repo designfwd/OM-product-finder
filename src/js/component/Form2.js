@@ -597,6 +597,7 @@ function Step1(props) {
           <Modal
             isOpen={props.showModallc}
             contentLabel="Minimal Modal Example"
+            parentSelector={() => document.querySelector('#root')}
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Loose Curls
@@ -624,6 +625,7 @@ function Step1(props) {
           <Modal
             isOpen={props.showModaltc}
             contentLabel="Minimal Modal Example"
+            parentSelector={() => document.querySelector('#root')}
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Tight Curls
@@ -801,6 +803,7 @@ function Step3(props) {
           <Modal
             isOpen={props.showModalSingleStrand}
             contentLabel="Minimal Modal Example"
+            parentSelector={() => document.querySelector('#root')}
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Single Strand
@@ -1109,6 +1112,7 @@ function Step6(props) {
           <Modal
             isOpen={props.showModalNatWithNoRefreshing}
             contentLabel="Minimal Modal Example"
+            parentSelector={() => document.querySelector('#root')}
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Natural With No Refreshing
@@ -1136,6 +1140,7 @@ function Step6(props) {
           <Modal
             isOpen={props.showModalNatWithSomeRefreshing}
             contentLabel="Minimal Modal Example"
+            parentSelector={() => document.querySelector('#root')}
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Natural With Some Refreshing
@@ -1163,6 +1168,7 @@ function Step6(props) {
           <Modal
             isOpen={props.showModalOccasionalHeat}
             contentLabel="Minimal Modal Example"
+            parentSelector={() => document.querySelector('#root')}
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Occasional Heat Styling
@@ -1190,6 +1196,7 @@ function Step6(props) {
           <Modal
             isOpen={props.showModalVolumized}
             contentLabel="Minimal Modal Example"
+            parentSelector={() => document.querySelector('#root')}
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Volumized
