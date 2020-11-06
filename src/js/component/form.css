@@ -392,6 +392,12 @@ body,
   width: 60vw;
 }
 
+.ReactModalPortal,
+.ReactModal__Overlay {
+  margin-top: -10rem;
+  position: relative;
+}
+
 .ReactModal__Content.ReactModal__Content--after-open {
   align-content: center;
   background-color: #f5f5f5;
