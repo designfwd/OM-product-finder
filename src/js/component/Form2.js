@@ -267,9 +267,6 @@ class MasterForm extends React.Component {
     let currentStep = this.state.currentStep
     let curlPattern = this.state.curlPattern;
     let porosity = this.state.porosity;
-    this.setState({
-      buttonState : !this.state.buttonState
-    })
 
 
     if(currentStep==1){
@@ -305,7 +302,8 @@ class MasterForm extends React.Component {
       currentStep = currentStep >= 6? 7: currentStep+1;
     }
     this.setState({
-      currentStep: currentStep
+      currentStep: currentStep,
+      buttonState : !this.state.buttonState
     })
   }
     
