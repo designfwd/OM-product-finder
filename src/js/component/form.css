@@ -1,4 +1,10 @@
 body {
+  width: 100%;
+}
+
+body,
+#root {
+  height: 100%;
   margin: 0;
 }
 
@@ -7,7 +13,7 @@ body {
   color: #999;
   display: flex;
   flex-direction: column;
-  margin:  0 auto 8rem;
+  margin:  0 auto;
   max-width: 1100px;
   min-height: 640px;
   position: relative;
@@ -16,14 +22,17 @@ body {
 }
 
 .form-slide__background {
+  bottom: 0;
   display: flex;
-  height: 100vh;
+  height: ( 100% + 4rem );
   justify-content: space-between;
-  margin: 4rem auto;
+  margin: 0 auto;
   max-height: 1100px;
-  max-width: 1280px;
-  overflow: hidden;
+  max-width: 1440px;
+  overflow-x: hidden;
+  overflow-y: visible;
   position: absolute;
+  top: 0;
   width: 100%;
   z-index: -1;
 }
@@ -75,13 +84,13 @@ body {
 }
 
 .form-slide__button--next {
-  bottom: -4rem;
+  bottom: 2rem;
   left: calc( 50% + 1rem );
   position: absolute;
 }
 
 .form-slide__button--prev {
-  bottom: -4rem;
+  bottom: 2rem;
   position: absolute;
   right: calc( 50% + 1rem );
 }
@@ -96,7 +105,7 @@ body {
 
 .form-slide__button--start {
   background-color: #739BC7;
-  bottom: -4rem;
+  bottom: 2rem;
   color: #fff;
   left: 50%;
   transform: translate3d( -50%, 0, 0 );
@@ -149,16 +158,20 @@ body {
 }
 
 .form-slide__decoration {
+  height: 100%;
+  object-fit: cover;
   position: absolute;
-  width: min( 50vw, 420px );
+  width: 80%;
 }
 
 .form-slide__decoration--left {
-  right: 80vw;
+  object-position: right bottom;
+  right: 70vw;
 }
 
 .form-slide__decoration--right {
-  left: 80vw;
+  left: 70vw;
+  object-position: left bottom;
 }
 
 .form-slide__email {
@@ -180,10 +193,13 @@ body {
 }
 
 .form-slide__form {
-  margin: auto;
+  border: 1px solid #ccc;
+  margin: 4rem auto auto;
+  max-height: 1100px;
   max-width: 1440px;
+  padding: 0 0 4rem;
   position: relative;
-  width: 100%;
+  width: calc( 100% - 2px );
 }
 
 .form-slide__headline {
@@ -351,11 +367,11 @@ body {
 
 @media( min-width: 1280px ) {
   .form-slide__decoration--left {
-    right: min( 960px, 80vw );
+    right: 960px;
   }
   
   .form-slide__decoration--right {
-    left: min( 960px, 80vw );
+    left: 960px;
   }
 }
 
@@ -364,6 +380,8 @@ body {
 }
 
 .form-slide--seven {
+  height: 100%;
+  margin: 0 auto;
   max-width: 1440px;
   width: 100%;
 }
