@@ -12,7 +12,6 @@ Modal.defaultStyles = {
     transform: 'translate3D( -50%, -50%, 0 )'
   }
 };
-
 class MasterForm extends React.Component {
   constructor(props) {
     super(props)
@@ -45,7 +44,8 @@ class MasterForm extends React.Component {
       showModalNatWithSomeRefreshing: false,
       showModalOccasionalHeat: false,
       showModalVolumized: false,
-      hairType: '',  
+      hairType: '',
+      buttonState: true,
     }
     //step 1
     this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -88,7 +88,7 @@ class MasterForm extends React.Component {
     this.handleOpenModalSensitive = this.handleOpenModalSensitive.bind(this);
     this.handleCloseModalSensitive = this.handleCloseModalSensitive.bind(this);
     
-    this.handleOpenModalIrritated = this.handleOpenModalIrritated.bind(this);
+    this.handleOpenModalIrritate = this.handleOpenModalIrritated.bind(this);
     this.handleCloseModalIrritated = this.handleCloseModalIrritated.bind(this);
     
     this.handleOpenModalFlaking = this.handleOpenModalFlaking.bind(this);
@@ -239,6 +239,10 @@ class MasterForm extends React.Component {
   }
 
   handleChange = event => {
+    this.setState({
+      buttonState : !this.buttonState
+    })
+    this.forceUpdate();
     const {name, value} = event.target
     this.setState({
       [name]: value
@@ -263,7 +267,35 @@ class MasterForm extends React.Component {
     let currentStep = this.state.currentStep
     let curlPattern = this.state.curlPattern;
     let porosity = this.state.porosity;
+    this.setState({
+      buttonState : !this.state.buttonState
+    })
 
+
+    if(currentStep==1){
+      if(!this.state.curlPattern)
+        return null;
+    }else if(currentStep==2){
+      if(!this.state.porosity)
+        return null;
+
+    }else if (currentStep==3){
+      if(!this.state.curlShape)
+        return null;
+
+    }else if (currentStep==4){
+      if(!this.state.hairTexture)
+        return null;
+
+    }else if(currentStep==5){
+      if(!this.state.scalpCondition)
+        return null;
+
+    }else if(currentStep==6){
+      if(!this.state.stylingPreference)
+        return null;
+
+    }
     if(currentStep == 2) {
       if((curlPattern == 'TightCurls') && (porosity == 'MediumToLowPorosity'))
         currentStep++;
@@ -317,7 +349,7 @@ class MasterForm extends React.Component {
     if(currentStep > 0 && currentStep < 7){
       return (
         <button 
-          className="btn btn-primary form-slide__button form-slide__button--next" 
+          className={`btn btn-primary form-slide__button form-slide__button--next  ${this.state.buttonState ? "active" : "inactive"}`}
           type="button" onClick={this._next}>
         Continue  &rarr;
         </button>        
@@ -368,6 +400,7 @@ class MasterForm extends React.Component {
           handleOpenModallc={this.handleOpenModallc}
           handleCloseModallc={this.handleCloseModallc}
           showModallc={this.state.showModallc}
+          
         />
         <Step2 
           currentStep={this.state.currentStep} 
@@ -482,7 +515,6 @@ class MasterForm extends React.Component {
       );
     }
 }
-
 
 
 function Step0(props) {
