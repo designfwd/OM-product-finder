@@ -102,6 +102,19 @@ body {
   transform: translate3d( -50%, 0, 0 );
 }
 
+.form-slide__button.inactive {
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  color: #fff;
+  cursor: text;
+}
+
+.form-slide__button.inactive:hover {
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  color: #fff;
+}
+
 .form-slide__content {
   margin: auto;
 }
