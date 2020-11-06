@@ -394,13 +394,13 @@ body,
 
 .ReactModalPortal,
 .ReactModal__Overlay {
-  margin-top: -10rem;
   position: relative;
 }
 
 .ReactModal__Content.ReactModal__Content--after-open {
   align-content: center;
   background-color: #f5f5f5;
+  margin-top: -16rem;
   padding: 4.5rem;
   display: flex;
   flex-direction: column;
