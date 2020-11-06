@@ -557,6 +557,7 @@ function Step1(props) {
             name="curlPattern" 
             value="StraightToWavy"
             onClick={props.handleChange}
+            checked={props.curlPattern == 'StraightToWavy'}
           />
           <span class="form-slide__control"></span>
           <label class="form-slide__label" for="s2w">Straight To Wavy</label>
@@ -585,6 +586,7 @@ function Step1(props) {
             name="curlPattern" 
             value="LooseCurls"
             onClick={props.handleChange}
+            checked={props.curlPattern == 'LooseCurls'}
           />
           <span class="form-slide__control"></span>
           <label class="form-slide__label" for="lc">Loose Curls</label>
@@ -611,6 +613,7 @@ function Step1(props) {
             name="curlPattern" 
             value="TightCurls"
             onClick={props.handleChange}
+            checked={props.curlPattern == 'TightCurls'}
           />
           <span class="form-slide__control"></span>
           <label class="form-slide__label" for="s2w">Tight Curls</label>
@@ -656,6 +659,7 @@ function Step2(props) {
             name="porosity" 
             value="MediumToLowPorosity"
             onClick={props.handleChange}
+            checked={props.porosity == 'MediumToLowPorosity'}
           />
           <span class="form-slide__control"></span>
           <label class="form-slide__label" for="s2w">Medium to Low Porosity</label>
@@ -682,6 +686,7 @@ function Step2(props) {
             name="porosity" 
             value="MediumToHighPorosity"
             onClick={props.handleChange}
+            checked={props.porosity == 'MediumToHighPorosity'}
           />
           <span class="form-slide__control"></span>
           <label class="form-slide__label" for="lc">Medium to High Porosity</label>
@@ -726,6 +731,7 @@ function Step3(props) {
             name="curlShape" 
             value="s-shape"
             onClick={props.handleChange}
+            checked={props.curlShape == 's-shape'}
           />
           <span class="form-slide__control"></span>
           <label class="form-slide__label" for="sshape">'S' Shape</label>
@@ -752,6 +758,7 @@ function Step3(props) {
             name="curlShape" 
             value="spiral"
             onClick={props.handleChange}
+            checked={props.curlShape == 'spiral'}
           />
           <span class="form-slide__control"></span>
           <label class="form-slide__label" for="lc">Spiral</label>
@@ -778,6 +785,7 @@ function Step3(props) {
             name="curlShape" 
             value="singleStrand"
             onClick={props.handleChange}
+            checked={props.curlShape == 'singleStrand'}
           />
           <span class="form-slide__control"></span>
           <label class="form-slide__label" for="singleStrand">Single Strand</label>
@@ -823,6 +831,7 @@ function Step4(props) {
             name="hairTexture" 
             value="Fine"
             onClick={props.handleChange}
+            checked={props.hairTexture == 'Fine'}
           />
           <span class="form-slide__control"></span>
           <label class="form-slide__label" for="fine">Fine</label>
@@ -849,6 +858,7 @@ function Step4(props) {
             name="hairTexture" 
             value="medium"
             onClick={props.handleChange}
+            checked={props.hairTexture == 'medium'}
           />
           <span class="form-slide__control"></span>
           <label class="form-slide__label" for="medium">Medium</label>
@@ -875,6 +885,7 @@ function Step4(props) {
             name="hairTexture" 
             value="coarse"
             onClick={props.handleChange}
+            checked={props.hairTexture == 'coarse'}
           />
           <span class="form-slide__control"></span>
           <label class="form-slide__label" for="coarse">Coarse</label>
@@ -920,6 +931,7 @@ function Step5(props) {
             name="scalpCondition" 
             value="sensitive"
             onClick={props.handleChange}
+            checked={props.scalpCondition == 'sensitive'}
           />
           <span class="form-slide__control"></span>
           <label class="form-slide__label" for="sensitive">Sensitive</label>
@@ -946,6 +958,7 @@ function Step5(props) {
             name="scalpCondition" 
             value="irritated"
             onClick={props.handleChange}
+            checked={props.scalpCondition == 'irritated'}
           />
           <span class="form-slide__control"></span>
           <label class="form-slide__label" for="irritated">Irritated</label>
@@ -972,6 +985,7 @@ function Step5(props) {
             name="scalpCondition" 
             value="flaking"
             onClick={props.handleChange}
+            checked={props.scalpCondition == 'irritated'}
           />
           <span class="form-slide__control"></span>
           <label class="form-slide__label" for="flaking">Flaking</label>
@@ -998,6 +1012,7 @@ function Step5(props) {
             name="scalpCondition" 
             value="tight"
             onClick={props.handleChange}
+            checked={props.scalpCondition == 'tight'}
           />
           <span class="form-slide__control"></span>
           <label class="form-slide__label" for="tight">Tight</label>
@@ -1024,6 +1039,7 @@ function Step5(props) {
             name="scalpCondition" 
             value="supple"
             onClick={props.handleChange}
+            checked={props.scalpCondition == 'supple'}
           />
           <span class="form-slide__control"></span>
           <label class="form-slide__label" for="supple">Supple</label>
@@ -1069,6 +1085,7 @@ function Step6(props) {
             name="stylingPreference" 
             value="naturalWithNoRefreshing"
             onClick={props.handleChange}
+            checked={props.stylingPreference == 'naturalWithNoRefreshing'}
           />
           <span class="form-slide__control"></span>
           <label class="form-slide__label" for="nwnr">Natural with No Refreshing</label>
@@ -1095,6 +1112,7 @@ function Step6(props) {
             name="stylingPreference" 
             value="naturalWithSomeRefreshing"
             onClick={props.handleChange}
+            checked={props.stylingPreference == 'naturalWithSomeRefreshing'}
           />
           <span class="form-slide__control"></span>
           <label class="form-slide__label" for="nwsr">Natural with Some Refreshing</label>
@@ -1121,6 +1139,7 @@ function Step6(props) {
             name="stylingPreference" 
             value="occasionalHeatStyling"
             onClick={props.handleChange}
+            checked={props.stylingPreference == 'occasionalHeatStyling'}
           />
           <span class="form-slide__control"></span>
           <label class="form-slide__label" for="ohs">Occasional Heat Styling</label>
@@ -1147,6 +1166,7 @@ function Step6(props) {
             name="stylingPreference" 
             value="volumized"
             onClick={props.handleChange}
+            checked={props.stylingPreference == 'volumized'}
           />
           <span class="form-slide__control"></span>
           <label class="form-slide__label" for="volumized">Volumized</label>
