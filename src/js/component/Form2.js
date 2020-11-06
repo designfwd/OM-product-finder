@@ -521,7 +521,7 @@ function Step0(props) {
   } 
   return(
     <div class="content-container form-slide form-slide--zero">
-      <img class="form-slide__icon" src="./images/om-logo-blue-sm.png" />
+      <img class="form-slide__icon" src="https://www.originalmoxie.com/templates/__custom/images/om-logo-blue-sm.png" />
       <h2 class="form-slide__headline">
         We speak hair!<br/>Your hair is talking and we’re listening.
       </h2>
@@ -540,7 +540,7 @@ function Step1(props) {
     <div className="form-group form-slide form-slide--one">
       <p class="form-slide__step">Step {props.currentStep} of 6</p>
 
-      <img class="form-slide__icon" src="./images/icon-hair-curl-pattern.png" />
+      <img class="form-slide__icon" src="https://www.originalmoxie.com/templates/__custom/images/icon-hair-curl-pattern.png" />
       <h2 class="form-slide__headline">
         What's Your Curl Pattern?
       </h2>
@@ -641,7 +641,7 @@ function Step2(props) {
     <div className="form-group form-slide form-slide--two">
       <p class="form-slide__step">Step {props.currentStep} of 6</p> 
 
-      <img class="form-slide__icon" src="./images/icon-hair-porosity.png" />
+      <img class="form-slide__icon" src="https://www.originalmoxie.com/templates/__custom/images/icon-hair-porosity.png" />
       <h2 class="form-slide__headline">What's Your Porosity</h2>
       <div class="copy form-slide__body">
         Porosity refers to the degree to which your hair is able to absorb moisture and product 
@@ -711,7 +711,7 @@ function Step3(props) {
     <div className="form-group form-slide form-slide--three">
       <p class="form-slide__step">Step {props.currentStep} of 6</p> 
       
-      <img class="form-slide__icon" src="./images/icon-hair-curl-shape.png" />
+      <img class="form-slide__icon" src="https://www.originalmoxie.com/templates/__custom/images/icon-hair-curl-shape.png" />
       <h2 class="form-slide__headline">What's Your Curl Shape?</h2>
       <div class="copy form-slide__body">
         The Three-dimensional appearance of a curl or wave.
@@ -808,7 +808,7 @@ function Step4(props) {
     <div className="form-group form-slide form-slide--four">
       <p class="form-slide__step">Step {props.currentStep} of 6</p> 
 
-      <img class="form-slide__icon" src="./images/icon-hair-texture.png" />
+      <img class="form-slide__icon" src="https://www.originalmoxie.com/templates/__custom/images/icon-hair-texture.png" />
       <h2 class="form-slide__headline">What's Your Hair Texture?</h2>
       <div class="copy form-slide__body">
         The width of your individual strands of hair ranging from less than 60 microns to 80 microns in diameter.
@@ -905,7 +905,7 @@ function Step5(props) {
     <div className="form-group form-slide form-slide--five">
       <p class="form-slide__step">Step {props.currentStep} of 6</p> 
       
-      <img class="form-slide__icon" src="./images/icon-hair-scalp-condition.png" />
+      <img class="form-slide__icon" src="https://www.originalmoxie.com/templates/__custom/images/icon-hair-scalp-condition.png" />
       <h2 class="form-slide__headline">What's Your Scalp Condition?</h2>
       <div class="copy form-slide__body">
         Healthy scalps grow healthy Hair! Pick the option that best describes your scalp
@@ -1054,7 +1054,7 @@ function Step6(props) {
     <div className="form-group form-slide form-slide--six">
       <p class="form-slide__step">Step {props.currentStep} of 6</p> 
       
-      <img class="form-slide__icon" src="./images/icon-hair-styling-preference.png" />
+      <img class="form-slide__icon" src="https://www.originalmoxie.com/templates/__custom/images/icon-hair-styling-preference.png" />
       <h2 class="form-slide__headline">What's Your Styling Preference?</h2>
       <div class="copy form-slide__body">
         Which of these profiles best describes your styling routine?
@@ -1208,7 +1208,7 @@ function Step7(props) {
   //if curlpattern = straight to wavy and hair perosity = medium to low goes to mermaid
   //if curlpattern = loose curls and perosity = medium to low goes to mermaid
   if((props.curlPattern == 'StraightToWavy' && props.porosity == 'MediumToLowPorosity') ||(props.curlPattern=='LooseCurls' && props.porosity == 'MediumToLowPorosity')){
-    image = './images/icon-hair-mermaid.png';
+    image = 'https://www.originalmoxie.com/templates/__custom/images/icon-hair-mermaid.png';
     content = 'Water is your element!  With your natural strength and resilience, length comes easily to you.  It takes just the right mix of moisture and control to awaken and tame your inner waves.  Too much of either will weigh your hair down and hide its natural sheen.';
     if(props.curlPattern=='LooseCurls'){
       if(props.hairTexture == 'Fine')
@@ -1228,7 +1228,7 @@ function Step7(props) {
     hairType = 'The Mermaid™/Merman™';
   }else if(props.curlPattern == 'TightCurls' && props.porosity == 'MediumToHighPorosity'){
     // if curlPattern = Tight Curls && Porosity == MediumToHighPorosity : shape shifter
-    image = './images/icon-hair-shapeshifter.png';
+    image = 'https://www.originalmoxie.com/templates/__custom/images/icon-hair-shapeshifter.png';
     content = 'Change is the only constant with this hair type!  Your tight curls are natural barometers that change with the weather and morph in appearance from wet to dry and in between washes.  Protect your hair from damage and help it look its best with rich moisturizers, strong definers and shine-enhancing sealants.  ';
 
     if(props.curlShape == 'singleStrand'){
@@ -1242,7 +1242,7 @@ function Step7(props) {
   }else if((props.curlPattern == 'StraightToWavy' && props.porosity == 'MediumToHighPorosity') ||(props.curlPattern=='LooseCurls' && props.porosity == 'MediumToLowPorosity')){
     // if curlPattern = StraightToWavy && Porosity == MediumToHighPorosity : cotton candy
     // if curlPattern = LooseCurls && Porosity == MediumToLowPorosity : cotton candy
-    image = './images/icon-hair-cotton-candy.png';
+    image = 'https://www.originalmoxie.com/templates/__custom/images/icon-hair-cotton-candy.png';
     content = 'Your hair is like spun sugar that can rise to great heights or melt away in the blink of an eye. Your delicate, changeable waves and loose curls are easily damaged and thrive with a light touch.  Keep your hair healthy, strong, and buoyant with rich moisturizers and lightweight definers and sealers.';
     if(props.curlPattern=='LooseCurls'){
       if(props.hairTexture == 'Fine')
@@ -1261,7 +1261,7 @@ function Step7(props) {
     }
     hairType = 'The Cotton Candy Dream™';
   }else{
-    image = './images/icon-hair-warrior-queen.png';
+    image = 'https://www.originalmoxie.com/templates/__custom/images/icon-hair-warrior-queen.png';
     content = 'Your tight curls have a mind of their own and the strength to withstand whatever comes their way.    Selective in its tastes, your hair won’t absorb what doesn’t suit it.  It takes just the right mix of products to reveal the velvety sheen and softness that lie within.';
 
     if(props.curlShape == 'singleStrand'){
@@ -1286,8 +1286,8 @@ function Step7(props) {
     <React.Fragment>
       <div className="form-group form-slide form-slide--seven form-slide--final">
         <div class="form-slide__background">
-          <img class="form-slide__decoration form-slide__decoration--left" src="./images/Shape-Shifter-Back.png" />
-          <img class="form-slide__decoration form-slide__decoration--right" src="./images/Get-Clean-Back.png" />  
+          <img class="form-slide__decoration form-slide__decoration--left" src="https://www.originalmoxie.com/templates/__custom/images/Shape-Shifter-Back.png" />
+          <img class="form-slide__decoration form-slide__decoration--right" src="https://www.originalmoxie.com/templates/__custom/images/Get-Clean-Back.png" />  
         </div>
         <div class="form-slide__foreground">
           <div class="content-container form-slide__content">
