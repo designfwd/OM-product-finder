@@ -1253,30 +1253,34 @@ function Step7(props) {
   return(
     <React.Fragment>
       <div className="form-group form-slide form-slide--seven form-slide--final">
-        <img class="form-slide__decoration form-slide__decoration--left" src="./images/Shape-Shifter-Back-2.png" />
-        <div class="content-container form-slide__content">
-          <img class="form-slide__icon" src={`${image}`} />
-          <h3 class="form-slide__subhead">Your Hair Type Personality™ is</h3>
-          <h2 class="form-slide__headline">{`${hairType}`}</h2>
-          <div class="copy form-slide__body">
-            {`${content}`}
-          </div> 
-
-          <div class="form-slide__inputs form-slide__inputs--email">
-            <label class="form-slide__label form-slide__label--email" htmlFor="email">Email</label>
-            <input
-              className="form-control form-slide__email"
-              id="email"
-              name="email"
-              type="email"
-              placeholder="Email Address"
-              value={props.email}
-              onChange={props.handleChange}
-            />
-          </div>
+        <div class="form-slide__background">
+          <img class="form-slide__decoration form-slide__decoration--left" src="./images/Shape-Shifter-Back.png" />
+          <img class="form-slide__decoration form-slide__decoration--right" src="./images/Get-Clean-Back.png" />  
         </div>
-        <img class="form-slide__decoration form-slide__decoration--right" src="./images/Get-Clean-Back-2.png" />   
-        <a class="btn btn-success btn-block form-slide__button form-slide__button--submit" href={`${link}`}>Get My Detailed Results!</a>
+        <div class="form-slide__foreground">
+          <div class="content-container form-slide__content">
+            <img class="form-slide__icon" src={`${image}`} />
+            <h3 class="form-slide__subhead">Your Hair Type Personality™ is</h3>
+            <h2 class="form-slide__headline">{`${hairType}`}</h2>
+            <div class="copy form-slide__body">
+              {`${content}`}
+            </div> 
+
+            <div class="form-slide__inputs form-slide__inputs--email">
+              <label class="form-slide__label form-slide__label--email" htmlFor="email">Email</label>
+              <input
+                className="form-control form-slide__email"
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Email Address"
+                value={props.email}
+                onChange={props.handleChange}
+              />
+            </div>
+          </div> 
+          <a class="btn btn-success btn-block form-slide__button form-slide__button--submit" href={`${link}`}>Get My Detailed Results!</a>
+        </div>
       </div>
     </React.Fragment>
   );
