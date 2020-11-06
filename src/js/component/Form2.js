@@ -569,9 +569,7 @@ function Step1(props) {
           <Modal 
             isOpen={props.showModal}
             contentLabel="Straight to Wavy"
-            parentSelector={
-              () => document.getElementById("root")
-            }
+            parentSelector={() => document.querySelector('#root')}
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Straight to Wavy
@@ -672,9 +670,7 @@ function Step2(props) {
           <Modal 
             isOpen={props.showModalm2lp}
             contentLabel="Medium to Low Porosity"
-            parentSelector={
-              () => document.getElementById("root")
-            }
+            parentSelector={() => document.querySelector('#root')}
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Medium to Low Porosity
@@ -702,9 +698,7 @@ function Step2(props) {
           <Modal 
             isOpen={props.showModalm2hp}
             contentLabel="Medium to High Porosity"
-            parentSelector={
-              () => document.getElementById("root")
-            }
+            parentSelector={() => document.querySelector('#root')}
             
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
@@ -751,9 +745,7 @@ function Step3(props) {
           <Modal 
             isOpen={props.showModalSshaped}
             contentLabel="S-Shaped"
-            parentSelector={
-              () => document.getElementById("root")
-            }
+            parentSelector={() => document.querySelector('#root')}
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               'S' Shape
@@ -781,9 +773,7 @@ function Step3(props) {
           <Modal 
             isOpen={props.showModalSpiral}
             contentLabel="Spiral"
-            parentSelector={
-              () => document.getElementById("root")
-            }
+            parentSelector={() => document.querySelector('#root')}
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Spiral
@@ -857,9 +847,7 @@ function Step4(props) {
           <Modal 
             isOpen={props.showModalFine}
             contentLabel="Fine"
-            parentSelector={
-              () => document.getElementById("root")
-            }
+            parentSelector={() => document.querySelector('#root')}
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Fine
@@ -887,9 +875,7 @@ function Step4(props) {
           <Modal 
             isOpen={props.showModalMedium}
             contentLabel="Medium"
-            parentSelector={
-              () => document.getElementById("root")
-            }
+            parentSelector={() => document.querySelector('#root')}
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Medium
@@ -917,9 +903,7 @@ function Step4(props) {
           <Modal 
             isOpen={props.showModalCoarse}
             contentLabel="Coarse"
-            parentSelector={
-              () => document.getElementById("root")
-            }
+            parentSelector={() => document.querySelector('#root')}
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Coarse
@@ -966,9 +950,7 @@ function Step5(props) {
           <Modal 
             isOpen={props.showModalSensitive}
             contentLabel="Sensitive"
-            parentSelector={
-              () => document.getElementById("root")
-            }
+            parentSelector={() => document.querySelector('#root')}
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Sensitive
@@ -996,9 +978,7 @@ function Step5(props) {
           <Modal 
             isOpen={props.showModalIrritated}
             contentLabel="Irritated"
-            parentSelector={
-              () => document.getElementById("root")
-            }
+            parentSelector={() => document.querySelector('#root')}
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Irritated
@@ -1026,9 +1006,7 @@ function Step5(props) {
           <Modal 
             isOpen={props.showModalFlaking}
             contentLabel="Flaking"
-            parentSelector={
-              () => document.getElementById("root")
-            }
+            parentSelector={() => document.querySelector('#root')}
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Flaking
@@ -1056,9 +1034,7 @@ function Step5(props) {
           <Modal 
             isOpen={props.showModalTightDry}
             contentLabel="Tight"
-            parentSelector={
-              () => document.getElementById("root")
-            }
+            parentSelector={() => document.querySelector('#root')}
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Tight
@@ -1086,9 +1062,7 @@ function Step5(props) {
           <Modal 
             isOpen={props.showModalSupple}
             contentLabel="Supple"
-            parentSelector={
-              () => document.getElementById("root")
-            }
+            parentSelector={() => document.querySelector('#root')}
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Supple
