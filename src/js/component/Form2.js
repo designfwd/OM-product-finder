@@ -8,10 +8,12 @@ Modal.defaultStyles = {
   content: {
     left: '50%',
     position: 'absolute',
-    top: '100%',
+    top: '50%',
     transform: 'translate3D( -50%, -50%, 0 )'
   }
 };
+
+
 class MasterForm extends React.Component {
   constructor(props) {
     super(props)
@@ -566,7 +568,10 @@ function Step1(props) {
           </a>
           <Modal 
             isOpen={props.showModal}
-            contentLabel="Minimal Modal Example"
+            contentLabel="Straight to Wavy"
+            parentSelector={
+              () => document.getElementById("root")
+            }
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Straight to Wavy
@@ -666,7 +671,10 @@ function Step2(props) {
           <a class="form-slide__trigger" onClick={props.handleOpenModalm2lp}>i</a>
           <Modal 
             isOpen={props.showModalm2lp}
-            contentLabel="Minimal Modal Example"
+            contentLabel="Medium to Low Porosity"
+            parentSelector={
+              () => document.getElementById("root")
+            }
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Medium to Low Porosity
@@ -693,7 +701,11 @@ function Step2(props) {
           <a class="form-slide__trigger" onClick={props.handleOpenModalm2hp}>i</a>
           <Modal 
             isOpen={props.showModalm2hp}
-            contentLabel="Minimal Modal Example"
+            contentLabel="Medium to High Porosity"
+            parentSelector={
+              () => document.getElementById("root")
+            }
+            
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Medium to High Porosity
@@ -738,7 +750,10 @@ function Step3(props) {
           <a class="form-slide__trigger" onClick={props.handleOpenModalSshaped}>i</a>
           <Modal 
             isOpen={props.showModalSshaped}
-            contentLabel="Minimal Modal Example"
+            contentLabel="S-Shaped"
+            parentSelector={
+              () => document.getElementById("root")
+            }
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               'S' Shape
@@ -765,7 +780,10 @@ function Step3(props) {
           <a class="form-slide__trigger" onClick={props.handleOpenModalSpiral}>i</a>
           <Modal 
             isOpen={props.showModalSpiral}
-            contentLabel="Minimal Modal Example"
+            contentLabel="Spiral"
+            parentSelector={
+              () => document.getElementById("root")
+            }
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Spiral
@@ -838,7 +856,10 @@ function Step4(props) {
           <a class="form-slide__trigger" onClick={props.handleOpenModalFine}>i</a>
           <Modal 
             isOpen={props.showModalFine}
-            contentLabel="Minimal Modal Example"
+            contentLabel="Fine"
+            parentSelector={
+              () => document.getElementById("root")
+            }
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Fine
@@ -865,7 +886,10 @@ function Step4(props) {
           <a class="form-slide__trigger" onClick={props.handleOpenModalMedium}>i</a>
           <Modal 
             isOpen={props.showModalMedium}
-            contentLabel="Minimal Modal Example"
+            contentLabel="Medium"
+            parentSelector={
+              () => document.getElementById("root")
+            }
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Medium
@@ -892,7 +916,10 @@ function Step4(props) {
           <a class="form-slide__trigger" onClick={props.handleOpenModalCoarse}>i</a>
           <Modal 
             isOpen={props.showModalCoarse}
-            contentLabel="Minimal Modal Example"
+            contentLabel="Coarse"
+            parentSelector={
+              () => document.getElementById("root")
+            }
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Coarse
@@ -938,7 +965,10 @@ function Step5(props) {
           <a class="form-slide__trigger" onClick={props.handleOpenModalSensitive}>i</a>
           <Modal 
             isOpen={props.showModalSensitive}
-            contentLabel="Minimal Modal Example"
+            contentLabel="Sensitive"
+            parentSelector={
+              () => document.getElementById("root")
+            }
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Sensitive
@@ -965,7 +995,10 @@ function Step5(props) {
           <a class="form-slide__trigger" onClick={props.handleOpenModalIrritated}>i</a>
           <Modal 
             isOpen={props.showModalIrritated}
-            contentLabel="Minimal Modal Example"
+            contentLabel="Irritated"
+            parentSelector={
+              () => document.getElementById("root")
+            }
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Irritated
@@ -992,7 +1025,10 @@ function Step5(props) {
           <a class="form-slide__trigger" onClick={props.handleOpenModalFlaking}>i</a>
           <Modal 
             isOpen={props.showModalFlaking}
-            contentLabel="Minimal Modal Example"
+            contentLabel="Flaking"
+            parentSelector={
+              () => document.getElementById("root")
+            }
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Flaking
@@ -1019,7 +1055,10 @@ function Step5(props) {
           <a class="form-slide__trigger" onClick={props.handleOpenModalTightDry}>i</a>
           <Modal 
             isOpen={props.showModalTightDry}
-            contentLabel="Minimal Modal Example"
+            contentLabel="Tight"
+            parentSelector={
+              () => document.getElementById("root")
+            }
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Tight
@@ -1046,7 +1085,10 @@ function Step5(props) {
           <a class="form-slide__trigger" onClick={props.handleOpenModalSupple}>i</a>
           <Modal 
             isOpen={props.showModalSupple}
-            contentLabel="Minimal Modal Example"
+            contentLabel="Supple"
+            parentSelector={
+              () => document.getElementById("root")
+            }
           >
             <h2 class="form-slide__headline form-slide__headline--modal">
               Supple
