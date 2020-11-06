@@ -1001,7 +1001,7 @@ function Step5(props) {
             name="scalpCondition" 
             value="flaking"
             onClick={props.handleChange}
-            checked={props.scalpCondition == 'irritated'}
+            checked={props.scalpCondition == 'flaking'}
           />
           <span class="form-slide__control"></span>
           <label class="form-slide__label" for="flaking">Flaking</label>
