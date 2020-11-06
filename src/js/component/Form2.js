@@ -687,82 +687,84 @@ function Step3(props) {
         The Three-dimensional appearance of a curl or wave.
       </div> 
 
-      <div class="form-slide__option">
-        <input
-          className="form-control form-slide__radio" 
-          type="radio" 
-          id="sshape" 
-          name="curlShape" 
-          value="s-shape"
-          onClick={props.handleChange}
-        />
-        <span class="form-slide__control"></span>
-        <label class="form-slide__label" for="sshape">'S' Shape</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModalSshaped}>i</a>
-        <Modal 
-          isOpen={props.showModalSshaped}
-          contentLabel="Minimal Modal Example"
-        >
-          <h2 class="form-slide__headline form-slide__headline--modal">
-            'S' Shape
-          </h2>
-          <p class="form-slide__body form-slide__body--modal">
-            Clear curl ‘families’ that group in a repeating wave pattern.  May be loose or very tight.
-          </p>
-          <a class="form-slide__close" onClick={props.handleCloseModalSshaped}>X</a>
-        </Modal>
-      </div>
+      <div class="form-slide__inputs">
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="sshape" 
+            name="curlShape" 
+            value="s-shape"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="sshape">'S' Shape</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModalSshaped}>i</a>
+          <Modal 
+            isOpen={props.showModalSshaped}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              'S' Shape
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              Clear curl ‘families’ that group in a repeating wave pattern.  May be loose or very tight.
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModalSshaped}>X</a>
+          </Modal>
+        </div>
 
-      <div class="form-slide__option">
-        <input
-          className="form-control form-slide__radio" 
-          type="radio" 
-          id="spiral" 
-          name="curlShape" 
-          value="spiral"
-          onClick={props.handleChange}
-        />
-        <span class="form-slide__control"></span>
-        <label class="form-slide__label" for="lc">Spiral</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModalSpiral}>i</a>
-        <Modal 
-          isOpen={props.showModalSpiral}
-          contentLabel="Minimal Modal Example"
-        >
-          <h2 class="form-slide__headline form-slide__headline--modal">
-            Spiral
-          </h2>
-          <p class="form-slide__body form-slide__body--modal">
-            Clear curl ‘families’ that that coil in a helix around a central axis. May be loose or very tight.
-          </p>
-          <a class="form-slide__close" onClick={props.handleCloseModalSpiral}>X</a>
-        </Modal>
-      </div>
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="spiral" 
+            name="curlShape" 
+            value="spiral"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="lc">Spiral</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModalSpiral}>i</a>
+          <Modal 
+            isOpen={props.showModalSpiral}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Spiral
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              Clear curl ‘families’ that that coil in a helix around a central axis. May be loose or very tight.
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModalSpiral}>X</a>
+          </Modal>
+        </div>
 
-      <div class="form-slide__option">
-        <input
-          className="form-control form-slide__radio" 
-          type="radio" 
-          id="singleStrand" 
-          name="curlShape" 
-          value="singleStrand"
-          onClick={props.handleChange}
-        />
-        <span class="form-slide__control"></span>
-        <label class="form-slide__label" for="singleStrand">Single Strand</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModalSingleStrand}>i</a>
-        <Modal
-          isOpen={props.showModalSingleStrand}
-          contentLabel="Minimal Modal Example"
-        >
-          <h2 class="form-slide__headline form-slide__headline--modal">
-            Single Strand
-          </h2>
-          <p class="form-slide__body form-slide__body--modal">
-            Independent strands that stand out from one another, do not easily group, and may be ‘s’ or spiral shaped. 
-          </p>
-          <a class="form-slide__close" onClick={props.handleCloseModalSinglStrand}>X</a>
-        </Modal>
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="singleStrand" 
+            name="curlShape" 
+            value="singleStrand"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="singleStrand">Single Strand</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModalSingleStrand}>i</a>
+          <Modal
+            isOpen={props.showModalSingleStrand}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Single Strand
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              Independent strands that stand out from one another, do not easily group, and may be ‘s’ or spiral shaped. 
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModalSinglStrand}>X</a>
+          </Modal>
+        </div>
       </div>
     </div>
   );
@@ -1239,7 +1241,7 @@ function Step7(props) {
     else
       link = warriorURLS[0];
 
-    hairType = 'The Warrior Queen™/Warrior King™';
+    hairType = 'The Warrior Queen™ / Warrior King™';
   }
   console.log(`Your registration detail: \n 
     curlPattern: ${props.curlPattern} \n 
@@ -1267,7 +1269,6 @@ function Step7(props) {
             </div> 
 
             <div class="form-slide__inputs form-slide__inputs--email">
-              <label class="form-slide__label form-slide__label--email" htmlFor="email">Email</label>
               <input
                 className="form-control form-slide__email"
                 id="email"
