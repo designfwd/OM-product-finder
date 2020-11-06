@@ -783,62 +783,83 @@ function Step4(props) {
       </div> 
 
       <div class="form-slide__inputs">
-        <input
-          className="form-control form-slide__control" 
-          type="radio" 
-          id="fine" 
-          name="hairTexture" 
-          value="Fine"
-          onClick={props.handleChange}
-        />
-        <label class="form-slide__label" for="fine">Fine</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModalFine}>Trigger Modal</a>
-        <Modal 
-          className="form-slide__modal"
-          isOpen={props.showModalFine}
-          contentLabel="Minimal Modal Example"
-        >
-          Individual hairs are easy to feel between the fingers and are somewhat soft
-          <a class="form-slide__close" onClick={props.handleCloseModalFine}>Close Modal</a>
-        </Modal>
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="fine" 
+            name="hairTexture" 
+            value="Fine"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="fine">Fine</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModalFine}>i</a>
+          <Modal 
+            isOpen={props.showModalFine}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Fine
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              Individual hairs are easy to feel between the fingers and are somewhat soft
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModalFine}>X</a>
+          </Modal>
+        </div>
 
-        <input
-          className="form-control form-slide__control" 
-          type="radio" 
-          id="medium" 
-          name="hairTexture" 
-          value="medium"
-          onClick={props.handleChange}
-        />
-        <label class="form-slide__label" for="medium">Medium</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModalMedium}>Trigger Modal</a>
-        <Modal 
-          className="form-slide__modal"
-          isOpen={props.showModalMedium}
-          contentLabel="Minimal Modal Example"
-        >
-          Individual hairs are easy to feel between the fingers and are somewhat soft
-          <a class="form-slide__close" onClick={props.handleCloseModalMedium}>Close Modal</a>
-        </Modal>
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="medium" 
+            name="hairTexture" 
+            value="medium"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="medium">Medium</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModalMedium}>i</a>
+          <Modal 
+            isOpen={props.showModalMedium}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Medium
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              Individual hairs are easy to feel between the fingers and are somewhat soft
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModalMedium}>X</a>
+          </Modal>
+        </div>
 
-        <input
-          className="form-control form-slide__control" 
-          type="radio" 
-          id="coarse" 
-          name="hairTexture" 
-          value="coarse"
-          onClick={props.handleChange}
-        />
-        <label class="form-slide__label" for="coarse">Coarse</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModalCoarse}>Trigger Modal</a>
-        <Modal 
-          className="form-slide__modal"
-          isOpen={props.showModalCoarse}
-          contentLabel="Minimal Modal Example"
-        >
-          Individual hairs feel hard and substantial between the fingers.
-          <a class="form-slide__close" onClick={props.handleCloseModalCoarse}>Close Modal</a>
-        </Modal>
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="coarse" 
+            name="hairTexture" 
+            value="coarse"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="coarse">Coarse</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModalCoarse}>i</a>
+          <Modal 
+            isOpen={props.showModalCoarse}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Coarse
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              Individual hairs feel hard and substantial between the fingers.
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModalCoarse}>X</a>
+          </Modal>
+        </div>
       </div>
     </div>
   );
@@ -859,100 +880,135 @@ function Step5(props) {
       </div> 
 
       <div class="form-slide__inputs">
-        <input
-          className="form-control form-slide__control" 
-          type="radio" 
-          id="sensitive" 
-          name="scalpCondition" 
-          value="sensitive"
-          onClick={props.handleChange}
-        />
-        <label class="form-slide__label" for="sensitive">Sensitive</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModalSensitive}>Trigger Modal</a>
-        <Modal 
-          className="form-slide__modal"
-          isOpen={props.showModalSensitive}
-          contentLabel="Minimal Modal Example"
-        >
-          Sore feeling, even when not restricted in a tight style.
-          <a class="form-slide__close" onClick={props.handleCloseModalSensitive}>Close Modal</a>
-        </Modal>
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="sensitive" 
+            name="scalpCondition" 
+            value="sensitive"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="sensitive">Sensitive</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModalSensitive}>i</a>
+          <Modal 
+            isOpen={props.showModalSensitive}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Sensitive
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              Sore feeling, even when not restricted in a tight style.
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModalSensitive}>X</a>
+          </Modal>
+        </div>
 
-        <input
-          className="form-control form-slide__control" 
-          type="radio" 
-          id="irritated" 
-          name="scalpCondition" 
-          value="irritated"
-          onClick={props.handleChange}
-        />
-        <label class="form-slide__label" for="irritated">Irritated</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModalIrritated}>Trigger Modal</a>
-        <Modal 
-          className="form-slide__modal"
-          isOpen={props.showModalIrritated}
-          contentLabel="Minimal Modal Example"
-        >
-          Visible redness and itching.
-          <a class="form-slide__close" onClick={props.handleCloseModalIrritated}>Close Modal</a>
-        </Modal>
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="irritated" 
+            name="scalpCondition" 
+            value="irritated"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="irritated">Irritated</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModalIrritated}>i</a>
+          <Modal 
+            isOpen={props.showModalIrritated}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Irritated
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              Visible redness and itching.
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModalIrritated}>X</a>
+          </Modal>
+        </div>
 
-        <input
-          className="form-control form-slide__control" 
-          type="radio" 
-          id="flaking" 
-          name="scalpCondition" 
-          value="flaking"
-          onClick={props.handleChange}
-        />
-        <label class="form-slide__label" for="flaking">Flaking</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModalFlaking}>Trigger Modal</a>
-        <Modal 
-          className="form-slide__modal"
-          isOpen={props.showModalFlaking}
-          contentLabel="Minimal Modal Example"
-        >
-          Light colored flakes originating from the scalp (not product build up).
-          <a class="form-slide__close" onClick={props.handleCloseModalFlaking}>Close Modal</a>
-        </Modal>
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="flaking" 
+            name="scalpCondition" 
+            value="flaking"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="flaking">Flaking</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModalFlaking}>i</a>
+          <Modal 
+            isOpen={props.showModalFlaking}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Flaking
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              Light colored flakes originating from the scalp (not product build up).
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModalFlaking}>X</a>
+          </Modal>
+        </div>
 
-        <input
-          className="form-control form-slide__control" 
-          type="radio" 
-          id="tight" 
-          name="scalpCondition" 
-          value="tight"
-          onClick={props.handleChange}
-        />
-        <label class="form-slide__label" for="tight">Tight</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModalTightDry}>Trigger Modal</a>
-        <Modal 
-          className="form-slide__modal"
-          isOpen={props.showModalTightDry}
-          contentLabel="Minimal Modal Example"
-        >
-          Scalp does not move easily over the skull and feels almost glued down.
-          <a class="form-slide__close" onClick={props.handleCloseModalTightDry}>Close Modal</a>
-        </Modal>
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="tight" 
+            name="scalpCondition" 
+            value="tight"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="tight">Tight</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModalTightDry}>i</a>
+          <Modal 
+            isOpen={props.showModalTightDry}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Tight
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              Scalp does not move easily over the skull and feels almost glued down.
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModalTightDry}>X</a>
+          </Modal>
+        </div>
 
-        <input
-          className="form-control form-slide__control" 
-          type="radio" 
-          id="supple" 
-          name="scalpCondition" 
-          value="supple"
-          onClick={props.handleChange}
-        />
-        <label class="form-slide__label" for="supple">Supple</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModalSupple}>Trigger Modal</a>
-        <Modal 
-          className="form-slide__modal"
-          isOpen={props.showModalSupple}
-          contentLabel="Minimal Modal Example"
-        >
-          Scalp moves easily over the skull and has some give when pressed with fingertips.
-          <a class="form-slide__close" onClick={props.handleCloseModalSupple}>Close Modal</a>
-        </Modal>      
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="supple" 
+            name="scalpCondition" 
+            value="supple"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="supple">Supple</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModalSupple}>i</a>
+          <Modal 
+            isOpen={props.showModalSupple}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Supple
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              Scalp moves easily over the skull and has some give when pressed with fingertips.
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModalSupple}>X</a>
+          </Modal>      
+        </div>
       </div>
     </div>
   );
@@ -973,81 +1029,109 @@ function Step6(props) {
       </div> 
 
       <div class="form-slide__inputs">
-        <input
-          className="form-control form-slide__control" 
-          type="radio" 
-          id="nwnr" 
-          name="stylingPreference" 
-          value="naturalWithNoRefreshing"
-          onClick={props.handleChange}
-        />
-        <label class="form-slide__label" for="nwnr">Natural with No Refreshing</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModalNatWithNoRefreshing}>Trigger Modal</a>
-        <Modal 
-          className="form-slide__modal"
-          isOpen={props.showModalNatWithNoRefreshing}
-          contentLabel="Minimal Modal Example"
-        >
-          No heat styling and minimal post-wash day styling. 
-          <a class="form-slide__close" onClick={props.handleCloseModalNatWithNoRefreshing}>Close Modal</a>
-        </Modal>
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="nwnr" 
+            name="stylingPreference" 
+            value="naturalWithNoRefreshing"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="nwnr">Natural with No Refreshing</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModalNatWithNoRefreshing}>i</a>
+          <Modal
+            isOpen={props.showModalNatWithNoRefreshing}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Natural With No Refreshing
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              No heat styling and minimal post-wash day styling. 
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModalNatWithNoRefreshing}>X</a>
+          </Modal>
+        </div>
 
-        <input
-          className="form-control form-slide__control" 
-          type="radio" 
-          id="nwsr" 
-          name="stylingPreference" 
-          value="naturalWithSomeRefreshing"
-          onClick={props.handleChange}
-        />
-        <label class="form-slide__label" for="nwsr">Natural with Some Refreshing</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModalNatWithSomeRefreshing}>Trigger Modal</a>
-        <Modal 
-          className="form-slide__modal"
-          isOpen={props.showModalNatWithSomeRefreshing}
-          contentLabel="Minimal Modal Example"
-        >
-          No heat styling with some post-wash day styling to reshape waves and curls
-          <a class="form-slide__close" onClick={props.handleCloseModalNatWithSomeRefreshing}>Close Modal</a>
-        </Modal>
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="nwsr" 
+            name="stylingPreference" 
+            value="naturalWithSomeRefreshing"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="nwsr">Natural with Some Refreshing</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModalNatWithSomeRefreshing}>i</a>
+          <Modal
+            isOpen={props.showModalNatWithSomeRefreshing}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Natural With Some Refreshing
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              No heat styling with some post-wash day styling to reshape waves and curls
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModalNatWithSomeRefreshing}>X</a>
+          </Modal>
+        </div>
 
-        <input
-          className="form-control form-slide__control" 
-          type="radio" 
-          id="ohs" 
-          name="stylingPreference" 
-          value="occasionalHeatStyling"
-          onClick={props.handleChange}
-        />
-        <label class="form-slide__label" for="ohs">Occational Heat Styling</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModalOccasionalHeat}>Trigger Modal</a>
-        <Modal 
-          class="form-slide__modal"
-          isOpen={props.showModalOccasionalHeat}
-          contentLabel="Minimal Modal Example"
-        >
-          Hair is blow dried and/or flat ironed once in a while.
-          <a class="form-slide__close" onClick={props.handleCloseModalOccasionalHeat}>Close Modal</a>
-        </Modal>
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="ohs" 
+            name="stylingPreference" 
+            value="occasionalHeatStyling"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="ohs">Occasional Heat Styling</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModalOccasionalHeat}>i</a>
+          <Modal
+            isOpen={props.showModalOccasionalHeat}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Occasional Heat Styling
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              Hair is blow dried and/or flat ironed once in a while.
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModalOccasionalHeat}>X</a>
+          </Modal>
+        </div>
 
-        <input
-          className="form-control form-slide__control" 
-          type="radio" 
-          id="volumized" 
-          name="stylingPreference" 
-          value="volumized"
-          onClick={props.handleChange}
-        />
-        <label class="form-slide__label" for="volumized">Volumized</label>
-        <a class="form-slide__trigger" onClick={props.handleOpenModalVolumized}>Trigger Modal</a>
-        <Modal 
-          class="form-slide__modal"
-          isOpen={props.showModalVolumized}
-          contentLabel="Minimal Modal Example"
-        >
-          Hair is encouraged to fluff up for a soft, full look.
-          <a class="form-slide__close" onClick={props.handleCloseModalVolumized}>Close Modal</a>
-        </Modal>
+        <div class="form-slide__option">
+          <input
+            className="form-control form-slide__radio" 
+            type="radio" 
+            id="volumized" 
+            name="stylingPreference" 
+            value="volumized"
+            onClick={props.handleChange}
+          />
+          <span class="form-slide__control"></span>
+          <label class="form-slide__label" for="volumized">Volumized</label>
+          <a class="form-slide__trigger" onClick={props.handleOpenModalVolumized}>i</a>
+          <Modal
+            isOpen={props.showModalVolumized}
+            contentLabel="Minimal Modal Example"
+          >
+            <h2 class="form-slide__headline form-slide__headline--modal">
+              Volumized
+            </h2>
+            <p class="form-slide__body form-slide__body--modal">
+              Hair is encouraged to fluff up for a soft, full look.
+            </p>
+            <a class="form-slide__close" onClick={props.handleCloseModalVolumized}>X</a>
+          </Modal>
+        </div>
       </div>
     </div>
   );
@@ -1168,33 +1252,32 @@ function Step7(props) {
     
   return(
     <React.Fragment>
+      <div className="form-group form-slide form-slide--seven form-slide--final">
+        <img class="form-slide__decoration form-slide__decoration--left" src="./images/Shape-Shifter-Back-2.png" />
+        <div class="content-container form-slide__content">
+          <img class="form-slide__icon" src={`${image}`} />
+          <h3 class="form-slide__subhead">Your Hair Type Personality™ is</h3>
+          <h2 class="form-slide__headline">{`${hairType}`}</h2>
+          <div class="copy form-slide__body">
+            {`${content}`}
+          </div> 
 
-<div className="form-group form-slide form-slide--seven">
-        <img src="./images/Shape-Shifter-Back-2.png" />
-      <div class="content-container">
-      <img class="form-slide__icon" src={`${image}`} />
-        <h3>Your Hair Type Personality™ is</h3>
-      <h2 class="form-slide__headline">{`${hairType}`}</h2>
-      <div class="copy form-slide__body">
-        {`${content}`}
-      </div> 
-
-      <div class="form-slide__inputs">
-        <label class="form-slide__label" htmlFor="email">Email</label>
-        <input
-          className="form-control form-slide__control"
-          id="email"
-          name="email"
-          type="email"
-          placeholder="Email Address"
-          value={props.email}
-          onChange={props.handleChange}
-        />
+          <div class="form-slide__inputs form-slide__inputs--email">
+            <label class="form-slide__label form-slide__label--email" htmlFor="email">Email</label>
+            <input
+              className="form-control form-slide__email"
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Email Address"
+              value={props.email}
+              onChange={props.handleChange}
+            />
+          </div>
+        </div>
+        <img class="form-slide__decoration form-slide__decoration--right" src="./images/Get-Clean-Back-2.png" />   
+        <a class="btn btn-success btn-block form-slide__button form-slide__button--submit" href={`${link}`}>Get My Detailed Results!</a>
       </div>
-        <img src="./images/Get-Clean-Back-2.png" />   
-    </div>
-      <a href={`${link}`} className="btn btn-success btn-block form-slide__button form-slide__button--results">Get My Detailed Results!</a>
-    </div>
     </React.Fragment>
   );
 }
