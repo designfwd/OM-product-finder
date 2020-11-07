@@ -90,7 +90,7 @@ class MasterForm extends React.Component {
     this.handleOpenModalSensitive = this.handleOpenModalSensitive.bind(this);
     this.handleCloseModalSensitive = this.handleCloseModalSensitive.bind(this);
     
-    this.handleOpenModalIrritate = this.handleOpenModalIrritated.bind(this);
+    this.handleOpenModalIrritated = this.handleOpenModalIrritated.bind(this);
     this.handleCloseModalIrritated = this.handleCloseModalIrritated.bind(this);
     
     this.handleOpenModalFlaking = this.handleOpenModalFlaking.bind(this);
@@ -856,7 +856,7 @@ function Step4(props) {
               Fine
             </h2>
             <p class="form-slide__body form-slide__body--modal">
-              Individual hairs are easy to feel between the fingers and are somewhat soft
+            Individual hairs are very soft – almost undetectable between the fingers.
             </p>
             <a class="form-slide__close" onClick={props.handleCloseModalFine}>X</a>
           </Modal>
@@ -884,7 +884,7 @@ function Step4(props) {
               Medium
             </h2>
             <p class="form-slide__body form-slide__body--modal">
-              Individual hairs are easy to feel between the fingers and are somewhat soft
+              Individual hairs are easy to feel between the fingers and are somewhat soft.
             </p>
             <a class="form-slide__close" onClick={props.handleCloseModalMedium}>X</a>
           </Modal>
@@ -1146,7 +1146,7 @@ function Step6(props) {
               Natural With Some Refreshing
             </h2>
             <p class="form-slide__body form-slide__body--modal">
-              No heat styling with some post-wash day styling to reshape waves and curls
+              No heat styling with some post-wash day styling to reshape waves and curls.
             </p>
             <a class="form-slide__close" onClick={props.handleCloseModalNatWithSomeRefreshing}>X</a>
           </Modal>
@@ -1300,7 +1300,7 @@ function Step7(props) {
       else if(props.hairTexture == 'medium')
         link = cottonCandyURLS[4];
       else 
-        link = mermacottonCandyURLSidURLS[3];
+        link = cottonCandyURLS[3];
     }
     hairType = 'The Cotton Candy Dream™';
   }else{
