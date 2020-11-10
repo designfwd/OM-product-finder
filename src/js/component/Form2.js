@@ -296,7 +296,7 @@ class MasterForm extends React.Component {
 
     }
     if(currentStep == 2) {
-      if((curlPattern == 'TightCurls') && (porosity == 'MediumToLowPorosity'))
+      if((curlPattern == 'TightCurls'))
         currentStep++;
       else
         currentStep +=2;
@@ -830,7 +830,7 @@ function Step4(props) {
       <img class="form-slide__icon" src="https://www.originalmoxie.com/templates/__custom/images/icon-hair-texture.png" />
       <h2 class="form-slide__headline">What's Your Hair Texture?</h2>
       <div class="copy form-slide__body">
-        The width of your individual strands of hair ranging from less than 60 microns to 80 microns in diameter.
+      The width of your individual strands of hair, which can range from less than 60 microns to 80 microns in diameter.
       </div> 
 
       <div class="form-slide__inputs">
@@ -1282,7 +1282,7 @@ function Step7(props) {
       link = shapeShifterURLS[0];
 
     hairType = 'The Shape Shifter™';
-  }else if((props.curlPattern == 'StraightToWavy' && props.porosity == 'MediumToHighPorosity') ||(props.curlPattern=='LooseCurls' && props.porosity == 'MediumToLowPorosity')){
+  }else if((props.curlPattern == 'StraightToWavy' && props.porosity == 'MediumToHighPorosity') ||(props.curlPattern=='LooseCurls' && props.porosity == 'MediumToHighPorosity')){
     // if curlPattern = StraightToWavy && Porosity == MediumToHighPorosity : cotton candy
     // if curlPattern = LooseCurls && Porosity == MediumToLowPorosity : cotton candy
     image = 'https://www.originalmoxie.com/templates/__custom/images/icon-hair-cotton-candy.png';
