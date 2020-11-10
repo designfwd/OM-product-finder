@@ -90,7 +90,7 @@ class MasterForm extends React.Component {
     this.handleOpenModalSensitive = this.handleOpenModalSensitive.bind(this);
     this.handleCloseModalSensitive = this.handleCloseModalSensitive.bind(this);
     
-    this.handleOpenModalIrritate = this.handleOpenModalIrritated.bind(this);
+    this.handleOpenModalIrritated = this.handleOpenModalIrritated.bind(this);
     this.handleCloseModalIrritated = this.handleCloseModalIrritated.bind(this);
     
     this.handleOpenModalFlaking = this.handleOpenModalFlaking.bind(this);
@@ -114,6 +114,8 @@ class MasterForm extends React.Component {
     
     this.handleOpenModalVolumized = this.handleOpenModalVolumized.bind(this);
     this.handleCloseModalVolumized = this.handleCloseModalVolumized.bind(this);
+
+    this.jumpEnd = this.jumpEnd.bind(this);
   }
   //open modals
   handleOpenModal () {
@@ -240,6 +242,15 @@ class MasterForm extends React.Component {
     this.setState({ showModalVolumized: false });
   }
 
+  jumpEnd = event => {
+    console.log(event.target.dataset.extra);
+    this.setState({
+      currentStep: 7,
+      hairType: event.target.dataset.extra
+    })
+    //this.forceUpdate();
+  }
+
   handleChange = event => {
     this.setState({
       buttonState : !this.buttonState
@@ -268,9 +279,7 @@ class MasterForm extends React.Component {
   _next = () => {
     let currentStep = this.state.currentStep
     let curlPattern = this.state.curlPattern;
-    let porosity = this.state.porosity;
-
-
+    let buttonState = !this.state.buttonState;
     if(currentStep==1){
       if(!this.state.curlPattern)
         return null;
@@ -296,7 +305,7 @@ class MasterForm extends React.Component {
 
     }
     if(currentStep == 2) {
-      if((curlPattern == 'TightCurls') && (porosity == 'MediumToLowPorosity'))
+      if((curlPattern == 'TightCurls'))
         currentStep++;
       else
         currentStep +=2;
@@ -305,7 +314,7 @@ class MasterForm extends React.Component {
     }
     this.setState({
       currentStep: currentStep,
-      buttonState : !this.state.buttonState
+      buttonState : buttonState
     })
   }
     
@@ -323,7 +332,8 @@ class MasterForm extends React.Component {
       currentStep = currentStep <= 1? 1: currentStep - 1
     }    
     this.setState({
-      currentStep: currentStep
+      currentStep: currentStep,
+      buttonState : true
     })
   }
 
@@ -332,7 +342,7 @@ class MasterForm extends React.Component {
   */
   previousButton() {
     let currentStep = this.state.currentStep;
-    if(currentStep !==0 && currentStep < 7){
+    if(currentStep > 1 && currentStep < 7){
       return (
         <button 
           className="btn btn-secondary form-slide__button form-slide__button--prev" 
@@ -400,7 +410,8 @@ class MasterForm extends React.Component {
           handleOpenModallc={this.handleOpenModallc}
           handleCloseModallc={this.handleCloseModallc}
           showModallc={this.state.showModallc}
-          
+
+          jumpEnd={this.jumpEnd}
         />
         <Step2 
           currentStep={this.state.currentStep} 
@@ -505,6 +516,7 @@ class MasterForm extends React.Component {
           curlShape={this.state.curlShape}
           porosity={this.state.porosity}
           curlPattern={this.state.curlPattern}
+          hairType={this.state.hairType}
         />        
         {this.getStarted()}
         {this.previousButton()}
@@ -547,7 +559,7 @@ function Step1(props) {
         What's Your Curl Pattern?
       </h2>
       <div class="copy form-slide__body">
-        The number of curls that occur along a 1” section of hair. Have your hair in <a class="form-slide__link" href="#" target="_blank">locs</a> or a <a class="form-slide__link" href="#" target="_blank">protective style</a>? Click these links for product recommendations. 
+        The number of curls that occur along a 1” section of hair. Have your hair in <a class="form-slide__link" data-extra="Locs" onClick={props.jumpEnd}>locs</a> or a <a class="form-slide__link" data-extra="Protective Styles" onClick={props.jumpEnd}>protective style</a>? Click these links for product recommendations. 
       </div> 
 
       <div class="form-slide__inputs">
@@ -830,7 +842,7 @@ function Step4(props) {
       <img class="form-slide__icon" src="https://www.originalmoxie.com/templates/__custom/images/icon-hair-texture.png" />
       <h2 class="form-slide__headline">What's Your Hair Texture?</h2>
       <div class="copy form-slide__body">
-        The width of your individual strands of hair ranging from less than 60 microns to 80 microns in diameter.
+      The width of your individual strands of hair, which can range from less than 60 microns to 80 microns in diameter.
       </div> 
 
       <div class="form-slide__inputs">
@@ -856,7 +868,7 @@ function Step4(props) {
               Fine
             </h2>
             <p class="form-slide__body form-slide__body--modal">
-              Individual hairs are easy to feel between the fingers and are somewhat soft
+            Individual hairs are very soft – almost undetectable between the fingers.
             </p>
             <a class="form-slide__close" onClick={props.handleCloseModalFine}>X</a>
           </Modal>
@@ -884,7 +896,7 @@ function Step4(props) {
               Medium
             </h2>
             <p class="form-slide__body form-slide__body--modal">
-              Individual hairs are easy to feel between the fingers and are somewhat soft
+              Individual hairs are easy to feel between the fingers and are somewhat soft.
             </p>
             <a class="form-slide__close" onClick={props.handleCloseModalMedium}>X</a>
           </Modal>
@@ -1146,7 +1158,7 @@ function Step6(props) {
               Natural With Some Refreshing
             </h2>
             <p class="form-slide__body form-slide__body--modal">
-              No heat styling with some post-wash day styling to reshape waves and curls
+              No heat styling with some post-wash day styling to reshape waves and curls.
             </p>
             <a class="form-slide__close" onClick={props.handleCloseModalNatWithSomeRefreshing}>X</a>
           </Modal>
@@ -1247,10 +1259,19 @@ function Step7(props) {
     'https://www.originalmoxie.com/warrior-queen-spiral-curls/',
     'https://www.originalmoxie.com/warrior-queen-single-strand/',
   ]; 
+  if(props.hairType)
+    hairType = props.hairType
 
+  if(hairType == 'Locs'){
+    content = 'Whether coiled, crocheted, or palm-rolled, locs need holistic care for optimal health and growth.  Each of our highly-concentrated formulations is packed with nutrition to feed your locs and nourish your scalp with gentle, sulfate-free cleansing, intensive deep conditioning, and moisturizing leave-ins.';
+    link = 'https://www.originalmoxie.com/locs/';
+  }else if(hairType == 'Protective Styles'){
+    content = 'Protect your crown with products that go deep to nourish your hair and scalp from the inside out.  Whether it’s on display in braids or tucked beneath a wig, we provide everything your hair needs be healthy and happy every step of the way.';
+    link = 'https://www.originalmoxie.com/protective-hair-products/';
+  }
   //if curlpattern = straight to wavy and hair perosity = medium to low goes to mermaid
   //if curlpattern = loose curls and perosity = medium to low goes to mermaid
-  if((props.curlPattern == 'StraightToWavy' && props.porosity == 'MediumToLowPorosity') ||(props.curlPattern=='LooseCurls' && props.porosity == 'MediumToLowPorosity')){
+  else if((props.curlPattern == 'StraightToWavy' && props.porosity == 'MediumToLowPorosity') ||(props.curlPattern=='LooseCurls' && props.porosity == 'MediumToLowPorosity')){
     image = 'https://www.originalmoxie.com/templates/__custom/images/icon-hair-mermaid.png';
     content = 'Water is your element!  With your natural strength and resilience, length comes easily to you.  It takes just the right mix of moisture and control to awaken and tame your inner waves.  Too much of either will weigh your hair down and hide its natural sheen.';
     if(props.curlPattern=='LooseCurls'){
@@ -1282,7 +1303,7 @@ function Step7(props) {
       link = shapeShifterURLS[0];
 
     hairType = 'The Shape Shifter™';
-  }else if((props.curlPattern == 'StraightToWavy' && props.porosity == 'MediumToHighPorosity') ||(props.curlPattern=='LooseCurls' && props.porosity == 'MediumToLowPorosity')){
+  }else if((props.curlPattern == 'StraightToWavy' && props.porosity == 'MediumToHighPorosity') ||(props.curlPattern=='LooseCurls' && props.porosity == 'MediumToHighPorosity')){
     // if curlPattern = StraightToWavy && Porosity == MediumToHighPorosity : cotton candy
     // if curlPattern = LooseCurls && Porosity == MediumToLowPorosity : cotton candy
     image = 'https://www.originalmoxie.com/templates/__custom/images/icon-hair-cotton-candy.png';
@@ -1300,7 +1321,7 @@ function Step7(props) {
       else if(props.hairTexture == 'medium')
         link = cottonCandyURLS[4];
       else 
-        link = mermacottonCandyURLSidURLS[3];
+        link = cottonCandyURLS[3];
     }
     hairType = 'The Cotton Candy Dream™';
   }else{
