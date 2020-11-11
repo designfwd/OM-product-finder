@@ -8,6 +8,10 @@ body,
   margin: 0;
 }
 
+.home-salon-promotion-container {
+  max-width: 1000px;
+}
+
 .form-slide {
   align-items: center;
   color: #999;
