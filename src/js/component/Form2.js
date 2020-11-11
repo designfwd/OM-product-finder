@@ -528,8 +528,8 @@ function Step0(props) {
         We speak hair!<br/>Your hair is talking and we’re listening.
       </h2>
       <div class="copy form-slide__body">
-        Healthy hair is happy hair.  Find your Hair Type Personality<sup class="
-form-slide__sup">™</sup> and help your hair live its best life.
+        Healthy hair is happy hair.<br/>Find your Hair Type Personality<sup class="
+form-slide__sup">™</sup><br/>>and help your hair live its best life.
       </div> 
     </div>
   );
