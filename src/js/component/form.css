@@ -258,6 +258,7 @@ body,
 
 .form-slide__link {
   color: #8FAFD2;
+  font-size: 24px;
   transition: color 300ms ease;
 }
 
