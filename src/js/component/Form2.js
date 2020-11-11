@@ -528,8 +528,7 @@ function Step0(props) {
         We speak hair!<br/>Your hair is talking and we’re listening.
       </h2>
       <div class="copy form-slide__body">
-        Healthy hair is happy hair.<br/>Find your Hair Type Personality<sup class="
-form-slide__sup">™</sup><br/>>and help your hair live its best life.
+        Healthy hair is happy hair.<br/>Find your Hair Type Personality™<br/>and help your hair live its best life.
       </div> 
     </div>
   );
@@ -1269,9 +1268,7 @@ function Step7(props) {
       else 
         link = mermaidURLS[3];
     }
-    hairType = 'The Mermaid<sup class="
-form-slide__sup">™</sup> / Merman<sup class="
-form-slide__sup">™</sup>';
+    hairType = 'The Mermaid™/Merman™';
   }else if(props.curlPattern == 'TightCurls' && props.porosity == 'MediumToHighPorosity'){
     // if curlPattern = Tight Curls && Porosity == MediumToHighPorosity : shape shifter
     image = 'https://www.originalmoxie.com/templates/__custom/images/icon-hair-shapeshifter.png';
@@ -1284,8 +1281,7 @@ form-slide__sup">™</sup>';
     else
       link = shapeShifterURLS[0];
 
-    hairType = 'The Shape Shifter<sup class="
-form-slide__sup">™</sup>';
+    hairType = 'The Shape Shifter™';
   }else if((props.curlPattern == 'StraightToWavy' && props.porosity == 'MediumToHighPorosity') ||(props.curlPattern=='LooseCurls' && props.porosity == 'MediumToLowPorosity')){
     // if curlPattern = StraightToWavy && Porosity == MediumToHighPorosity : cotton candy
     // if curlPattern = LooseCurls && Porosity == MediumToLowPorosity : cotton candy
@@ -1306,8 +1302,7 @@ form-slide__sup">™</sup>';
       else 
         link = mermacottonCandyURLSidURLS[3];
     }
-    hairType = 'The Cotton Candy Dream<sup class="
-form-slide__sup">™</sup>';
+    hairType = 'The Cotton Candy Dream™';
   }else{
     image = 'https://www.originalmoxie.com/templates/__custom/images/icon-hair-warrior-queen.png';
     content = 'Your tight curls have a mind of their own and the strength to withstand whatever comes their way.    Selective in its tastes, your hair won’t absorb what doesn’t suit it.  It takes just the right mix of products to reveal the velvety sheen and softness that lie within.';
@@ -1319,9 +1314,7 @@ form-slide__sup">™</sup>';
     else
       link = warriorURLS[0];
 
-    hairType = 'The Warrior Queen<sup class="
-form-slide__sup">™</sup> / Warrior King<sup class="
-form-slide__sup">™</sup>';
+    hairType = 'The Warrior Queen™ / Warrior King™';
   }
   console.log(`Your registration detail: \n 
     curlPattern: ${props.curlPattern} \n 
@@ -1342,8 +1335,7 @@ form-slide__sup">™</sup>';
         <div class="form-slide__foreground">
           <div class="content-container form-slide__content">
             <img class="form-slide__icon" src={`${image}`} />
-            <h3 class="form-slide__subhead">Your Hair Type Personality<sup class="
-form-slide__sup">™</sup> is</h3>
+            <h3 class="form-slide__subhead">Your Hair Type Personality™ is</h3>
             <h2 class="form-slide__headline">{`${hairType}`}</h2>
             <div class="copy form-slide__body">
               {`${content}`}
