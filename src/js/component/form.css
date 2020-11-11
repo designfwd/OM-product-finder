@@ -31,6 +31,7 @@ body,
   max-width: 1440px;
   overflow-x: hidden;
   overflow-y: visible;
+  pointer-events: none;
   position: absolute;
   top: 0;
   width: 100%;
