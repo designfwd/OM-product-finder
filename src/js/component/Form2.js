@@ -19,7 +19,7 @@ class MasterForm extends React.Component {
     super(props)
     this.state = {
       currentStep: 0,
-      email:  '',
+      EMAIL:  '',
       curlPattern: '',
       porosity: '',
       curlShape: '',
@@ -48,6 +48,7 @@ class MasterForm extends React.Component {
       showModalVolumized: false,
       hairType: '',
       buttonState: true,
+      categoryURL: '',
     }
     //step 1
     this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -243,7 +244,6 @@ class MasterForm extends React.Component {
   }
 
   jumpEnd = event => {
-    console.log(event.target.dataset.extra);
     this.setState({
       currentStep: 7,
       hairType: event.target.dataset.extra
@@ -252,20 +252,64 @@ class MasterForm extends React.Component {
   }
 
   handleChange = event => {
-    this.setState({
-      buttonState : !this.buttonState
-    })
-    this.forceUpdate();
     const {name, value} = event.target
+    var changeState = false
+    var currentStep = this.state.currentStep
+    if(currentStep==1){
+      if(!this.state.curlPattern)
+        changeState = true;
+    }else if(currentStep==2){
+      if(!this.state.porosity)
+      changeState = true;
+
+    }else if (currentStep==3){
+      if(!this.state.curlShape)
+      changeState = true;
+
+    }else if (currentStep==4){
+      if(!this.state.hairTexture)
+      changeState = true;
+
+    }else if(currentStep==5){
+      if(!this.state.scalpCondition)
+      changeState = true;
+
+    }else if(currentStep==6){
+      if(!this.state.stylingPreference)
+      changeState = true;
+
+    }
+    console.log(event)
+    if(changeState){
+      this.setState({
+        buttonState : !this.state.buttonState
+      })
+    }
+    console.log(event.target.dataset.categoryurl)
+    this.forceUpdate();
     this.setState({
-      [name]: value
+      [event.target.dataset.name]: value
     })
+    if(this.state.currentStep>6){
+      this.setState({
+        ['categoryURL']: event.target.dataset.categoryurl,
+        ['hairType']: event.target.dataset.hairtype
+      })
+    }
   }
    
   handleSubmit = event => {
     event.preventDefault()
-    const { email,curlPattern, porosity,curlShape, hairTexture, scalpCondition, stylingPreference } = this.state;
-
+    const { EMAIL,curlPattern, porosity,curlShape, hairTexture, scalpCondition, stylingPreference,categoryURL, hairType } = this.state;
+    axios({
+      url: 'https://designfwd.us15.list-manage.com/subscribe/post?u=442a18930aeac419c82d00006&id=55dcc7355d',
+      method: 'post',
+      data: this.state,
+      dataType: 'json'
+    })
+    .then(() => {
+      console.log('success');
+    });
     alert(`Your registration detail: \n 
             curlPattern: ${curlPattern} \n 
             porosity: ${porosity} \n
@@ -273,7 +317,9 @@ class MasterForm extends React.Component {
             hairTexture: ${hairTexture}\n
             scalpCondition: ${scalpCondition} \n
             stylingPreference: ${stylingPreference} \n
-            email: ${email}`)
+            categoryURL: ${categoryURL} \n
+            haritype: ${hairType} \n
+            email: ${EMAIL}`)
   }
   
   _next = () => {
@@ -568,8 +614,9 @@ function Step1(props) {
             className="form-control form-slide__radio" 
             type="radio" 
             id="s2w" 
-            name="curlPattern" 
+            name="CURLPATTER" 
             value="StraightToWavy"
+            data-name='curlPattern'
             onClick={props.handleChange}
             checked={props.curlPattern == 'StraightToWavy'}
           />
@@ -598,8 +645,9 @@ function Step1(props) {
             className="form-control form-slide__radio" 
             type="radio" 
             id="lc" 
-            name="curlPattern" 
+            name="CURLPATTER" 
             value="LooseCurls"
+            data-name='curlPattern'
             onClick={props.handleChange}
             checked={props.curlPattern == 'LooseCurls'}
           />
@@ -626,8 +674,9 @@ function Step1(props) {
             className="form-control form-slide__radio" 
             type="radio" 
             id="tc" 
-            name="curlPattern" 
+            name="CURLPATTER" 
             value="TightCurls"
+            data-name='curlPattern'
             onClick={props.handleChange}
             checked={props.curlPattern == 'TightCurls'}
           />
@@ -647,6 +696,7 @@ function Step1(props) {
             </p>
             <a class="form-slide__close" onClick={props.handleCloseModaltc}>X</a>
           </Modal>
+          
         </div>
       </div>
     </div>
@@ -673,8 +723,9 @@ function Step2(props) {
             className="form-control form-slide__radio" 
             type="radio" 
             id="m2lp" 
-            name="porosity" 
+            name="POROSITY" 
             value="MediumToLowPorosity"
+            data-name='porosity'
             onClick={props.handleChange}
             checked={props.porosity == 'MediumToLowPorosity'}
           />
@@ -701,8 +752,9 @@ function Step2(props) {
             className="form-control form-slide__radio" 
             type="radio" 
             id="m2hp" 
-            name="porosity" 
+            name="POROSITY" 
             value="MediumToHighPorosity"
+            data-name='porosity'
             onClick={props.handleChange}
             checked={props.porosity == 'MediumToHighPorosity'}
           />
@@ -748,8 +800,9 @@ function Step3(props) {
             className="form-control form-slide__radio" 
             type="radio" 
             id="sshape" 
-            name="curlShape" 
+            name="CURLSHAPE" 
             value="s-shape"
+            data-name='curlShape'
             onClick={props.handleChange}
             checked={props.curlShape == 's-shape'}
           />
@@ -776,8 +829,9 @@ function Step3(props) {
             className="form-control form-slide__radio" 
             type="radio" 
             id="spiral" 
-            name="curlShape" 
+            name="CURLSHAPE" 
             value="spiral"
+            data-name='curlShape'
             onClick={props.handleChange}
             checked={props.curlShape == 'spiral'}
           />
@@ -804,8 +858,9 @@ function Step3(props) {
             className="form-control form-slide__radio" 
             type="radio" 
             id="singleStrand" 
-            name="curlShape" 
+            name="CURLSHAPE" 
             value="singleStrand"
+            data-name='curlShape'
             onClick={props.handleChange}
             checked={props.curlShape == 'singleStrand'}
           />
@@ -851,8 +906,9 @@ function Step4(props) {
             className="form-control form-slide__radio" 
             type="radio" 
             id="fine" 
-            name="hairTexture" 
+            name="HAIRTEXTUR" 
             value="Fine"
+            data-name='hairTexture'
             onClick={props.handleChange}
             checked={props.hairTexture == 'Fine'}
           />
@@ -879,8 +935,9 @@ function Step4(props) {
             className="form-control form-slide__radio" 
             type="radio" 
             id="medium" 
-            name="hairTexture" 
+            name="HAIRTEXTUR" 
             value="medium"
+            data-name='hairTexture'
             onClick={props.handleChange}
             checked={props.hairTexture == 'medium'}
           />
@@ -907,8 +964,9 @@ function Step4(props) {
             className="form-control form-slide__radio" 
             type="radio" 
             id="coarse" 
-            name="hairTexture" 
+            name="HAIRTEXTUR" 
             value="coarse"
+            data-name='hairTexture'
             onClick={props.handleChange}
             checked={props.hairTexture == 'coarse'}
           />
@@ -954,8 +1012,9 @@ function Step5(props) {
             className="form-control form-slide__radio" 
             type="radio" 
             id="sensitive" 
-            name="scalpCondition" 
+            name="SCALPCONDI" 
             value="sensitive"
+            data-name='scalpCondition'
             onClick={props.handleChange}
             checked={props.scalpCondition == 'sensitive'}
           />
@@ -982,8 +1041,9 @@ function Step5(props) {
             className="form-control form-slide__radio" 
             type="radio" 
             id="irritated" 
-            name="scalpCondition" 
+            name="SCALPCONDI" 
             value="irritated"
+            data-name='scalpCondition'
             onClick={props.handleChange}
             checked={props.scalpCondition == 'irritated'}
           />
@@ -1010,8 +1070,9 @@ function Step5(props) {
             className="form-control form-slide__radio" 
             type="radio" 
             id="flaking" 
-            name="scalpCondition" 
+            name="SCALPCONDI" 
             value="flaking"
+            data-name='scalpCondition'
             onClick={props.handleChange}
             checked={props.scalpCondition == 'flaking'}
           />
@@ -1038,8 +1099,9 @@ function Step5(props) {
             className="form-control form-slide__radio" 
             type="radio" 
             id="tight" 
-            name="scalpCondition" 
+            name="SCALPCONDI" 
             value="tight"
+            data-name='scalpCondition'
             onClick={props.handleChange}
             checked={props.scalpCondition == 'tight'}
           />
@@ -1066,8 +1128,9 @@ function Step5(props) {
             className="form-control form-slide__radio" 
             type="radio" 
             id="supple" 
-            name="scalpCondition" 
+            name="SCALPCONDI" 
             value="supple"
+            data-name='scalpCondition'
             onClick={props.handleChange}
             checked={props.scalpCondition == 'supple'}
           />
@@ -1113,8 +1176,9 @@ function Step6(props) {
             className="form-control form-slide__radio" 
             type="radio" 
             id="nwnr" 
-            name="stylingPreference" 
+            name="STYLINGPRE" 
             value="naturalWithNoRefreshing"
+            data-name='stylingPreference'
             onClick={props.handleChange}
             checked={props.stylingPreference == 'naturalWithNoRefreshing'}
           />
@@ -1141,8 +1205,9 @@ function Step6(props) {
             className="form-control form-slide__radio" 
             type="radio" 
             id="nwsr" 
-            name="stylingPreference" 
+            name="STYLINGPRE" 
             value="naturalWithSomeRefreshing"
+            data-name='stylingPreference'
             onClick={props.handleChange}
             checked={props.stylingPreference == 'naturalWithSomeRefreshing'}
           />
@@ -1169,8 +1234,9 @@ function Step6(props) {
             className="form-control form-slide__radio" 
             type="radio" 
             id="ohs" 
-            name="stylingPreference" 
+            name="STYLINGPRE" 
             value="occasionalHeatStyling"
+            data-name='stylingPreference'
             onClick={props.handleChange}
             checked={props.stylingPreference == 'occasionalHeatStyling'}
           />
@@ -1197,8 +1263,9 @@ function Step6(props) {
             className="form-control form-slide__radio" 
             type="radio" 
             id="volumized" 
-            name="stylingPreference" 
+            name="STYLINGPRE" 
             value="volumized"
+            data-name='stylingPreference'
             onClick={props.handleChange}
             checked={props.stylingPreference == 'volumized'}
           />
@@ -1337,14 +1404,18 @@ function Step7(props) {
 
     hairType = 'The Warrior Queen<sup>™</sup> / Warrior King<sup>™</sup>';
   }
+
   console.log(`Your registration detail: \n 
     curlPattern: ${props.curlPattern} \n 
     porosity: ${props.porosity} \n
     curlShape: ${props.curlShape} \n
     hairTexture: ${props.hairTexture}\n
     scalpCondition: ${props.scalpCondition} \n
-    stylingPreference: ${props.stylingPreference} \n`
+    stylingPreference: ${props.stylingPreference} \n
+    email: ${props.EMAIL} \n`
   )
+
+
     
   return(
     <React.Fragment>
@@ -1366,15 +1437,21 @@ function Step7(props) {
               <input
                 className="form-control form-slide__email"
                 id="email"
-                name="email"
+                name="EMAIL"
                 type="email"
                 placeholder="Email Address"
-                value={props.email}
-                onChange={props.handleChange}
+                value={props.EMAIL}
+                data-name = "EMAIL"
+                data-categoryURL = {`${link}`}
+                data-hairtype = {`${hairType}`}
+                onBlur={props.handleChange}
               />
+
+              <input type="hidden" value={props.categoryURL} name="CATEGORYUR" class="" id="mce-CATEGORYUR"></input>
+              <input type="hidden" value={props.hairType} name="HAIRTYPE" class="" id="mce-HAIRTYPE"></input>
             </div>
           </div> 
-          <a class="btn btn-success btn-block form-slide__button form-slide__button--submit" href={`${link}`}>Get My Detailed Results!</a>
+          <input type="submit" class="btn btn-success btn-block form-slide__button form-slide__button--submit" value="Get My Detailed Results!" />
         </div>
       </div>
     </React.Fragment>
