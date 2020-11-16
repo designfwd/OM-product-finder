@@ -63,10 +63,10 @@ body,
   color: #999;
   cursor: pointer;
   font-family: 'Raleway', sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 28px;
-  padding: 1rem 2rem;
+  padding: .8rem 1.6rem;
   position: absolute;
   transition: background-color 300ms ease,
     border 300ms ease,
@@ -231,6 +231,10 @@ body,
   margin: 0 auto 1rem;
 }
 
+.form-slide__headline sup {
+  font-size: 16px;
+}
+
 .form-slide__icon {
   margin-top: 4rem;
   width: 110px;
@@ -319,6 +323,10 @@ body,
   text-decoration: none;
 }
 
+.form-slide__subhead sup {
+  font-size: 10px;
+}
+
 .form-slide__step {
   font-family: 'Rockwell', 'Gelasio', serif;
   font-size: 18px;
@@ -373,7 +381,7 @@ body,
   }
 
   .form-slide__button--start {
-    padding: 1.5rem 10rem;
+    padding: 1rem 6.4rem;
   }
 
   .form-slide__decoration--left {
