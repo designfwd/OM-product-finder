@@ -280,13 +280,11 @@ class MasterForm extends React.Component {
       changeState = true;
 
     }
-    console.log(event)
     if(changeState){
       this.setState({
         buttonState : !this.state.buttonState
       })
     }
-    console.log(event.target.dataset.categoryurl)
     this.forceUpdate();
     this.setState({
       [event.target.dataset.name]: value
@@ -315,19 +313,14 @@ class MasterForm extends React.Component {
       dataType: 'json',
       headers: headers
     })
-    .then(() => {
-      console.log('success');
+    .then(function (response) {
+      console.log(response.data);
+      window.location = response.data
+    })
+    .catch(function(error) {
+      console.log(this.state.categoryURL);
+      window.location = "/login"
     });
-    alert(`Your registration detail: \n 
-            curlPattern: ${curlPattern} \n 
-            porosity: ${porosity} \n
-            curlShape: ${curlShape} \n
-            hairTexture: ${hairTexture}\n
-            scalpCondition: ${scalpCondition} \n
-            stylingPreference: ${stylingPreference} \n
-            categoryURL: ${categoryURL} \n
-            haritype: ${hairType} \n
-            email: ${EMAIL}`)
   }
   
   _next = () => {
@@ -1413,15 +1406,6 @@ function Step7(props) {
     hairType = 'The Warrior Queen<sup>™</sup> / Warrior King<sup>™</sup>';
   }
 
-  console.log(`Your registration detail: \n 
-    curlPattern: ${props.curlPattern} \n 
-    porosity: ${props.porosity} \n
-    curlShape: ${props.curlShape} \n
-    hairTexture: ${props.hairTexture}\n
-    scalpCondition: ${props.scalpCondition} \n
-    stylingPreference: ${props.stylingPreference} \n
-    email: ${props.EMAIL} \n`
-  )
 
 
     
