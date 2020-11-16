@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Modal from 'react-modal';
+import axios from 'axios';
 
 import './form.css';
 Modal.setAppElement('#root');
@@ -301,8 +302,9 @@ class MasterForm extends React.Component {
   handleSubmit = event => {
     event.preventDefault()
     const { EMAIL,curlPattern, porosity,curlShape, hairTexture, scalpCondition, stylingPreference,categoryURL, hairType } = this.state;
+    console.log('starting');
     axios({
-      url: 'https://designfwd.us15.list-manage.com/subscribe/post?u=442a18930aeac419c82d00006&id=55dcc7355d',
+      url: 'https://designfwddev.com/om/productfinder.php',
       method: 'post',
       data: this.state,
       dataType: 'json'
