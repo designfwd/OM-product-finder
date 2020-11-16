@@ -303,11 +303,17 @@ class MasterForm extends React.Component {
     event.preventDefault()
     const { EMAIL,curlPattern, porosity,curlShape, hairTexture, scalpCondition, stylingPreference,categoryURL, hairType } = this.state;
     console.log('starting');
+
+    const headers = {
+      'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+    }
+
     axios({
       url: 'https://designfwddev.com/om/productfinder.php',
       method: 'post',
       data: this.state,
-      dataType: 'json'
+      dataType: 'json',
+      headers: headers
     })
     .then(() => {
       console.log('success');
