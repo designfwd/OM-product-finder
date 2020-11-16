@@ -39,7 +39,7 @@ body,
   pointer-events: none;
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 101%;
 }
 
 .form-slide__body {
@@ -63,10 +63,10 @@ body,
   color: #999;
   cursor: pointer;
   font-family: 'Raleway', sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 28px;
-  padding: 1rem 2rem;
+  padding: .8rem 1.6rem;
   position: absolute;
   transition: background-color 300ms ease,
     border 300ms ease,
@@ -106,6 +106,7 @@ body,
 
 .form-slide__button--submit {
   background-color: #739BC7;
+  border: 1px solid #739BC7;
   color: #fff !important;
   margin-top: 1rem;
   position: relative;
@@ -114,7 +115,7 @@ body,
 
 .form-slide__button--start {
   background-color: #739BC7;
-  bottom: 2rem;
+  bottom: 4rem;
   color: #fff;
   left: 50%;
   transform: translate3d( -50%, 0, 0 );
@@ -231,6 +232,10 @@ body,
   margin: 0 auto 1rem;
 }
 
+.form-slide__headline sup {
+  font-size: 16px;
+}
+
 .form-slide__icon {
   margin-top: 4rem;
   width: 110px;
@@ -313,10 +318,15 @@ body,
   font-weight: 400;
   line-height: 32px;
   margin: .5rem auto 1.5rem;
+  text-transform: unset;
 }
 
 .form-slide__subhead:hover {
   text-decoration: none;
+}
+
+.form-slide__subhead sup {
+  font-size: 10px;
 }
 
 .form-slide__step {
@@ -368,12 +378,12 @@ body,
   }
 
   .form-slide__button--prev {
-    left: unset;
-    right: 4rem;
+    left: 4rem;
+    right: unset;
   }
 
   .form-slide__button--start {
-    padding: 1.5rem 10rem;
+    padding: 1rem 6.4rem;
   }
 
   .form-slide__decoration--left {
@@ -396,10 +406,6 @@ body,
   }
 }
 
-.form-slide--zero {
-  padding: 0;
-}
-
 .form-slide--zero .form-slide__headline {
   margin: 2rem auto 3rem;
 }
@@ -418,7 +424,8 @@ body,
 }
 
 .modalClose {
-  background-size: cover;
+  background-position: center;
+  background-size: 120%;
   height: 24px;
   opacity: .65;
   right: 12px;
