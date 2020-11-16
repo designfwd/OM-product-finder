@@ -10,7 +10,7 @@ Modal.defaultStyles = {
     left: '50%',
     position: 'absolute',
     top: '50%',
-    transform: 'translate3D( -50%, -50%, 0 )'
+    transform: 'translate3D( -50%, -80%, 0 )'
   }
 };
 
