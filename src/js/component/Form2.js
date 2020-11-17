@@ -51,6 +51,7 @@ class MasterForm extends React.Component {
       hairTypeMC: '',
       buttonState: true,
       categoryURL: '',
+      kitURL: '',
     }
     //step 1
     this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -294,7 +295,8 @@ class MasterForm extends React.Component {
       this.setState({
         ['categoryURL']: event.target.dataset.categoryurl,
         ['hairType']: event.target.dataset.hairtype,
-        ['hairTypeMC']: event.target.dataset.hairtypemc, 
+        ['hairTypeMC']: event.target.dataset.hairtypemc,
+        ['kitURL']: event.target.dataset.kiturl,
       })
     }
   }
@@ -1330,6 +1332,8 @@ function Step7(props) {
     'https://www.originalmoxie.com/warrior-queen-spiral-curls/',
     'https://www.originalmoxie.com/warrior-queen-single-strand/',
   ]; 
+  var kitURL = '';
+
   if(props.hairType)
     hairType = props.hairType
 
@@ -1362,6 +1366,7 @@ function Step7(props) {
     }
     hairType = 'The Mermaid<sup>™</sup> / Merman<sup>™</sup>';
     hairTypeMC = 'mermaid';
+    kitURL = 'https://www.originalmoxie.com/mermaid-hair-care-kit/';
   }else if(props.curlPattern == 'TightCurls' && props.porosity == 'MediumToHighPorosity'){
     // if curlPattern = Tight Curls && Porosity == MediumToHighPorosity : shape shifter
     image = 'https://www.originalmoxie.com/templates/__custom/images/icon-hair-shapeshifter.png';
@@ -1376,6 +1381,7 @@ function Step7(props) {
 
     hairType = 'The Shape Shifter<sup>™</sup>';
     hairTypeMC = 'shapeShifter';
+    kitURL = 'https://www.originalmoxie.com/shape-shifter-hair-care-kit/';
   }else if((props.curlPattern == 'StraightToWavy' && props.porosity == 'MediumToHighPorosity') ||(props.curlPattern=='LooseCurls' && props.porosity == 'MediumToHighPorosity')){
     // if curlPattern = StraightToWavy && Porosity == MediumToHighPorosity : cotton candy
     // if curlPattern = LooseCurls && Porosity == MediumToLowPorosity : cotton candy
@@ -1398,6 +1404,7 @@ function Step7(props) {
     }
     hairType = 'The Cotton Candy Dream<sup>™</sup>';
     hairTypeMC = 'cottonCandy';
+    kitURL = 'https://www.originalmoxie.com/cotton-candy-dream-hair-care-kit/';
   }else{
     image = 'https://www.originalmoxie.com/templates/__custom/images/icon-hair-warrior-queen.png';
     content = 'Your tight curls have a mind of their own and the strength to withstand whatever comes their way.    Selective in its tastes, your hair won’t absorb what doesn’t suit it.  It takes just the right mix of products to reveal the velvety sheen and softness that lie within.';
@@ -1411,6 +1418,7 @@ function Step7(props) {
 
     hairType = 'The Warrior Queen<sup>™</sup> / Warrior King<sup>™</sup>';
     hairTypeMC = 'warrorQueeen';
+    kitURL = 'https://www.originalmoxie.com/warrior-queen-hair-care-kit/';
   }
 
 
@@ -1444,6 +1452,7 @@ function Step7(props) {
                 data-categoryURL = {`${link}`}
                 data-hairtype = {`${hairType}`}
                 data-hairtypemc = {`${hairTypeMC}`}
+                data-kitURL = {`${kitURL}`}
                 onBlur={props.handleChange}
               />
 
