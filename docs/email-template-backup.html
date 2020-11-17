@@ -1,0 +1,620 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta content="telephone=no" name="format-detection">
+    
+  <style type="text/css">
+		.e2ma-template h1,.e2ma-template h2,.e2ma-template h3,.e2ma-template h4,.e2ma-template h5,.e2ma-template h6{
+			margin:0;
+			padding:0;
+			border:0;
+			font-size:100%;
+			font:inherit;
+			vertical-align:baseline;
+		}
+		.e2ma-template h1{
+			font-family:Arial,Helvetica,sans-serif;
+			font-size:26px;
+			font-weight:normal;
+			color:#333;
+		}
+		.e2ma-template h2{
+			font-family:Arial,Helvetica,sans-serif;
+			font-size:18px;
+			font-weight:normal;
+			color:#333;
+		}
+		.e2ma-template h3{
+			font-family:Arial,Helvetica,sans-serif;
+			font-size:14px;
+			font-weight:normal;
+			color:#333;
+		}
+		.e2ma-template h4{
+			font-family:Arial,Helvetica,sans-serif;
+			font-size:11px;
+			font-weight:normal;
+			color:#333;
+		}
+		.e2ma-template .e2ma-content-block p,.e2ma-template .e2ma-combo-block p,.e2ma-template .e2ma-combo-content p,.e2ma-template .e2ma-content-block li,.e2ma-template .e2ma-combo-block li,.e2ma-template .e2ma-combo-content li{
+			font-family:Arial,Helvetica,sans-serif;
+			font-size:13px;
+			color:#333;
+		}
+		.e2ma-template #template_container a,.e2ma-template .link{
+			color:#333;
+			text-decoration:underline;
+		}
+		.e2ma-template blockquote{
+			padding-top:10px;
+			padding-bottom:10px;
+			border-top:1px solid #000;
+			border-bottom:1px solid #000;
+			font-style:italic;
+		}
+		.e2ma-template blockquote p{
+			margin-bottom:0;
+		}
+		.e2ma-template .editable_image img{
+			display:block;
+			border:0;
+		}
+		.e2ma-template .e2ma-unsubscribe{
+			padding-bottom:10px;
+		}
+		.e2ma-template .business_rsvp{
+			font-family:Helvetica,Arial,sans-serif;
+			padding:10px;
+			color:#666;
+			font-size:10px;
+		}
+		.e2ma-template e2ma-design-option-backdrop{
+			background-color:#ccc !important;
+		}
+	@media screen and (max-width: 480px){
+		.e2ma-template html{
+			-webkit-text-size-adjust:none;
+		}
+
+}	@media screen and (max-width: 480px){
+		.e2ma-template [class].e2ma-content-block p,.e2ma-template [class].e2ma-combo-block p,.e2ma-template [class].e2ma-combo-content p,.e2ma-template [class].e2ma-content-block li,.e2ma-template [class].e2ma-combo-block li,.e2ma-template [class].e2ma-combo-content li{
+			font-size:15px !important;
+		}
+
+}	@media screen and (max-width: 480px){
+		.e2ma-template [class].e2ma-holder table,.e2ma-template [class].e2ma-holder table td{
+			display:table !important;
+			float:none !important;
+			width:100% !important;
+			padding-left:0 !important;
+			padding-right:0 !important;
+		}
+
+}	@media screen and (max-width: 480px){
+		.e2ma-template [class].e2ma-single-column-layout table{
+			float:none !important;
+			margin:0 auto;
+		}
+
+}	@media screen and (max-width: 480px){
+		.e2ma-template [class].e2ma-unsubscribe span{
+			font-size:12px !important;
+		}
+
+}	@media screen and (max-width: 480px){
+		.e2ma-template [class].business_rsvp{
+			font-size:12px !important;
+		}
+
+}	@media screen and (max-width: 480px){
+		.e2ma-template [class].social-sharing{
+			text-align:center !important;
+			padding-bottom:10px;
+		}
+
+}	@media screen and (max-width: 480px){
+		.e2ma-template [class].e2ma-layout-column-content img,.e2ma-template [class].e2ma-single-column-layout img,.e2ma-template [class].e2ma-layout-column-sidebar img,.e2ma-template [class].e2ma-layout-column-sidebar-2 img,.e2ma-template [class].e2ma-layout-column-sidebar-3 img{
+			max-width:100%;
+			height:auto;
+			margin:0 auto;
+		}
+
+}	@media screen and (max-width: 480px){
+		.e2ma-template [class].footer-social img{
+			width:44px !important;
+			height:43px !important;
+			margin:0 auto;
+		}
+
+}	@media screen and (max-width: 480px){
+		.e2ma-template [class].share-block{
+			text-align:center !important;
+			margin:0 auto !important;
+		}
+
+}	@media screen and (max-width: 480px){
+		.e2ma-template [class].footer-text{
+			text-align:center !important;
+		}
+
+}	@media screen and (max-width: 480px){
+		.e2ma-template [class].mobile-width{
+			width:100% !important;
+			padding-left:10px;
+			padding-right:10px;
+		}
+
+}	@media screen and (max-width: 480px){
+		.e2ma-template [class].mobile-width-nopad{
+			width:100% !important;
+		}
+
+}	@media screen and (max-width: 480px){
+		.e2ma-template [class].stack,.e2ma-template [class].e2ma-layout-column-content,.e2ma-template [class].e2ma-layout-column-sidebar,.e2ma-template [class].e2ma-layout-column-sidebar-2,.e2ma-template [class].e2ma-layout-column-sidebar-3{
+			display:block !important;
+			width:100% !important;
+		}
+
+}	@media screen and (max-width: 480px){
+		.e2ma-template [class].hide{
+			display:none !important;
+		}
+
+}	@media screen and (max-width: 480px){
+		.e2ma-template [class].center,.e2ma-template [class].center img{
+			text-align:center !important;
+			margin:0 auto;
+		}
+
+}	@media screen and (max-width: 480px){
+		.e2ma-template [class].scale img,.e2ma-template [class].editable_image img{
+			max-width:100%;
+			height:auto;
+			margin:0 auto;
+		}
+
+}	@media screen and (max-width: 480px){
+		.e2ma-template [class].addpad{
+			padding:10px !important;
+		}
+
+}	@media screen and (max-width: 480px){
+		.e2ma-template [class].addpad-top{
+			padding-top:10px !important;
+		}
+
+}	@media screen and (max-width: 480px){
+		.e2ma-template [class].sanpad{
+			padding:0 !important;
+		}
+
+}	@media screen and (max-width: 480px){
+		.e2ma-template [class].sanborder{
+			border:none !important;
+		}
+
+}</style></head>
+  <body data-e2ma-name="Backdrop" data-e2ma-styles="background" style="margin: 0 auto; padding: 0; width: 100% !important; background-color: #CCC !important; font-family: Rockwell, Georgia, Times, Times New Roman, serif">
+    <div style="margin:0px;padding:0px;border-right-width:0px;border-left-width:0px;border-right-style:solid;border-left-style:solid;width:100% !important;background-color:rgb(214,214,214);" align="center">
+      <table style="margin:0 auto;font-family:Rockwell, Georgia, Times, 'Times New Roman', serif;background-color:#CCC !important;" border="0" cellpadding="0" cellspacing="0" width="600">
+        <tbody>
+          <tr>
+            <td colspan="2" align="left">
+              <img alt="logo" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/814b2fe4-1e98-4352-9e85-6675e1b64c75.png" height="98" width="195">
+            </td>
+            <td colspan="4" align="right" valign="middle" width="469">
+              <img alt="You're an Original" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/c383df26-3079-4d68-ba1b-3b43c26749f7.gif" style="padding-right: 10px !important" hspace="20" align="middle" width="330">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table style="margin:0 auto;border-bottom:1px solid;border-bottom-color:#CCC;" cellpadding="0" cellspacing="0" width="600">
+        <tbody>
+          <tr align="center" valign="middle">
+            <td style="background-color:#CCC;" height="23" bgcolor="#ffffff" width="119">
+              <a href="http://www.originalmoxie.com/all-products/">
+                <img alt="Shop" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/ccba5ef7-6073-4e8f-a6fd-20e8f4b4e033.gif"></a>
+              </td>
+              <td style="background-color:#CCC;" height="1" bgcolor="#cccccc" width="1">
+                <img alt="" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/8802b17a-1a21-4e5a-a6a9-92b3f6b04ec7.gif">
+              </td>
+              <td style="background-color:#CCC;" height="23" bgcolor="#ffffff" width="119">
+                <a href="http://www.originalmoxie.com/find-yourself/">
+                  <img alt="Learn" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/649a12ba-5e46-4b68-b7ec-36ae75520819.gif"></a>
+                </td>
+                <td style="background-color:#CCC;" height="1" bgcolor="#cccccc" width="1">
+                  <img alt="" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/8802b17a-1a21-4e5a-a6a9-92b3f6b04ec7.gif">
+                </td>
+                <td style="background-color:#CCC;" height="23" bgcolor="#ffffff" width="119">
+                  <a href="http://www.originalmoxie.com/about-original-moxie/">
+                    <img alt="Who We Are" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/6df930ae-53fa-4731-97e7-03e16256d1ae.gif"></a>
+                  </td>
+                  <td style="background-color:#CCC;" height="1" bgcolor="#cccccc" width="1">
+                    <img alt="" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/8802b17a-1a21-4e5a-a6a9-92b3f6b04ec7.gif">
+                  </td>
+                  <td style="background-color:#CCC;" height="23" bgcolor="#ffffff" width="119">
+                    <a href="http://www.originalmoxie.com/sephora/">
+                      <img alt="Where to Buy" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/1814bc28-2cf9-4055-aa43-a5b494753cc3.gif"></a>
+                    </td>
+                    <td style="background-color:#CCC;" height="1" bgcolor="#cccccc" width="1">
+                      <img alt="" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/8802b17a-1a21-4e5a-a6a9-92b3f6b04ec7.gif">
+                    </td>
+                    <td style="background-color:#CCC;" height="23" bgcolor="#ffffff" width="119">
+                      <a href="http://www.originalmoxie.com/pages/Customer-Care.html">
+                        <img alt="Customer Care" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/babc27ba-940b-42c1-909e-38dfb70db232.gif"></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table style="margin:0 auto;font-family:Rockwell, Georgia, Times, 'Times New Roman', serif;" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="600">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div style="text-align:center;vertical-align:middle;border:4px solid #F6A0A5;border-radius:10px;margin:25px;color:#999;width:540px;padding:25px 0 25px 0;" align="center">
+                          <span style="color: #F6A0A5; font-size: 35px; font-family: Rockwell, Georgia, Times, Times New Roman, serif">
+                            Hello, *|FNAME|*
+                          </span>
+                          <br><span style="color: #999; font-size: 18px; font-family: Rockwell, Georgia, Times, Times New Roman, serif">Here's Your Hair Care Assessment</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table style="margin:0 auto;font-family:Rockwell, Georgia, Times, 'Times New Roman', serif;" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="600">
+                  <tbody>
+                    <tr>
+                      <td align="center">
+                        <div style="color:#999;width:500px;padding:10px 50px 20px 50px;font-size:16px;" align="center"> Thank you for meeting with our Hair Care Expert for your Seven Point Assessment! We have created
+                          your unique hair type profile based on our evaluation of your Scalp Suppleness, Curl Pattern,
+                          Density, Texture, Porosity, Moisture &amp; Shape.</div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table style="margin:0 auto;font-family:Rockwell;" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="600">
+                    <tbody>
+                      <tr>
+                        <td>
+                          *|IF:SCALP=Supple|*
+                          <img alt="Supple Scalp" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/2f125157-cbce-4be7-856d-7cf83dc0106f.gif" height="241" width="145">*|END:IF|* *|IF:SCALP=Moderately|*
+                          <img alt="Moderately Scalp" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/62344e85-cc55-466f-b406-966b7b4f375f.gif" height="241" width="145">*|END:IF|* *|IF:SCALP=Tight|*
+                          <img alt="Tight Sclap" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/e3f3ba7f-3a39-4922-a3c2-f1e69c489018.png">*|END:IF|* *|IF:SCALP=Very Tight|*
+                          <img alt="Very Tight scalp" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/21e31238-bb4e-437b-a300-27cfe8ad58bc.gif" height="241" width="145">*|END:IF|*
+                        </td>
+                        <td>
+                          *|IF:CURLPATTER=0-1 Wavy to straight|*
+                          <img alt="Wavy to straight" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/38e2993c-9294-43f0-8875-1fd8d0997839.gif" height="241" width="145">*|END:IF|* *|IF:CURLPATTER=1-2 Loose Curls|*
+                          <img alt="Loose Curls" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/0459c71f-068c-4acb-a251-82bc41ed5300.jpg" height="241" width="145">*|END:IF|* *|IF:CURLPATTER=2-4 Tight Curls|*
+                          <img alt="Tight Curls" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/c09220b9-a5de-4bdf-97a1-31f9207f6c10.gif" height="241" width="145">*|END:IF|* *|IF:CURLPATTER=4-8 Very Tight Curls|*
+                          <img alt="Very Tight Curls" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/54df1f82-c1a5-464b-9059-46e4dbd210cd.gif" height="241" width="145">*|END:IF|*
+                        </td>
+                        <td>
+                          *|IF:DENSITY=Very Little to no scalp visible: Thick Density|*
+                          <img alt="thick density" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/2a817337-42f2-4be2-8c54-5cffead99633.gif" height="241" width="145">*|END:IF|* *|IF:DENSITY=Some scalp visible: Medium density|*
+                          <img alt="medium density" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/c90216c8-d06a-403d-b6fe-a8c48701d34c.gif" height="241" width="145">*|END:IF|* *|IF:DENSITY=A lot of scalp visible: Thin Density|*
+                          <img src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/1a681c99-9a8f-499c-92a7-992acf88aa21.gif" height="241" width="145" alt="1a681c99-9a8f-499c-92a7-992acf88aa21.gif">*|END:IF|*
+                        </td>
+                        <td>
+                          *|IF:TEXTURE=Fine Texture|*
+                          <img alt="Fine Texture" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/bcabedc1-b8a9-476e-8be3-e9e01aa7155f.gif" height="241" width="145">*|END:IF|* *|IF:TEXTURE=Medium Texture|*
+                          <img alt="Medium Texture" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/7d57085f-d05f-4aa1-846f-5dac7cb21d3d.gif" height="241" width="145">*|END:IF|* *|IF:TEXTURE=Coarse Texture|*
+                          <img alt="Coarse Texture" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/cef7f324-65ae-4296-9d31-5a1f16cda2f7.gif" height="241" width="145">*|END:IF|*
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          *|IF:POROSITY=Low Porosity|*
+                          <img alt="Low Porosity" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/52f9122c-5a46-4a03-b504-082b95c8f891.gif" height="241" width="145">*|END:IF|* *|IF:POROSITY=Medium Porosity|*
+                          <img alt="Medium Porosity" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/38eae6fa-527b-4f9e-a516-387b7f3f5c27.gif" height="241" width="145">*|END:IF|* *|IF:POROSITY=High Porosity|*
+                          <img alt="High Porosity" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/c4d4f1b5-c2fe-4686-8f61-156de7c143c0.gif" height="241" width="145">*|END:IF|*
+                        </td>
+                        <td>
+                          *|IF:ELASTICITY=Full recoil|*
+                          <img alt="full recoil" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/70d85e0a-c0ff-4990-8732-16161bb0678f.gif" height="241" width="145">*|END:IF|* *|IF:ELASTICITY=Limited elasticity|*
+                          <img alt="Limited elasticity" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/be6451e5-e722-482a-88bd-8cf4d551969a.gif" height="241" width="145">*|END:IF|* *|IF:ELASTICITY=No Recoil|*
+                          <img alt="No Recoil" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/d7aa3f23-ef83-417d-bbee-e54e2c0f6f46.gif" height="241" width="145">*|END:IF|*
+                        </td>
+                        <td>
+                          *|IF:SHAPE=S|*
+                          <img alt="S" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/62386919-cff0-4c21-93e9-7bb3fcfc5565.gif" height="241" width="145">*|END:IF|* *|IF:SHAPE=Spiral|*
+                          <img alt="Spiral" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/fe6bd92b-904c-419d-9742-6726fa26a813.jpg" height="241" width="145">*|END:IF|*
+                        </td>
+                        <td>
+                          <a href="http://www.originalmoxie.com/understand-your-7-point-hair-assessment/">
+                            <img alt="click here" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/f3371442-dca1-45ad-96f8-f44862cc8560.jpg" height="241" width="145"></a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table bgcolor="#ffffff" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/1daedb07-094c-463b-a6e2-3ab24da94219.gif" alt="1daedb07-094c-463b-a6e2-3ab24da94219.gif">
+                            <div style="color:#999;width:500px;padding:10px 50px 20px 50px;font-size:16px;font-family:Rockwell, Georgia, Times, 'Times New Roman', serif;" align="center"> Below is your hair regimen specifically designed for your unique hair type profile.</div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table style="margin:0 auto;font-family:Rockwell, Georgia, Times, 'Times New Roman', serif;" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="600">
+                      <tbody>
+                        <tr>
+                          <td bgcolor="#e7e7e9" width="50%">
+                            *|IF:TREAT=Emollience Pre-treatment|*
+                            <a href="http://www.originalmoxie.com/dry-hair-moisturizing-treatment/">
+                              <img alt="Emollienc Pre-treatment" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/1be8b253-fbf0-4b4c-9dd0-5002491e5333.jpg"></a>
+                              *|END:IF|* *|IF:TREAT=Oasis Moisture Gel|*
+                              <a href="http://www.originalmoxie.com/moisturizing-damaged-hair-treatment/">
+                                <img alt="Oasis Moisture Gel" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/f0591ae4-bdb2-4a62-842b-821bd0d77916.jpg"></a>
+                                *|END:IF|* *|IF:TREAT=Scalp Therapy|*
+                                <a href="http://www.originalmoxie.com/natural-scalp-treatment/">
+                                  <img alt="Scalp Therapy" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/feeb71b0-658e-4eff-ba8b-5d88d3c2b436.jpg"></a>
+                                  *|END:IF|* *|IF:TREAT=|*
+                                  <a href="http://www.originalmoxie.com/natural-hair-treatments/">
+                                    <img src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/1918c118-c2da-4f68-bade-044aa3dbbc0b.gif" alt="1918c118-c2da-4f68-bade-044aa3dbbc0b.gif"></a>
+                                    *|END:IF|*
+                                    <span style="color: rgb(153, 153, 153); font-family: Rockwell, Georgia, Times, Times New Roman, serif">
+                                      <ul style="list-style:none;padding-right:30px;">
+                                        <li style="list-style:none;">
+                                          <b>
+                                          Frequency:
+                                        </b>
+                                        *|IF:TREATFREQ=As needed|* Use as needed *|END:IF|* *|IF:TREATFREQ=Once per week|* Use once a week *|END:IF|* *|IF:TREATFREQ=Once
+                                        a month|* Use once a month *|END:IF|*
+                                      </li>
+                                      <li style="list-style:none;">
+                                        <b>
+                                        Method:
+                                      </b>
+                                      *|IF:TREATMETH=As a pre-treatment (prior to washing)|* Use as a pre-treatment *|END:IF|* *|IF:TREATMETH=As a leave-in(after
+                                      washing and conditioning)|* Use as a leave-in *|END:IF|*
+                                    </li>
+                                    </ul></span>
+                                  </td>
+                                  <td width="50%">
+                                    *|IF:CLEANSE=Get Fresh! Shampoo|*
+                                    <a href="http://www.originalmoxie.com/sulfate-free-shampoo/">
+                                      <img alt="Get Fresh! Shampoo" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/d6e66305-24b9-407b-a7c7-8cad8b2ee0ac.jpg"></a>
+                                      *|END:IF|* *|IF:CLEANSE=Get Clean! No-Foam Shampoo|*
+                                      <a href="http://www.originalmoxie.com/sulfate-free-no-foam-shampoo/">
+                                        <img alt="Get Clean! No-Foam Shampoo" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/d611d90a-9ce5-487d-9c32-d292b17e76c8.jpg"></a>
+                                        *|END:IF|* *|IF:CLEANSE=''|*
+                                        <a href="http://www.originalmoxie.com/natural-shampoos/">
+                                          <img src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/1f48327b-8571-4f71-8271-8c0e0e8abf3f.jpg" alt="1f48327b-8571-4f71-8271-8c0e0e8abf3f.jpg"></a>
+                                          *|END:IF|*
+                                          <span style="color: rgb(153, 153, 153); font-family: Rockwell, Georgia, Times, Times New Roman, serif">
+                                            <ul style="list-style:none;padding-right:30px;">
+                                              <li style="list-style:none;">
+                                                <b>
+                                                Frequency:
+                                              </b>
+                                              *|IF:CLEANSEFR=As needed|* Use as needed *|END:IF|* *|IF:CLEANSEFR=Every day|* Use every day *|END:IF|* *|IF:CLEANSEFR=Every
+                                              other day|* Use every other day *|END:IF|* *|IF:CLEANSEFR=Once per week|* Use once a
+                                              week *|END:IF|* *|IF:CLEANSEFR=Once every two weeks|* Use once every two weeks *|END:IF|*
+                                              *|IF:CLEANSEFR=Once a month|* Use once a month *|END:IF|*
+                                            </li>
+                                            </ul></span>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <table style="margin:0 auto;font-family:Rockwell;" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="600">
+                                      <tbody>
+                                        <tr>
+                                          <td width="50%">
+                                            *|IF:CONDITION=Featherweight Conditioner|*
+                                            <a href="http://www.originalmoxie.com/oily-hair-conditioner/">
+                                              <img alt="Featherweight Conditioner" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/87497312-12dc-44a9-87ca-81ef47134102.jpg" style=""></a>
+                                              *|END:IF|* *|IF:CONDITION=Intense Quench Deep Conditioner|*
+                                              <a href="http://www.originalmoxie.com/moisturizing-dry-damaged-hair-conditioner/">
+                                                <img alt="Intense Quench Deep Conditioner" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/eb8c169e-e8c3-4166-88f1-5bf4408991b3.jpg" style=""></a>
+                                                *|END:IF|* *|IF:CONDITION=''|*
+                                                <a href="http://www.originalmoxie.com/natural-conditioners/">
+                                                  <img src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/eb5b570e-eb3e-4e4b-82de-73cd32bebd34.gif" style="" alt="eb5b570e-eb3e-4e4b-82de-73cd32bebd34.gif"></a>
+                                                  *|END:IF|*
+                                                  <span style="color: rgb(153, 153, 153); font-family: Rockwell, Georgia, Times, Times New Roman, serif">
+                                                    <ul style="list-style:none;padding-right:30px;">
+                                                      <li style="list-style:none;">
+                                                        <b>
+                                                        Frequency:
+                                                      </b>
+                                                      *|IF:CONDITIONF=As needed|* Use as needed *|END:IF|* *|IF:CONDITIONF=Every day|* Use every day *|END:IF|* *|IF:CONDITIONF=Every
+                                                      other day|* Use every other day *|END:IF|* *|IF:CONDITIONF=Once per week|* Use once a
+                                                      week *|END:IF|* *|IF:CONDITIONF=Once every two weeks|* Use once every two weeks *|END:IF|*
+                                                      *|IF:CONDITIONF=Once a month|* Use once a month *|END:IF|*
+                                                    </li>
+                                                    </ul></span>
+                                                  </td>
+                                                  <td bgcolor="#e7e7e9" width="50%">
+                                                    *|IF:MOISTURIZE=Everyday Leave-in|*
+                                                    <a href="http://www.originalmoxie.com/detangling-conditioner/">
+                                                      <img alt="Everyday Leave-in" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/7566a61f-73bf-4482-818e-e06f5a73b49d.jpg" style=""></a>
+                                                      *|END:IF|* *|IF:MOISTURIZE=Oasis Moisture Gel|*
+                                                      <a href="http://www.originalmoxie.com/moisturizing-damaged-hair-treatment/">
+                                                        <img alt="Oasis Moisture Gel" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/2929e68f-8df1-462b-84f7-87c8a48173f7.jpg" style=""></a>
+                                                        *|END:IF|* *|IF:MOISTURIZE=Lux Locks Styling and Shine|*
+                                                        <a href="http://www.originalmoxie.com/natural-hair-butter/">
+                                                          <img alt="Lux Locks Styling and Shine" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/eed72c51-62bd-484f-8888-36c228694f28.jpg" style=""></a>
+                                                          *|END:IF|* *|IF:MOISTURIZE=Shape Shifter Re-forming Creme|*
+                                                          <a href="http://www.originalmoxie.com/curl-cream/">
+                                                            <img alt="Shape Shifter Re-forming Creme" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/6976dc13-277a-4b30-9c13-35a5aaa9cfd3.jpg" style=""></a>
+                                                            *|END:IF|* *|IF:MOISTURIZE=Heat Wave Blow Dry Creme|*
+                                                            <a href="https://www.originalmoxie.com/heat-wave-reparative-blow-dry-creme/">
+                                                              <img alt="Heat Wave Blow Dry Creme" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/717e160b-c28f-4efa-ad5e-cee3e428326a.jpg" style=""></a>
+                                                              *|END:IF|* *|IF:MOISTURIZE=''|*
+                                                              <a href="http://www.originalmoxie.com/curl-cream/">
+                                                                <img alt="e" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/845cf979-7f2d-432f-965a-c93941677b9c.gif" style=""></a>
+                                                                *|END:IF|*
+                                                                <span style="color: rgb(153, 153, 153); font-family: Rockwell, Georgia, Times, Times New Roman, serif">
+                                                                  <ul style="list-style:none;padding-right:30px;">
+                                                                    <li style="list-style:none;">
+                                                                      <b>
+                                                                      Method:
+                                                                    </b>
+                                                                    *|IF:MOISTURIZM=Apply when hair is wet, after conditioner is rinsed out.|* Apply to wet hair in sections. *|END:IF|* *|IF:MOISTURIZM=Apply
+                                                                    to damp hair in sections.|* Apply to damp hair in sections. *|END:IF|* *|IF:MOISTURIZM=Apply
+                                                                    to damp or dry hair as needed.|* Apply to damp or dry hair *|END:IF|*
+                                                                  </li>
+                                                                  </ul></span>
+                                                                </td>
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
+                                                          <table style="margin:0 auto;font-family:Rockwell;" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="600">
+                                                            <tbody>
+                                                              <tr>
+                                                                <td bgcolor="#e7e7e9" width="50%">
+                                                                  *|IF:DEFINE=Hold Up Defining Serum|*
+                                                                  <a href="http://www.originalmoxie.com/hold-up-defining-serum/">
+                                                                    <img alt="Hold Up Defining Serum" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/a382c6a0-a32f-431c-b76d-5ccb9d9260d1.jpg" style=""></a>
+                                                                    *|END:IF|* *|IF:DEFINE=Just Gel Styling Concentrate|*
+                                                                    <a href="http://www.originalmoxie.com/anti-frizz-styling-treatment/">
+                                                                      <img alt="Just Gel Styling Concentrate" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/a382c6a0-a32f-431c-b76d-5ccb9d9260d1.jpg" style=""></a>
+                                                                      *|END:IF|* *|IF:DEFINE=Mane Tame Weightless Frizz Control|*
+                                                                      <a href="http://www.originalmoxie.com/frizzy-hair-treatment/">
+                                                                        <img alt="Mane Tame Weightless Frizz Control" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/ceaff058-c773-44a5-a80d-c3ebf8588c76.jpg" style=""></a>
+                                                                        *|END:IF|* *|IF:DEFINE=Sweet Poof Volumizing Spray|*
+                                                                        <a href="http://www.originalmoxie.com/volumizing-hair-treatment/">
+                                                                          <img alt="Sweet Poof Volumizing Spray" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/8831a1d0-f0e5-43b8-8043-b9615ef17e64.jpg" style=""></a>
+                                                                          *|END:IF|* *|IF:DEFINE=Pop Life Volumizing Mousse|*
+                                                                          <a href="https://www.originalmoxie.com/pop-life-volumizing-mousse/">
+                                                                            <img alt="Pop Life Volumizing Mousse" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/60a952b3-2948-43aa-93db-ef22f87c50c5.jpg" style=""></a>
+                                                                            *|END:IF|* *|IF:DEFINE=''|*
+                                                                            <a href="http://www.originalmoxie.com/natural-styling-products/">
+                                                                              <img src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/b8cbb9d7-99a6-4977-be28-4276d0a98867.jpg" style="" alt="b8cbb9d7-99a6-4977-be28-4276d0a98867.jpg"></a>
+                                                                              *|END:IF|*
+                                                                              <span style="color: rgb(153, 153, 153); font-family: Rockwell, Georgia, Times, Times New Roman, serif">
+                                                                                <ul style="list-style:none;padding-right:30px;">
+                                                                                  <li style="list-style:none;">
+                                                                                    <b>
+                                                                                    Method:
+                                                                                  </b>
+                                                                                  *|IF:DEFINEFRE=Apply when hair is wet, after conditioner is rinsed out.|* Apply to wet hair. *|END:IF|* *|IF:DEFINEFRE=Apply
+                                                                                  after moisturizer while hair is still damp.|* Apply to damp, moisturized hair. *|END:IF|*
+                                                                                  *|IF:DEFINEFRE=Apply to damp or dry hair. |* Apply to damp or dry hair. *|END:IF|*
+                                                                                </li>
+                                                                                </ul></span>
+                                                                              </td>
+                                                                              <td width="50%">
+                                                                                *|IF:SEAL=Emollience Pre-treatment|*
+                                                                                <a href="http://www.originalmoxie.com/dry-hair-moisturizing-treatment/">
+                                                                                  <img alt="Emollience Pre-treatment" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/ca26521b-6042-4fc5-97c7-3420870897ce.jpg" style=""></a>
+                                                                                  *|END:IF|* *|IF:SEAL=Hair Bling High Shine Pomade|*
+                                                                                  <a href="http://www.originalmoxie.com/hair-glossing-treatment/">
+                                                                                    <img alt="Hair Bling High Shine Pomade" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/98e9ef7f-7a7a-437e-87d3-d70b1debcd15.jpg" style=""></a>
+                                                                                    *|END:IF|* *|IF:SEAL=Twist Mist Lightweight Shine|*
+                                                                                    <a href="http://www.originalmoxie.com/shine-spray/">
+                                                                                      <img alt="Twist Mist Lightweight Shine" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/5dc2e35b-be77-442c-b7cb-ef2b18323926.jpg" style=""></a>
+                                                                                      *|END:IF|* *|IF:SEAL=Happy Endings Shine Repair|*
+                                                                                      <a href="https://www.originalmoxie.com/happy-endings-shine-and-repair-serum/">
+                                                                                        <img alt="Happy Endings Shine Repair" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/9c48d5ce-b4a0-46d1-9406-09f48f896831.jpg" style=""></a>
+                                                                                        *|END:IF|* *|IF:SEAL=T''|*
+                                                                                        <a href="http://www.originalmoxie.com/natural-styling-products/">
+                                                                                          <img src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/47272f0d-b42d-4833-ac04-beb957588530.gif" style="" alt="47272f0d-b42d-4833-ac04-beb957588530.gif"></a>
+                                                                                          *|END:IF|*
+                                                                                          <span style="color: rgb(153, 153, 153); font-family: Rockwell, Georgia, Times, Times New Roman, serif">
+                                                                                            <ul style="list-style:none;padding-right:30px;">
+                                                                                              <li style="list-style:none;">
+                                                                                                <b>
+                                                                                                Method:
+                                                                                              </b>
+                                                                                              *|IF:SEALFREQU=Apply to dry hair after all other stylers have been applied.|* Apply to dry, styled hair. *|END:IF|* *|IF:SEALFREQU=Apply
+                                                                                              to damp hair after all other stylers have been applied.|* Apply as a final step to damp
+                                                                                              hair. *|END:IF|* *|IF:SEALFREQU=Use to seal ends or to add shine to second-day hair.|*
+                                                                                              Apply to damp or dry hair. *|END:IF|*
+                                                                                            </li>
+                                                                                            </ul></span>
+                                                                                          </td>
+                                                                                        </tr>
+                                                                                      </tbody>
+                                                                                    </table>
+                                                                                    <table style="margin:0 auto;" border="0" cellpadding="0" cellspacing="20" width="600">
+                                                                                      <tbody>
+                                                                                        <tr>
+                                                                                          <td>
+                                                                                            <a href="http://gallery.sephora.com/">
+                                                                                              <img src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/5cdee469-be9b-4576-9d02-40dcf2a208ce.gif" alt="5cdee469-be9b-4576-9d02-40dcf2a208ce.gif"></a>
+                                                                                            </td>
+                                                                                            <td>
+                                                                                              <a href="http://www.originalmoxie.com/pages/Ask-Moxie.html">
+                                                                                                <img src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/8d1b62ff-ef32-4d15-9fcd-17d697d92233.gif" alt="8d1b62ff-ef32-4d15-9fcd-17d697d92233.gif"></a>
+                                                                                              </td>
+                                                                                            </tr>
+                                                                                          </tbody>
+                                                                                        </table>
+                                                                                        <table style="margin:0 auto;padding:0 20px 20px 20px;" border="0" cellpadding="0" cellspacing="0" width="600">
+                                                                                          <tbody>
+                                                                                            <tr>
+                                                                                              <td>
+                                                                                                <a href="http://www.originalmoxie.com/pages/Share-Your-Story.html">
+                                                                                                  <img src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/2fa606ca-8eb7-4cd0-b198-5e053cbd1680.gif" alt="2fa606ca-8eb7-4cd0-b198-5e053cbd1680.gif"></a>
+                                                                                                </td>
+                                                                                              </tr>
+                                                                                            </tbody>
+                                                                                          </table>
+                                                                                          <table width="100%">
+                                                                                            <tbody>
+                                                                                              <tr>
+                                                                                                <td class="e2ma-unsubscribe" style="padding:50px 0;" align="center" bgcolor="#F6F7F8" valign="top">
+                                                                                                  <table class="mobile-width" border="0" cellpadding="0" cellspacing="0" width="640">
+                                                                                                    <tbody>
+                                                                                                      <tr>
+                                                                                                        <td align="left" valign="top">
+                                                                                                          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                                                            <tbody>
+                                                                                                              <tr>
+                                                                                                                <td class="stack" align="left" valign="top" width="60"> </td>
+                                                                                                                <td class="stack" style="text-align:center;margin:0 auto;" align="center" valign="top" width="110">
+                                                                                                                  <a href="http://www.originalmoxie.com">
+                                                                                                                    <img src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/43db05e5-0629-46c7-bafc-7e3965c8f35a.gif" height="155" hspace="0" width="110" alt="43db05e5-0629-46c7-bafc-7e3965c8f35a.gif"></a>
+                                                                                                                  </td>
+                                                                                                                  <td class="stack" align="left" valign="top" width="20"> </td>
+                                                                                                                  <td class="stack" align="center" valign="bottom" width="410">
+                                                                                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                                                                      <tbody>
+                                                                                                                        <tr>
+                                                                                                                          <td class="share-block center" align="left" valign="top">
+                                                                                                                            [% socialShare %] { "name": "socialShare-1", "email": true, "facebook": true, "linkedin": true, "twitter": true } [%/ socialShare
+                                                                                                                            %]
+                                                                                                                          </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                          <td class="footer-text" style="font-family:Helvetica, Arial, sans-serif;color:#9d9e9f;font-size:11px;line-height:1.8;text-align:left;padding:20px 0;" align="left" valign="top"> [% management %] </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                          <td class="footer-text" style="font-family:Helvetica, Arial, sans-serif;font-size:11px;line-height:1.5;text-align:left;" align="left" valign="top">
+                                                                                                                            <a href="#" style="color:#9d9e9f;text-decoration:none;">[% account_rsvp_address_1 %] [% account_rsvp_address_2
+                                                                                                                              %]
+                                                                                                                              <br> [% account_rsvp_city %], [% account_rsvp_state
+                                                                                                                              %] | [% account_rsvp_zip_code %] [% account_rsvp_country
+                                                                                                                              %]
+                                                                                                                            </a>
+                                                                                                                          </td>
+                                                                                                                        </tr>
+                                                                                                                        <tr>
+                                                                                                                          <td class="footer-text" style="font-family:Helvetica, Arial, sans-serif;font-size:11px;line-height:1.5;text-align:left;padding-top:20px;" align="left" valign="top">
+                                                                                                                            <a href="%5B%25%20member:email%20%25%5D" style="color:#9d9e9f;text-decoration:none;">[% recipient %]</a>
+                                                                                                                          </td>
+                                                                                                                        </tr>
+                                                                                                                      </tbody>
+                                                                                                                    </table>
+                                                                                                                  </td>
+                                                                                                                </tr>
+                                                                                                              </tbody>
+                                                                                                            </table>
+                                                                                                          </td>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                          <td style="line-height:0;font-size:0;" align="left" valign="top">
+                                                                                                            <div style="line-height:0;font-size:0;">[% bug %]</div>
+                                                                                                          </td>
+                                                                                                        </tr>
+                                                                                                      </tbody>
+                                                                                                    </table>
+                                                                                                  </td>
+                                                                                                </tr>
+                                                                                              </tbody>
+                                                                                            </table>
+                                                                                          </div>
+                                                                                        </body>
+</html>

@@ -48,6 +48,7 @@ class MasterForm extends React.Component {
       showModalOccasionalHeat: false,
       showModalVolumized: false,
       hairType: '',
+      hairTypeMC: '',
       buttonState: true,
       categoryURL: '',
     }
@@ -292,7 +293,8 @@ class MasterForm extends React.Component {
     if(this.state.currentStep>6){
       this.setState({
         ['categoryURL']: event.target.dataset.categoryurl,
-        ['hairType']: event.target.dataset.hairtype
+        ['hairType']: event.target.dataset.hairtype,
+        ['hairTypeMC']: event.target.dataset.hairtypemc, 
       })
     }
   }
@@ -1301,6 +1303,7 @@ function Step7(props) {
   var title = '';
   var link = '';
   var hairType = '';
+  var hairTypeMC = '';
   var cottonCandyURLS = [
     'https://www.originalmoxie.com/cotton-candy-loose-curls-fine/',
     'https://www.originalmoxie.com/cotton-candy-loose-curls-medium/',
@@ -1358,6 +1361,7 @@ function Step7(props) {
         link = mermaidURLS[3];
     }
     hairType = 'The Mermaid<sup>™</sup> / Merman<sup>™</sup>';
+    hairTypeMC = 'mermaid';
   }else if(props.curlPattern == 'TightCurls' && props.porosity == 'MediumToHighPorosity'){
     // if curlPattern = Tight Curls && Porosity == MediumToHighPorosity : shape shifter
     image = 'https://www.originalmoxie.com/templates/__custom/images/icon-hair-shapeshifter.png';
@@ -1371,6 +1375,7 @@ function Step7(props) {
       link = shapeShifterURLS[0];
 
     hairType = 'The Shape Shifter<sup>™</sup>';
+    hairTypeMC = 'shapeShifter';
   }else if((props.curlPattern == 'StraightToWavy' && props.porosity == 'MediumToHighPorosity') ||(props.curlPattern=='LooseCurls' && props.porosity == 'MediumToHighPorosity')){
     // if curlPattern = StraightToWavy && Porosity == MediumToHighPorosity : cotton candy
     // if curlPattern = LooseCurls && Porosity == MediumToLowPorosity : cotton candy
@@ -1392,6 +1397,7 @@ function Step7(props) {
         link = cottonCandyURLS[3];
     }
     hairType = 'The Cotton Candy Dream<sup>™</sup>';
+    hairTypeMC = 'cottonCandy';
   }else{
     image = 'https://www.originalmoxie.com/templates/__custom/images/icon-hair-warrior-queen.png';
     content = 'Your tight curls have a mind of their own and the strength to withstand whatever comes their way.    Selective in its tastes, your hair won’t absorb what doesn’t suit it.  It takes just the right mix of products to reveal the velvety sheen and softness that lie within.';
@@ -1404,6 +1410,7 @@ function Step7(props) {
       link = warriorURLS[0];
 
     hairType = 'The Warrior Queen<sup>™</sup> / Warrior King<sup>™</sup>';
+    hairTypeMC = 'warrorQueeen';
   }
 
 
@@ -1436,6 +1443,7 @@ function Step7(props) {
                 data-name = "EMAIL"
                 data-categoryURL = {`${link}`}
                 data-hairtype = {`${hairType}`}
+                data-hairtypemc = {`${hairTypeMC}`}
                 onBlur={props.handleChange}
               />
 
