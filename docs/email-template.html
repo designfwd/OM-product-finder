@@ -195,26 +195,26 @@
 
 }		.hair-details {
       background-color:#fff;
-			color:#666;
+			color:#999;
 			font-weight:400;
 			margin:-8px auto 0;
     }
     .thank-you{
 			background-color:#fff;
-			color:#666;
+			color:#999;
 			font-weight:400;
       margin:-8px auto 0;
       width: 600px;
 		}
 		.hair-feature {
 			background-color:#fff;
-			color:#666;
+			color:#999;
 			font-weight:400;
 			margin:.5rem auto;
     }
 
 		.hair-details h2,.hair-feature h1,.thank-you h2{
-			color:#666;
+			color:#999;
 			font-family:'Rockwell',Georgia,Times,'Times New Roman',serif;
 			font-size:30px;
 			font-weight:400;
@@ -222,10 +222,12 @@
 			padding:16px;
 			width:100%;
     }
-		.hair-feature p{
-			color:#5C707C;
-			font-family:Georgia,'Times New Roman',Times,serif;
+		.hair-feature p,
+    .thank-you p {
+			color:#999;
+			font-family: 'Raleway', Verdana, Geneva, Tahoma, sans-serif;
 			font-size:18px;
+      line-height: 1.6;
 			margin:16px 48px;
 			width:504px;
 		}
@@ -235,19 +237,26 @@
 		.product-feature{
 			background-color:#fff;
 			display:inline-block;
-			margin:-16px auto 0;
+			margin: 0 auto;
 			width:600px;
 		}
 		.product-feature a{
 			display:block;
 			width:100%;
 		}
+
+    .hair-feature__icon img {
+      display: block;
+      margin: auto;
+    }
+
 		.product-feature p{
-			color:#666;
-			font-family:Georgia,'Times New Roman',Times,serif;
+			color:#999;
+			font-family: 'Raleway', Verdana, Geneva, Tahoma, sans-serif;
 			font-size:18px;
 			padding:16px 0 48px;
 		}
+
 		.product-grid{
 			background-color:#fff;
 			margin:-24px 0 16px;
@@ -255,25 +264,14 @@
 		}
 		.product-grid a{
 			color:#739BC7;
-			display:inline-block;
-			margin:0 1rem;
-			max-width:260px;
+			display: block;
+			margin:0 auto;
+      text-align: center;
 			text-decoration:none;
 		}
 		.product-grid>div{
 			background-color:#F1F5F9;
 			margin:4px;
-		}
-		.product-grid__half{
-			display:inline-block;
-			margin-bottom:2rem;
-			vertical-align:top;
-			width:260px;
-		}
-		.product-grid__full{
-			display:block;
-			margin-bottom:2rem;
-			width:592px;
 		}
 		.product-grid h2{
 			color:#666;
@@ -350,7 +348,7 @@
       </table>
 
       <!-- Hair Type Feature -->
-      <table class="hair-feature" width="600px">
+      <table class="hair-feature" width="600px" style="padding-top: 1.5rem;" cellspacing="0" cellpadding="0">
         <tr>
           <td class="hair-feature__icon" colspan="2">
             *|IF:HAIRTYPE=cottonCandy|*
@@ -394,12 +392,12 @@
         </tr>
         <tr>
           <td class="hair-feature__button hair-feature__button--left" width="50%">
-            <a href="*|CATEGORYUR|*">
+            <a href="*|CATEGORYUR|*" style="display: inline-block; margin: auto; text-align: center; width: 100%;">
               <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/46eb4d19-f18b-46e6-bea3-c6b68acbd11d.gif" alt="See my products" height="40" width="176">
             </a>
           </td>
           <td class="hair-feature__button hair-feature__button--right" width="50%">
-            <a href="*|CATEGORYUR|*">
+            <a href="*|CATEGORYUR|*" style="display: inline-block; margin: auto; text-align: center; width: 100%;">
               <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/1b61ea03-4740-4742-9cd1-87814ae1b41e.gif" alt="See my products" height="40" width="176">
             </a>
           </td>
@@ -407,7 +405,7 @@
       </table>
       
       <!-- Hair Type Details -->
-      <table class="hair-details" width="600px">
+      <table class="hair-details" width="600px" cellspacing="0" cellpadding="0">
         <tr>
           <th colspan="4">
             <h2>
@@ -508,13 +506,13 @@
         <h2>
           Your Hair Products
         </h2>
-        <p style="margin: auto; max-width: 540px;">
+        <p style="margin: auto; max-width: 540px; padding-top: .25rem; padding-bottom: 2rem;">
           Thank you for meeting with our Hair Care Expert for your Seven Point Assessment! We have created your unique hair type profile based on our evaluation of your Scalp Suppleness, Curl Pattern, Density, Texture, Porosity, Moisture &amp; Shape.
         </p>
       </div>
 
       <!-- Product Feature Links -->
-      <table class="product-feature">
+      <table class="product-feature" border="0" cellpadding="0" cellspacing="0" width="600" style="margin: auto; margin-top: 0; margin-bottom: -8px;">
         <tbody>
           <tr>
             <td class="product-feature__link">
@@ -535,7 +533,7 @@
               *|END:IF|*
               *|IF:HAIRTYPE=warriorQueen|*
                 <a href="http://www.originalmoxie.com/natural-hair-treatments/">
-                  <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/235d552a-565b-4dda-a86f-129df2cb9cb4.jpg" alt="warrior queen" width="300">
+                  <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/235d552a-565b-4dda-a86f-129df2cb9cb4.jpg" alt="warrior queen" width="298">
                 </a>
               *|END:IF|*
             </td>
@@ -573,63 +571,139 @@
       </table>
 
       <!-- Product Grid -->
-      <table class="product-grid" width="600">
+      <table class="product-grid" width="600" border="0" cellpadding="0" cellspacing="0">
         <tbody>
           <tr>
-            <td colspan="2" class="product-grid__full">
-              <h2 style="text-align: center;">
-                Refreshing
-              </h2>
-              <a href="https://www.originalmoxie.com/frizzy-hair-treatment/">
-                <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/afd346ac-7f20-447f-96a6-f081638f6cc6.png" alt="Mane Tame Weightless Frizz Control" width="131" style="margin: auto;">
-                <h3 style="margin: auto; width: 240px;">
-                  Mane Tame<sup>TM</sup>
-                  <br>Weightless Frizz<br>Control
-                </h3>
-              </a>
+            <td colspan="2">
+              <table border="0" cellpadding="0" cellspacing="0" width="600" bgcolor="#F4F7FC" style="padding-top: 1rem; padding-bottom: 2rem; border: 4px solid #fff; border-bottom: 0;">
+                <tbody>
+                  <tr>
+                    <td>
+                      <h2 style="text-align: center;">
+                        Refreshing
+                      </h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.originalmoxie.com/frizzy-hair-treatment/" style="display: block; width: 132px; margin: auto">
+                        <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/afd346ac-7f20-447f-96a6-f081638f6cc6.png" alt="Mane Tame Weightless Frizz Control" width="131" style="margin: auto;">
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.originalmoxie.com/frizzy-hair-treatment/" width="100%" style="display: block; margin: auto; margin-top: 8px;">
+                        <h3 style="margin: auto; width: 240px; text-align: center;">
+                          Mane Tame<sup>TM</sup>
+                          <br>Weightless Frizz<br>Control
+                        </h3>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </td>
           </tr>
           <tr>
-            <td colspan="2" class="product-grid__full">
-              <h2 style="text-align: center;">
-                Heat Styling
-              </h2>
-              <a href="https://www.originalmoxie.com/heat-wave-reparative-blow-dry-creme/">
-                <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/e0fbc052-4077-49aa-a91f-b736581f7ee8.png" alt="heat Wave Blow Dry Creme" width="131" style="margin: auto;">
-                <h3 style="margin: auto; width: 240px">
-                  Heat Wave<sup>TM</sup> Blow Dry<br>Crème
-                </h3>
-              </a>
-              <a href="https://www.originalmoxie.com/happy-endings-shine-and-repair-serum/">
-                <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/98528cb1-d136-4b90-9827-15dff44b54d8.png" alt="Happy Endings Shine & Repair Serum" width="131" style="margin: auto;">
-                <h3 style="margin: auto; width: 240px">
-                  Happy Endings<sup>TM</sup> Shine<br>&amp; Repair Serum
-                </h3>
-              </a>
+            <td colspan="2">
+              <table border="0" cellpadding="0" cellspacing="0" width="600" bgcolor="#F4F7FC" style="padding-top: 1rem; padding-bottom: 2rem; border: 4px solid #fff; border-bottom: 0;">
+                <tr>
+                  <td colspan="2">
+                    <h2 style="margin: auto; width: 240px; text-align: center;">
+                      Heat Styling
+                    </h2>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.originalmoxie.com/heat-wave-reparative-blow-dry-creme/" style="display: block; width: 132px; margin: auto">
+                      <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/e0fbc052-4077-49aa-a91f-b736581f7ee8.png" alt="heat Wave Blow Dry Creme" width="131" style="margin: auto;">
+                    </a>
+                  </td>
+                  <td>
+                    <a href="https://www.originalmoxie.com/happy-endings-shine-and-repair-serum/" style="display: block; width: 132px; margin: auto">
+                      <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/98528cb1-d136-4b90-9827-15dff44b54d8.png" alt="Happy Endings Shine & Repair Serum" width="131" style="margin: auto;">
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.originalmoxie.com/heat-wave-reparative-blow-dry-creme/" style="display: block; width: 132px; margin: auto; margin-top: 8px;">
+                      <h3 style="margin: auto; width: 240px">
+                        Heat Wave<sup>TM</sup> Blow Dry<br>Crème
+                      </h3>
+                    </a>
+                  </td>
+                  <td>
+                    <a href="https://www.originalmoxie.com/happy-endings-shine-and-repair-serum/" style="display: block; width: 132px; margin: auto; margin-top: 8px;">
+                      <h3 style="margin: auto; width: 240px">
+                        Happy Endings<sup>TM</sup> Shine<br>&amp; Repair Serum
+                      </h3>
+                    </a>
+                  </td>
+                </tr>
+              </table>
             </td>
           </tr>
           <tr>
-            <td class="product-grid__half">
-              <h2>
-                Volumizing
-              </h2>
-              <a href="https://www.originalmoxie.com/volumizing-hair-treatment/">
-                <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/c8018814-67ff-476a-8c0b-f1e4f37a9f30.png" alt="Sweet Poof Volumizing Spray" width="131" style="margin: auto">
-                <h3 style="margin: auto; width: 240px">
-                  Sweet Poof<sup>TM</sup> Volumizing<br>Spray
-                </h3>
-              </a>
+            <td>
+              <table border="0" cellpadding="0" cellspacing="0" width="300" bgcolor="#F4F7FC" style="padding-top: 1rem; padding-bottom: 2rem; border: 4px solid #fff;">
+                <tbody>
+                  <tr>
+                    <td>
+                      <h2 style="margin: auto; width: 240px; text-align: center;">
+                        Volumizing
+                      </h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.originalmoxie.com/volumizing-hair-treatment/" style="display: block; width: 132px; margin: auto;">
+                        <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/c8018814-67ff-476a-8c0b-f1e4f37a9f30.png" alt="Sweet Poof Volumizing Spray" width="131" style="margin: auto">
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.originalmoxie.com/volumizing-hair-treatment/" style="display: block; width: 200px; margin: auto; margin-top: 8px;">
+                        <h3 style="margin: auto; width: 240px">
+                          Sweet Poof<sup>TM</sup> Volumizing<br>Spray
+                        </h3>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </td>
-            <td class="product-grid__half">
-              <h2>
-                Scalp Treatment
-              </h2>
-              <a href="https://www.originalmoxie.com/natural-scalp-treatment/">
-                <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/39ec4c80-a8f0-46dd-9b93-cc7a6af6974e.png" alt="Scalp Therapy" width="131" style="margin: auto">
-                <h3 style="margin: auto; width: 240px">
-                  Scalp Therapy<sup>TM</sup>
-                </h3>
-              </a>
+            <td>
+              <table border="0" cellpadding="0" cellspacing="0" width="300" bgcolor="#F4F7FC" style="padding-top: 1rem; padding-bottom: 3rem; border: 4px solid #fff; border-left: 0;">
+                <tbody>
+                  <tr>
+                    <td>
+                      <h2 style="margin: auto; width: 240px; text-align: center;">
+                        Scalp Treatment
+                      </h2>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.originalmoxie.com/natural-scalp-treatment/" style="display: block; width: 132px; margin: auto;">
+                        <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/39ec4c80-a8f0-46dd-9b93-cc7a6af6974e.png" alt="Scalp Therapy" width="131" style="margin: auto">
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.originalmoxie.com/natural-scalp-treatment/" style="display: block; width: 132px; margin: auto; margin-top: 8px;">
+                        <h3 style="margin: auto; width: 240px">
+                          Scalp Therapy<sup>TM</sup>
+                        </h3>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </td>
           </tr>
         </tbody>
