@@ -396,7 +396,7 @@ class MasterForm extends React.Component {
     if(currentStep > 1 && currentStep < 7){
       return (
         <button 
-          className="btn btn-secondary form-slide__button form-slide__button--prev" 
+          className="btn btn-primary form-slide__button form-slide__button--prev" 
           type="button" onClick={this._prev}>
         &larr;  Back
         </button>
