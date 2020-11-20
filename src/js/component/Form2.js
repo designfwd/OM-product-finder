@@ -584,6 +584,7 @@ function Step0(props) {
   if (props.currentStep !== 0) {
     return null
   } 
+  window.dispatchEvent(new Event('resize'));
   return(
     <div class="content-container form-slide form-slide--zero">
       <img class="form-slide__icon" src="https://www.originalmoxie.com/templates/__custom/images/om-logo-blue-sm.png" />
