@@ -396,7 +396,7 @@ class MasterForm extends React.Component {
     if(currentStep > 1 && currentStep < 7){
       return (
         <button 
-          className="btn btn-secondary form-slide__button form-slide__button--prev" 
+          className="form-slide__button form-slide__button--prev" 
           type="button" onClick={this._prev}>
         &larr;  Back
         </button>
@@ -410,7 +410,7 @@ class MasterForm extends React.Component {
     if(currentStep > 0 && currentStep < 7){
       return (
         <button 
-          className={`btn btn-primary form-slide__button form-slide__button--next  ${this.state.buttonState ? "active" : "inactive"}`}
+          className={`form-slide__button form-slide__button--next  ${this.state.buttonState ? "active" : "inactive"}`}
           type="button" onClick={this._next}>
         Continue  &rarr;
         </button>        
@@ -424,7 +424,7 @@ class MasterForm extends React.Component {
     if(currentStep == 0){
       return (
         <button 
-          className="btn btn-primary form-slide__button form-slide__button--start" 
+          className="form-slide__button form-slide__button--start" 
           type="button" onClick={this._next}>
         Get Started
         </button>        
@@ -1461,7 +1461,7 @@ function Step7(props) {
               <input type="hidden" value={props.hairType} name="HAIRTYPE" class="" id="mce-HAIRTYPE"></input>
             </div>
           </div> 
-          <input type="submit" class="btn btn-success btn-block form-slide__button form-slide__button--submit" value="Get My Detailed Results!" />
+          <input type="submit" class="form-slide__button form-slide__button--submit" value="Get My Detailed Results!" />
         </div>
       </div>
     </React.Fragment>
