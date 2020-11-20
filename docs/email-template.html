@@ -284,14 +284,14 @@
   <body data-e2ma-name="Backdrop" data-e2ma-styles="background" style="margin: 0 auto; padding: 0; width: 100% !important; background-color: #CCC !important; font-family: Rockwell, Georgia, Times, Times New Roman, serif">
     <div style="margin:0;padding:0;border-right-width:0;border-left-width:0;width:100% !important;background-color:rgb(214,214,214);" align="center">
       <!-- Top logo area -->
-      <table style="margin:0 auto;font-family:Rockwell, Georgia, Times, 'Times New Roman', serif;background-color:#CCC !important;" border="0" cellpadding="0" cellspacing="0" width="600">
+      <table style="margin:0 auto;font-family:Rockwell, Georgia, Times, 'Times New Roman', serif;background-color:#CCC !important;" border="0" cellpadding="0" cellspacing="0" width="600" bgcolor="#CCC">
         <tbody>
           <tr>
             <td colspan="2" align="left">
               <img alt="logo" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/814b2fe4-1e98-4352-9e85-6675e1b64c75.png" height="98" width="195">
             </td>
             <td colspan="4" align="right" valign="middle" width="469">
-              <img alt="You're an Original" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/c383df26-3079-4d68-ba1b-3b43c26749f7.gif" style="padding-right: 10px !important" hspace="20" align="middle" width="330">
+              <img alt="You're an Original" src="https://mcusercontent.com/442a18930aeac419c82d00006/images/eed2c303-3189-4a34-81e3-f6750ef8d457.png" style="padding-right: 10px !important" hspace="20" align="middle" width="330">
             </td>
           </tr>
         </tbody>
@@ -344,7 +344,7 @@
       <!-- Hair Type Feature -->
       <table class="hair-feature" width="600px" style="padding-top: 1.5rem;" cellspacing="0" cellpadding="0">
         <tr>
-          <td class="hair-feature__icon" colspan="2">
+          <td class="hair-feature__icon" colspan="2"  align="center">
             *|IF:HAIRTYPE=cottonCandy|*
               <img alt="cotton-candy" src="https://mcusercontent.com/442a18930aeac419c82d00006/images/fd627d9f-213c-455f-9873-147056c38be2.png" width="132">
             *|END:IF|*
@@ -385,13 +385,13 @@
           </td>
         </tr>
         <tr>
-          <td class="hair-feature__button hair-feature__button--left" width="50%">
+          <td class="hair-feature__button hair-feature__button--left" width="50%" align="center">
             <a href="*|CATEGORYUR|*" style="display: inline-block; margin: auto; text-align: center; width: 100%;">
               <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/46eb4d19-f18b-46e6-bea3-c6b68acbd11d.gif" alt="See my products" height="40" width="176">
             </a>
           </td>
-          <td class="hair-feature__button hair-feature__button--right" width="50%">
-            <a href="*|CATEGORYUR|*" style="display: inline-block; margin: auto; text-align: center; width: 100%;">
+          <td class="hair-feature__button hair-feature__button--right" width="50%" align="center">
+            <a href="*|KITURL|*" style="display: inline-block; margin: auto; text-align: center; width: 100%;">
               <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/1b61ea03-4740-4742-9cd1-87814ae1b41e.gif" alt="See my products" height="40" width="176">
             </a>
           </td>
@@ -429,18 +429,23 @@
               <img alt="Medium Porosity" src="https://mcusercontent.com/442a18930aeac419c82d00006/images/f3069062-e8a1-4d04-b224-d6cca8e57b08.gif" width="131px">
             *|END:IF|*
           </td>
+          <!-- Shape -->
+          *|IF:CURLSHAPE=s-shape|*
           <td>
-            <!-- Shape -->
-            *|IF:CURLSHAPE=s-shape|*
               <img alt="s-shape" src="https://mcusercontent.com/442a18930aeac419c82d00006/images/1b2089f4-2386-49f7-b3a0-b70a65b32725.gif" width="131px">
+              
+          </td>
             *|END:IF|*
             *|IF:CURLSHAPE=spiral|*
+            <td>
               <img alt="spiral" src="https://mcusercontent.com/442a18930aeac419c82d00006/images/81476d96-0681-4c65-85cb-6d052fe1a28e.gif" width="131px">
+            </td>
             *|END:IF|*
             *|IF:CURLSHAPE=singleStrand|*
+            <td>
               <img alt="single strand" src="https://mcusercontent.com/442a18930aeac419c82d00006/images/f4a2678a-8b60-4c96-bd3b-6c90d170635f.gif" width="131px">
+            </td>
             *|END:IF|*
-          </td>
           <td>
             <!-- Hair Texture -->
             *|IF:HAIRTEXTUR=Fine|*
@@ -510,48 +515,37 @@
         <tbody>
           <tr>
             <td class="product-feature__link">
+              <a href="*|CATEGORYUR|*">
               *|IF:HAIRTYPE=cottonCandy|*
-                <a href="http://www.originalmoxie.com/dry-hair-moisturizing-treatment/">
                   <img alt="Emollience Pre-treatment" src="https://mcusercontent.com/442a18930aeac419c82d00006/images/d11c5fdd-779f-4c4a-bff9-53cf12891fab.jpg" width="298">
-                </a>
               *|END:IF|*
-              *|IF:HAIRTYPE=mermaid|*
-                <a href="https://mcusercontent.com/442a18930aeac419c82d00006/images/96bd63e9-6ad9-4a28-bc57-df66a65232f7.jpg">
-                  <img alt="Oasis Moisture Gel" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/f0591ae4-bdb2-4a62-842b-821bd0d77916.jpg" width="298">
-                </a>
+              *|IF:HAIRTYPE=mermaid|*96bd63e9-6ad9-4a28-bc57-df66a65232f7.jpg">
+                  <img alt="Oasis Moisture Gel" src="https://mcusercontent.com/442a18930aeac419c82d00006/images/75b5cb9f-9c1a-451a-b7da-6bebbf0bd3b4.jpg" width="298">
               *|END:IF|*
               *|IF:HAIRTYPE=shapeShifter|*
-                <a href="http://www.originalmoxie.com/natural-scalp-treatment/">
                   <img alt="Scalp Therapy" src="https://mcusercontent.com/442a18930aeac419c82d00006/images/42b37781-a627-4968-b658-e5cf8831c92b.jpg" width="298">
-                </a>
               *|END:IF|*
               *|IF:HAIRTYPE=warriorQueen|*
-                <a href="http://www.originalmoxie.com/natural-hair-treatments/">
                   <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/235d552a-565b-4dda-a86f-129df2cb9cb4.jpg" alt="warrior queen" width="298">
-                </a>
+                
               *|END:IF|*
+            </a>
             </td>
             <td class="product-feature__link">
+              <a href="*|KITURL|*">
               *|IF:HAIRTYPE=cottonCandy|*
-                <a href="http://www.originalmoxie.com/dry-hair-moisturizing-treatment/">
-                  <img alt="Emollience Pre-treatment" src="https://mcusercontent.com/442a18930a" width="298">
-                </a>
+                  <img alt="Emollience Pre-treatment" src="https://mcusercontent.com/442a18930aeac419c82d00006/images/75b5cb9f-9c1a-451a-b7da-6bebbf0bd3b4.jpg" width="298">
               *|END:IF|*
               *|IF:HAIRTYPE=mermaid|*
-                <a href="https://mcusercontent.com/442a18930aeac419c82d00006/images/e8ac40fd-0175-43a2-abd3-23f2846fe8b9.jpg">
                   <img alt="Oasis Moisture Gel" src="https://gallery.mailchimp.com/b2209fbbd07449eb61d5f2c18/images/f0591ae4-bdb2-4a62-842b-821bd0d77916.jpg" width="298">
-                </a>
               *|END:IF|*
               *|IF:HAIRTYPE=shapeShifter|*
-                <a href="http://www.originalmoxie.com/natural-scalp-treatment/">
                     <img alt="Scalp Therapy" src="https://mcusercontent.com/442a18930aeac419c82d00006/images/b7e231af-e9a2-4db9-b55f-e8f6ad8d4a7b.jpg" width="298">
-                </a>
               *|END:IF|*
               *|IF:HAIRTYPE=warriorQueen|*
-                <a href="http://www.originalmoxie.com/natural-hair-treatments/">
                   <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/df19c9b7-fba7-4b0f-a580-c2e9b612bc28.jpg" alt="warrior queen" width="298">
-                </a>
               *|END:IF|*
+            </a>
             </td>
           </tr>
           <tr>
@@ -579,14 +573,14 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>
+                    <td  align="center">
                       <a href="https://www.originalmoxie.com/frizzy-hair-treatment/" style="display: block; width: 132px; margin: auto">
                         <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/afd346ac-7f20-447f-96a6-f081638f6cc6.png" alt="Mane Tame Weightless Frizz Control" width="131" style="margin: auto;">
                       </a>
                     </td>
                   </tr>
                   <tr>
-                    <td>
+                    <td  align="center"> 
                       <a href="https://www.originalmoxie.com/frizzy-hair-treatment/" width="100%" style="display: block; margin: auto; margin-top: 8px;">
                         <h3 style="margin: auto; width: 240px; text-align: center;">
                           Mane Tame<sup>TM</sup>
@@ -610,26 +604,26 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>
+                  <td  align="center">
                     <a href="https://www.originalmoxie.com/heat-wave-reparative-blow-dry-creme/" style="display: block; width: 132px; margin: auto">
                       <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/e0fbc052-4077-49aa-a91f-b736581f7ee8.png" alt="heat Wave Blow Dry Creme" width="131" style="margin: auto;">
                     </a>
                   </td>
-                  <td>
+                  <td  align="center">
                     <a href="https://www.originalmoxie.com/happy-endings-shine-and-repair-serum/" style="display: block; width: 132px; margin: auto">
                       <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/98528cb1-d136-4b90-9827-15dff44b54d8.png" alt="Happy Endings Shine & Repair Serum" width="131" style="margin: auto;">
                     </a>
                   </td>
                 </tr>
                 <tr>
-                  <td>
+                  <td  align="center">
                     <a href="https://www.originalmoxie.com/heat-wave-reparative-blow-dry-creme/" style="display: block; width: 132px; margin: auto; margin-top: 8px;">
                       <h3 style="margin: auto; width: 240px">
                         Heat Wave<sup>TM</sup> Blow Dry<br>Crème
                       </h3>
                     </a>
-                  </td>
-                  <td>
+                  </td  align="center">
+                  <td align="center">
                     <a href="https://www.originalmoxie.com/happy-endings-shine-and-repair-serum/" style="display: block; width: 132px; margin: auto; margin-top: 8px;">
                       <h3 style="margin: auto; width: 240px">
                         Happy Endings<sup>TM</sup> Shine<br>&amp; Repair Serum
@@ -652,14 +646,14 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>
+                    <td  align="center">
                       <a href="https://www.originalmoxie.com/volumizing-hair-treatment/" style="display: block; width: 132px; margin: auto;">
                         <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/c8018814-67ff-476a-8c0b-f1e4f37a9f30.png" alt="Sweet Poof Volumizing Spray" width="131" style="margin: auto">
                       </a>
                     </td>
                   </tr>
                   <tr>
-                    <td>
+                    <td  align="center">
                       <a href="https://www.originalmoxie.com/volumizing-hair-treatment/" style="display: block; width: 200px; margin: auto; margin-top: 8px;">
                         <h3 style="margin: auto; width: 240px">
                           Sweet Poof<sup>TM</sup> Volumizing<br>Spray
@@ -681,14 +675,14 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>
+                    <td  align="center">
                       <a href="https://www.originalmoxie.com/natural-scalp-treatment/" style="display: block; width: 132px; margin: auto;">
                         <img src="https://mcusercontent.com/442a18930aeac419c82d00006/images/39ec4c80-a8f0-46dd-9b93-cc7a6af6974e.png" alt="Scalp Therapy" width="131" style="margin: auto">
                       </a>
                     </td>
                   </tr>
                   <tr>
-                    <td>
+                    <td  align="center">
                       <a href="https://www.originalmoxie.com/natural-scalp-treatment/" style="display: block; width: 132px; margin: auto; margin-top: 8px;">
                         <h3 style="margin: auto; width: 240px">
                           Scalp Therapy<sup>TM</sup>
