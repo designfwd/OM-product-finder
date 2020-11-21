@@ -507,3 +507,12 @@ body,
     width: 70vw;
   }
 }
+
+.home-salon-promotion-container {
+  max-width: unset !important;
+  width: 100% !important;
+}
+
+.home-salon-promotion {
+  border: 0 !important;
+}
