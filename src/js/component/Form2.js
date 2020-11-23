@@ -263,28 +263,29 @@ class MasterForm extends React.Component {
         changeState = true;
     }else if(currentStep==2){
       if(!this.state.porosity)
-      changeState = true;
+        changeState = true;
 
     }else if (currentStep==3){
       if(!this.state.curlShape)
-      changeState = true;
+        changeState = true;
 
     }else if (currentStep==4){
       if(!this.state.hairTexture)
-      changeState = true;
+        changeState = true;
 
     }else if(currentStep==5){
       if(!this.state.scalpCondition)
-      changeState = true;
+        changeState = true;
 
     }else if(currentStep==6){
       if(!this.state.stylingPreference)
-      changeState = true;
+        changeState = true;
 
     }
+    changeState = true;
     if(changeState){
       this.setState({
-        buttonState : !this.state.buttonState
+        buttonState : true
       })
     }
     this.forceUpdate();
@@ -331,30 +332,45 @@ class MasterForm extends React.Component {
     let currentStep = this.state.currentStep
     let curlPattern = this.state.curlPattern;
     let buttonState = !this.state.buttonState;
+    console.log(this.state.porosity);
     if(currentStep==1){
       if(!this.state.curlPattern)
         return null;
+      if(this.state.porosity){
+        buttonState = !buttonState;
+      }
+        
     }else if(currentStep==2){
       if(!this.state.porosity)
         return null;
+      if(this.state.curlShape){
+        buttonState = !buttonState;
+      }
 
     }else if (currentStep==3){
       if(!this.state.curlShape)
         return null;
-
+      if(this.state.hairTexture){
+        buttonState = !buttonState;
+      }
     }else if (currentStep==4){
       if(!this.state.hairTexture)
         return null;
-
+      if(this.state.scalpCondition){
+        buttonState = !buttonState;
+      }
     }else if(currentStep==5){
       if(!this.state.scalpCondition)
         return null;
-
+      if(this.state.stylingPreference){
+        buttonState = !buttonState;
+      }
     }else if(currentStep==6){
       if(!this.state.stylingPreference)
         return null;
 
     }
+
     if(currentStep == 2) {
       if((curlPattern == 'TightCurls'))
         currentStep++;
@@ -640,7 +656,7 @@ function Step1(props) {
               Straight to Wavy
             </h2>
             <p class="form-slide__body form-slide__body--modal">
-              Less than one curl per inch.  Hair ranges from perfectly straight to slight texture and is flat to the head when wet. Not much change in length when hair is pulled taught from its natural resting position.
+            Less than one curl per inch. Hair ranges from perfectly straight to slightly wavy and is flat to the head when wet. Not much change in length when hair is pulled taught from its natural resting position.
             </p>
             <a class="form-slide__close" onClick={props.handleCloseModal}>X</a>
           </Modal>
@@ -698,7 +714,7 @@ function Step1(props) {
               Tight Curls
             </h2>
             <p class="form-slide__body form-slide__body--modal">
-              More than two curls per inch.  Significant length change when hair is pulled taught from its natural resting position.  Challenging or impossible to pull your fingers through hair once it is and dry.
+            More than two curls per inch. Significant length change when hair is pulled taught from its natural resting position. Challenging or impossible to pull your fingers through hair once it is and dry.
             </p>
             <a class="form-slide__close" onClick={props.handleCloseModaltc}>X</a>
           </Modal>
@@ -720,7 +736,7 @@ function Step2(props) {
       <img class="form-slide__icon" src="https://www.originalmoxie.com/templates/__custom/images/icon-hair-porosity.png" />
       <h2 class="form-slide__headline">What's Your Porosity</h2>
       <div class="copy form-slide__body">
-        Porosity refers to the degree to which your hair is able to absorb moisture and product 
+        Porosity refers to the degree to which your hair is able to absorb moisture and product. 
       </div> 
 
       <div class="form-slide__inputs">
@@ -797,7 +813,7 @@ function Step3(props) {
       <img class="form-slide__icon" src="https://www.originalmoxie.com/templates/__custom/images/icon-hair-curl-shape.png" />
       <h2 class="form-slide__headline">What's Your Curl Shape?</h2>
       <div class="copy form-slide__body">
-        The Three-dimensional appearance of a curl or wave.
+        The three-dimensional appearance of a curl or wave.
       </div> 
 
       <div class="form-slide__inputs">
