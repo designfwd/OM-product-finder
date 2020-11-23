@@ -714,7 +714,7 @@ function Step1(props) {
               Tight Curls
             </h2>
             <p class="form-slide__body form-slide__body--modal">
-            More than two curls per inch. Significant length change when hair is pulled taught from its natural resting position. Challenging or impossible to pull your fingers through hair once it is and dry.
+            More than two curls per inch. Significant length change when hair is pulled taught from its natural resting position. Challenging or impossible to pull your fingers through hair once it is dry.
             </p>
             <a class="form-slide__close" onClick={props.handleCloseModaltc}>X</a>
           </Modal>
