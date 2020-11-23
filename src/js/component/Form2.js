@@ -263,28 +263,29 @@ class MasterForm extends React.Component {
         changeState = true;
     }else if(currentStep==2){
       if(!this.state.porosity)
-      changeState = true;
+        changeState = true;
 
     }else if (currentStep==3){
       if(!this.state.curlShape)
-      changeState = true;
+        changeState = true;
 
     }else if (currentStep==4){
       if(!this.state.hairTexture)
-      changeState = true;
+        changeState = true;
 
     }else if(currentStep==5){
       if(!this.state.scalpCondition)
-      changeState = true;
+        changeState = true;
 
     }else if(currentStep==6){
       if(!this.state.stylingPreference)
-      changeState = true;
+        changeState = true;
 
     }
+    changeState = true;
     if(changeState){
       this.setState({
-        buttonState : !this.state.buttonState
+        buttonState : true
       })
     }
     this.forceUpdate();
@@ -331,30 +332,45 @@ class MasterForm extends React.Component {
     let currentStep = this.state.currentStep
     let curlPattern = this.state.curlPattern;
     let buttonState = !this.state.buttonState;
+    console.log(this.state.porosity);
     if(currentStep==1){
       if(!this.state.curlPattern)
         return null;
+      if(this.state.porosity){
+        buttonState = !buttonState;
+      }
+        
     }else if(currentStep==2){
       if(!this.state.porosity)
         return null;
+      if(this.state.curlShape){
+        buttonState = !buttonState;
+      }
 
     }else if (currentStep==3){
       if(!this.state.curlShape)
         return null;
-
+      if(this.state.hairTexture){
+        buttonState = !buttonState;
+      }
     }else if (currentStep==4){
       if(!this.state.hairTexture)
         return null;
-
+      if(this.state.scalpCondition){
+        buttonState = !buttonState;
+      }
     }else if(currentStep==5){
       if(!this.state.scalpCondition)
         return null;
-
+      if(this.state.stylingPreference){
+        buttonState = !buttonState;
+      }
     }else if(currentStep==6){
       if(!this.state.stylingPreference)
         return null;
 
     }
+
     if(currentStep == 2) {
       if((curlPattern == 'TightCurls'))
         currentStep++;
