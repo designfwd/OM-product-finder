@@ -28,7 +28,7 @@ body,
 
 .form-slide__background {
   bottom: 0;
-  display: flex;
+  display: none;
   height: ( 100% + 4rem );
   justify-content: space-between;
   margin: 0 auto;
@@ -91,12 +91,12 @@ body,
 }
 
 .form-slide__button--next {
-  margin-right: -10rem;
+  margin-right: 2rem;
 }
 
 .form-slide__button--prev {
-  margin-bottom: -3.5rem;
-  margin-left: -10rem;
+  margin-bottom: -5rem;
+  margin-left: 2rem;
 }
 
 .form-slide__button--submit,
@@ -383,9 +383,9 @@ body,
   width: 100%;
 }
 
-  .form-slide--seven .form-slide__body {
-    width: 50vw;
-  }
+.form-slide--seven .form-slide__body {
+  width: 50vw;
+}
 
 .form-slide--seven .form-slide__content {
   margin-bottom: 2rem;
@@ -435,6 +435,12 @@ body,
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+@media( min-width: 800px ) {
+  .form-slide__background {
+    display: flex;
+  }
 }
 
 @media( min-width: 960px ) {
