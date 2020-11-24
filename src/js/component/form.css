@@ -8,6 +8,14 @@ body,
   margin: 0;
 }
 
+.error,
+.error * {
+  color: #D87683;
+  font-family: 'Raleway', sans-serif;
+  font-size: 11px;
+  line-height: 16px;
+}
+
 .home-salon-promotion-container {
   max-width: 1000px;
 }
