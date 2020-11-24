@@ -52,6 +52,7 @@ class MasterForm extends React.Component {
       buttonState: true,
       categoryURL: '',
       kitURL: '',
+      emailError: ''
     }
     //step 1
     this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -310,22 +311,28 @@ class MasterForm extends React.Component {
     const headers = {
       'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
     }
+    if(this.state.EMAIL){
+      axios({
+        url: 'https://designfwddev.com/om/productfinder.php',
+        method: 'post',
+        data: this.state,
+        dataType: 'json',
+        headers: headers
+      })
+      .then(function (response) {
+        console.log(response.data);
+        window.location = response.data
+      })
+      .catch(function(error) {
+        console.log(this.state.categoryURL);
+      });
+    }
+    else{
+      this.setState({
+        emailError: 'Please enter a valid email'
 
-    axios({
-      url: 'https://designfwddev.com/om/productfinder.php',
-      method: 'post',
-      data: this.state,
-      dataType: 'json',
-      headers: headers
-    })
-    .then(function (response) {
-      console.log(response.data);
-      window.location = response.data
-    })
-    .catch(function(error) {
-      console.log(this.state.categoryURL);
-      window.location = "/login"
-    });
+      })
+    }
   }
   
   _next = () => {
@@ -584,6 +591,7 @@ class MasterForm extends React.Component {
           porosity={this.state.porosity}
           curlPattern={this.state.curlPattern}
           hairType={this.state.hairType}
+          emailError={this.state.emailError}
         />        
         {this.getStarted()}
         {this.previousButton()}
@@ -1317,6 +1325,7 @@ function Step7(props) {
   if (props.currentStep !== 7) {
     return null
   } 
+  var emailError = props.emailError;
   var image = '';
   var content = '';
   var title = '';
@@ -1456,7 +1465,7 @@ function Step7(props) {
             <div class="copy form-slide__body">
               {`${content}`}
             </div> 
-
+            <div class="error">{`${emailError}`}</div>
             <div class="form-slide__inputs form-slide__inputs--email">
               <input
                 className="form-control form-slide__email"
