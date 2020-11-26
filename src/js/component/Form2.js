@@ -1366,9 +1366,11 @@ function Step7(props) {
   if(hairType == 'Locs'){
     content = 'Whether coiled, crocheted, or palm-rolled, locs need holistic care for optimal health and growth.  Each of our highly-concentrated formulations is packed with nutrition to feed your locs and nourish your scalp with gentle, sulfate-free cleansing, intensive deep conditioning, and moisturizing leave-ins.';
     link = 'https://www.originalmoxie.com/locs/';
+    hairTypeMC = 'locs';
   }else if(hairType == 'Protective Styles'){
     content = 'Protect your crown with products that go deep to nourish your hair and scalp from the inside out.  Whether it’s on display in braids or tucked beneath a wig, we provide everything your hair needs be healthy and happy every step of the way.';
     link = 'https://www.originalmoxie.com/protective-hair-products/';
+    hairTypeMC = 'protectiveStyles';
   }
   //if curlpattern = straight to wavy and hair perosity = medium to low goes to mermaid
   //if curlpattern = loose curls and perosity = medium to low goes to mermaid
