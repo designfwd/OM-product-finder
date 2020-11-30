@@ -456,6 +456,13 @@ class MasterForm extends React.Component {
     return null;
   }
 
+  onEnterPress = (e) => {
+    if(e.keyCode == 13 && e.shiftKey == false) {
+      e.preventDefault();
+      this.handleSubmit;
+    }
+  }
+
   render() {    
     return (
       <React.Fragment>
@@ -583,6 +590,7 @@ class MasterForm extends React.Component {
         <Step7
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
+          onEnterPress={this.onEnterPress}
           password={this.state.password}
           stylingPreference={this.state.stylingPreference}
           scalpCondition={this.state.scalpCondition}
@@ -1445,7 +1453,7 @@ function Step7(props) {
       link = warriorURLS[0];
 
     hairType = 'The Warrior Queen<sup>™</sup> / Warrior King<sup>™</sup>';
-    hairTypeMC = 'warrorQueeen';
+    hairTypeMC = 'warriorQueen';
     kitURL = 'https://www.originalmoxie.com/warrior-queen-hair-care-kit/';
   }
 
@@ -1482,6 +1490,7 @@ function Step7(props) {
                 data-hairtypemc = {`${hairTypeMC}`}
                 data-kitURL = {`${kitURL}`}
                 onBlur={props.handleChange}
+                onKeyDown={props.onEnterPress} 
               />
 
               <input type="hidden" value={props.categoryURL} name="CATEGORYUR" class="" id="mce-CATEGORYUR"></input>
