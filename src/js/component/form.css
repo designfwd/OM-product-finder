@@ -64,7 +64,8 @@ body,
   margin-bottom: 0;
 }
 
-.form-slide__button {
+.form-slide__button,
+.customer-type__button {
   background-color: #fff;
   border: 1px solid #999;
   border-radius: 3rem;
@@ -126,7 +127,8 @@ body,
     color 300ms ease !important;
 }
 
-.form-slide__button--start {
+.form-slide__button--start,
+.customer-type__button {
   background-color: #739BC7;
   bottom: -1rem;
   color: #fff;
